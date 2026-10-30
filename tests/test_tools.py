@@ -6,6 +6,8 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
+from datetime import datetime
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -182,6 +184,69 @@ class DataTests(unittest.TestCase):
             result = json.loads(buffer.getvalue())
             self.assertEqual(result['matches'], 3)
             self.assertEqual(len(result['shown']), 1)
+
+
+class TimePlanTests(unittest.TestCase):
+    def test_full_window_reserves_submission_and_written_time(self):
+        p = module('plan_time').plan('2026-10-31T10:00:00+09:00', '2026-10-31T14:00:00+09:00')
+        self.assertEqual(p['feature_freeze'], '2026-10-31T12:20:00+09:00')
+        self.assertEqual(p['submission_start'], '2026-10-31T12:50:00+09:00')
+        self.assertEqual(p['task_finish_by'], '2026-10-31T13:00:00+09:00')
+
+    def test_late_start_shortens_work_before_hard_end(self):
+        p = module('plan_time').plan('2026-10-31T11:00:00+09:00', '2026-10-31T14:00:00+09:00')
+        self.assertEqual(p['task_budget_minutes'], 140)
+        self.assertEqual(p['task_finish_by'], '2026-10-31T13:20:00+09:00')
+        self.assertEqual(p['written_finish_if_task_ends_at_limit'], p['hard_end'])
+
+    def test_different_offsets_describe_the_same_deadline(self):
+        p = module('plan_time').plan('2026-10-31T11:00:00+09:00', '2026-10-31T05:00:00+00:00')
+        self.assertEqual(p['task_budget_minutes'], 140)
+        self.assertLessEqual(datetime.fromisoformat(p['written_finish_if_task_ends_at_limit']),
+                             datetime.fromisoformat(p['hard_end']))
+
+    def test_short_window_has_ordered_checkpoints(self):
+        p = module('plan_time').plan('2026-10-31T13:00:00+09:00', '2026-10-31T14:00:00+09:00')
+        times = [datetime.fromisoformat(p[k]) for k in
+                 ('start', 'requirements_target', 'first_flow_target', 'feature_freeze', 'submission_start', 'task_finish_by')]
+        self.assertEqual(times, sorted(times))
+        self.assertTrue(p['short_budget'])
+
+    def test_missing_timezone_and_impossible_window_are_rejected(self):
+        for start, end in [('2026-10-31T10:00:00', '2026-10-31T14:00:00+09:00'),
+                           ('2026-10-31T13:30:00+09:00', '2026-10-31T14:00:00+09:00'),
+                           ('2026-10-31T15:00:00+09:00', '2026-10-31T14:00:00+09:00')]:
+            with self.subTest(start=start), self.assertRaises(ValueError):
+                module('plan_time').plan(start, end)
+
+
+class PreflightTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        with contextlib.redirect_stdout(io.StringIO()):
+            module('install').install(self.root)
+
+    def test_missing_required_record_is_reported_without_repair(self):
+        preflight = module('preflight')
+        self.assertEqual(preflight.inspect(self.root, files_only=True)['local_status'], 'PASS')
+        record = self.root / '.probe-kit/runtime/REQUIREMENTS.md'
+        record.unlink()
+        result = preflight.inspect(self.root, files_only=True)
+        self.assertEqual(result['local_status'], 'FAIL')
+        self.assertFalse(record.exists())
+        self.assertEqual(result['manual_status'], 'NOT_RUN')
+
+    def test_broken_codex_cli_fails_without_installing_or_changing_config(self):
+        preflight = module('preflight')
+        failure = subprocess.CompletedProcess(['codex', '--version'], 1, '', 'Missing optional dependency')
+        with patch.object(preflight.shutil, 'which', return_value='/usr/bin/codex'), \
+             patch.object(preflight.subprocess, 'run', return_value=failure) as run:
+            result = preflight.inspect(self.root)
+        self.assertEqual(result['local_status'], 'FAIL')
+        self.assertEqual(run.call_args.args[0], ['/usr/bin/codex', '--version'])
+        self.assertFalse((self.root / '.codex').exists())
 
 
 if __name__ == '__main__':

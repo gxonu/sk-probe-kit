@@ -4,6 +4,8 @@ chichochoi/sk original files are preserved under upstream/chichochoi and mostly 
 The root init.sh and scripts/subagent.sh are replaced to preserve platform settings.
 The active templates/HANDOFF.md is adapted for shared session records; its original
 is retained under upstream/chichochoi/templates/HANDOFF.md.
+The active foruser.md links to the integrated live runbook; the upstream version
+is retained under upstream/chichochoi/foruser.md.
 Original texts are retained; AGENTS.override.md and docs/RULES.md define conflict resolution.
 
 knowledge/semiconductor is copied unchanged from xodbs1021/kty-codex-harness-template.

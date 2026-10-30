@@ -1,6 +1,7 @@
 # 문서 시작점
 
 공식 규칙은 [RULES.md](RULES.md), 현재 작업과 세션 배정은 [handoff/CURRENT.md](handoff/CURRENT.md)에서 확인한다.
+당일 실행은 [RUNBOOK.md](RUNBOOK.md), 재현 가능한 구성 점검은 [REHEARSAL.md](REHEARSAL.md)를 따른다.
 
 | 폴더 | 목적 | 먼저 읽을 문서 |
 |---|---|---|

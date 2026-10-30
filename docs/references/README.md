@@ -5,6 +5,7 @@
 | 출처 ID | 자료 | 확인 범위 |
 |---|---|---|
 | SRC-COFA-INTERVIEW-20261031 | [Cofa Probe 제작진 인터뷰 분석](cofa-probe-interview-20261031.md) | 사용자 제공 자동 자막 전체, 영상과 원 논문은 별도 미확인 |
+| SRC-UPSTREAM-CHECK-20261031 | [chichochoi/sk 최신 확인](upstream-check-20261031.md) | GitHub API main과 기준 커밋 비교, 추가 커밋 0개 |
 
 공식 규칙은 설치한 과제의 `.probe-kit/docs/RULES.md`, 하네스 저장소에서는 `docs/RULES.md`에 있다. 실제 최신 공지가 우선한다.
 공개 레포 출처와 고정 커밋은 하네스의 UPSTREAMS.json과 ORIGINS.json, 반도체 자료는 knowledge/semiconductor에서 찾는다.

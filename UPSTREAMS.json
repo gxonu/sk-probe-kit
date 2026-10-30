@@ -3,7 +3,14 @@
     "url": "https://github.com/chichochoi/sk.git",
     "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
     "license_at_review": null,
-    "use": "Original files bundled; init and subagent entrypoints patched with originals preserved under upstream/chichochoi"
+    "use": "Original files bundled; init and subagent entrypoints patched with originals preserved under upstream/chichochoi",
+    "latest_check": {
+      "checked_at": "2026-10-31T03:03:00+09:00",
+      "head": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "status": "identical",
+      "additional_commits": 0,
+      "evidence": "docs/references/upstream-check-20261031.md"
+    }
   },
   "knowledge": {
     "url": "https://github.com/xodbs1021/kty-codex-harness-template.git",
