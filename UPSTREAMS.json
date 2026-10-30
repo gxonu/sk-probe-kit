@@ -1,0 +1,38 @@
+{
+  "main_design": {
+    "url": "https://github.com/chichochoi/sk.git",
+    "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+    "license_at_review": null,
+    "use": "Original files bundled; init and subagent entrypoints patched with originals preserved under upstream/chichochoi"
+  },
+  "knowledge": {
+    "url": "https://github.com/xodbs1021/kty-codex-harness-template.git",
+    "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+    "license_at_review": null,
+    "use": "Original knowledge/semiconductor folder bundled unchanged"
+  },
+  "written_prep": {
+    "url": "https://github.com/hamjoon2003/sk-hynix-2nd-harness.git",
+    "commit": "222a3119559c2b282ab3252a9ffb13e86c2749c1",
+    "license_at_review": "MIT",
+    "use": "Original document and MIT notice bundled; adapted pre-submission guide also included"
+  },
+  "keepdev": {
+    "url": "https://github.com/keepdev0919/hynix",
+    "commit": "42b88c801f9ffe34dd3f88cf792621c2e6cafaec",
+    "use": "Data-impossible goal -> A/B clarification; five-line stakeholder summary; local milestone commits",
+    "mode": "principles adapted in integration documents, not a whole-repository copy"
+  },
+  "cofa-skills": {
+    "url": "https://github.com/ColdTbrew/cofa-skills",
+    "commit": "80cdb84633e654294ab29be4a724b36d2da39a93",
+    "use": "Data audit, requirement elicitation, append-only decision trail",
+    "mode": "principles adapted in integration documents, not a whole-repository copy"
+  },
+  "hekate": {
+    "url": "https://github.com/hekate-louise/codex-harness",
+    "commit": "3ad89a225eb8bedbc09246572cda8f1cfec828ac",
+    "use": "Question checking and answer-to-requirement/test mapping; bounded first complete flow",
+    "mode": "principles adapted in integration documents, not a whole-repository copy"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "base_patch_sha256": "7deada885538951378429a65ef51b870af010c8708517a57d758b67e0ed8777f",
+  "change": "application-playbook.md:58 source count83 to84; administrative count only",
+  "final_guide_sha256": "396c036649730198df2e78229c49cd2b0b0379814dbbbc6bf4d6f9327f464a02"
+}

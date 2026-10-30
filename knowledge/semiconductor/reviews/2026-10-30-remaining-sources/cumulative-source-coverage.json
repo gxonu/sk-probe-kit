@@ -1,0 +1,919 @@
+{
+  "initial_base_commit": "9dab381bcccfc70d9c6596e13efff9d1879a2a0a",
+  "original_source_count": 83,
+  "additional_target_count": 58,
+  "current_source_count": 84,
+  "scope": "Relevant original sections for declared usage; not full publications, all source claims, or expert/product verification",
+  "rows": [
+    {
+      "id": "S01",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S02",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S03",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": "S03 initial B partial resolved using S03+S84 and rechecks"
+    },
+    {
+      "id": "S04",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S05",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S06",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S07",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S08",
+      "prior_reviewers": [
+        "A"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S09",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S10",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S11",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S12",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S13",
+      "prior_reviewers": [
+        "A"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S14",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S15",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S16",
+      "prior_reviewers": [
+        "A",
+        "B"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S17",
+      "prior_reviewers": [
+        "A"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S18",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S19",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S20",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S21",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S22",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S23",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S24",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S25",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S26",
+      "prior_reviewers": [
+        "A"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S27",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S28",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S29",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S30",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S31",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S32",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S33",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S34",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S35",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S36",
+      "prior_reviewers": [
+        "A",
+        "B"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S37",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S38",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S39",
+      "prior_reviewers": [
+        "A"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S40",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S41",
+      "prior_reviewers": [
+        "A"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S42",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S43",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S44",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S45",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S46",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S47",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S48",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S49",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S50",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S51",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S52",
+      "prior_reviewers": [
+        "A"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S53",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S54",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S55",
+      "prior_reviewers": [
+        "A"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S56",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S57",
+      "prior_reviewers": [
+        "A",
+        "B"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S58",
+      "prior_reviewers": [
+        "A"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S59",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S60",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S61",
+      "prior_reviewers": [
+        "A"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S62",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S63",
+      "prior_reviewers": [
+        "A",
+        "B"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S64",
+      "prior_reviewers": [
+        "A",
+        "B"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S65",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S66",
+      "prior_reviewers": [
+        "B"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S67",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S68",
+      "prior_reviewers": [
+        "A",
+        "B"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S69",
+      "prior_reviewers": [
+        "A",
+        "B"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S70",
+      "prior_reviewers": [
+        "A",
+        "B"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S71",
+      "prior_reviewers": [
+        "A",
+        "B"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S72",
+      "prior_reviewers": [
+        "A",
+        "B"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S73",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S74",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S75",
+      "prior_reviewers": [
+        "B"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S76",
+      "prior_reviewers": [
+        "A",
+        "B"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S77",
+      "prior_reviewers": [
+        "B"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S78",
+      "prior_reviewers": [
+        "B"
+      ],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S79",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S80",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S81",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S82",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S83",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [
+        "A",
+        "B"
+      ],
+      "supplement_recheck_reviewers": [],
+      "status": "checked-in-declared-scope",
+      "note": ""
+    },
+    {
+      "id": "S84",
+      "prior_reviewers": [],
+      "additional_58_reviewers": [],
+      "supplement_recheck_reviewers": [
+        "A",
+        "B"
+      ],
+      "status": "checked-in-declared-scope",
+      "note": "S84 new supporting section checked in focused rechecks"
+    }
+  ]
+}

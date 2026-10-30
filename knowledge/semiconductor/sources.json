@@ -1,0 +1,758 @@
+[
+  {
+    "id": "S01",
+    "publisher": "OpenStax",
+    "title": "Electrical Current",
+    "url": "https://openstax.org/books/university-physics-volume-2/pages/9-1-electrical-current",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "전하 이동률과 관습적 전류 방향"
+  },
+  {
+    "id": "S02",
+    "publisher": "OpenStax",
+    "title": "Ohm’s Law",
+    "url": "https://openstax.org/books/university-physics-volume-2/pages/9-4-ohms-law",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "옴성 물질에서 전압·전류 비례와 적용 한계"
+  },
+  {
+    "id": "S03",
+    "publisher": "OpenStax",
+    "title": "Capacitors and Capacitance",
+    "url": "https://openstax.org/books/university-physics-volume-2/pages/8-1-capacitors-and-capacitance",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "전하 저장·정전용량·진공 평행판 근사. 유전체 확장은 S84와 함께 대조"
+  },
+  {
+    "id": "S04",
+    "publisher": "OpenStax",
+    "title": "Electric Power",
+    "url": "https://openstax.org/books/physics/pages/19-4-electric-power",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "전력·에너지와 저항에서 소비 전력"
+  },
+  {
+    "id": "S05",
+    "publisher": "OpenStax",
+    "title": "Semiconductors and Doping",
+    "url": "https://openstax.org/books/university-physics-volume-3/pages/9-6-semiconductors-and-doping",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "밴드·전자·정공·도핑의 기본 원리"
+  },
+  {
+    "id": "S06",
+    "publisher": "Toshiba",
+    "title": "What is an N-type semiconductor?",
+    "url": "https://toshiba.semicon-storage.com/us/semiconductor/knowledge/faq/common_common/what-is-an-n-type-semiconductor.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "실리콘의 donor 도핑과 전자"
+  },
+  {
+    "id": "S07",
+    "publisher": "Toshiba",
+    "title": "What is a P-type semiconductor?",
+    "url": "https://toshiba.semicon-storage.com/us/semiconductor/knowledge/faq/common_common/what-is-a-p-type-semiconductor.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "실리콘의 acceptor 도핑과 정공"
+  },
+  {
+    "id": "S08",
+    "publisher": "NIST",
+    "title": "Prefixes for binary multiples",
+    "url": "https://pml.nist.gov/cuu/Units/binary.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "bit/byte와 SI·이진 접두어"
+  },
+  {
+    "id": "S09",
+    "publisher": "ETSU / David Tarnoff",
+    "title": "Digital Signals and Binary Numbers",
+    "url": "https://faculty.etsu.edu/tarnoff/ntes2150/dig_bin/dig_bin.htm",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "주기·주파수·듀티·기본 논리; 2003년 이후 미갱신 자료로 안정적 정의만 사용"
+  },
+  {
+    "id": "S10",
+    "publisher": "NIST",
+    "title": "Semiconductor Glossary",
+    "url": "https://www.nist.gov/semiconductors/semiconductor-glossary",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "wafer·IC·transistor·fab 용어"
+  },
+  {
+    "id": "S11",
+    "publisher": "ASML",
+    "title": "Six crucial steps in semiconductor manufacturing",
+    "url": "https://www.asml.com/en/company/stories/2021/semiconductor-manufacturing-process-steps",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "웨이퍼에서 다이 분리·패키징 개요만 사용; 제품 수치는 사용하지 않음"
+  },
+  {
+    "id": "S12",
+    "publisher": "SK hynix",
+    "title": "Semiconductor 101: What’s What",
+    "url": "https://news.skhynix.com/en/semiconductor-101-sk-hynix-explains-whats-what-in-the-semiconductor-world/",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "메모리·로직 분류와 휘발성·비휘발성"
+  },
+  {
+    "id": "S13",
+    "publisher": "Intel",
+    "title": "Memory Performance in a Nutshell",
+    "url": "https://www.intel.com/content/www/us/en/developer/articles/technical/memory-performance-in-a-nutshell.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "지연시간·대역폭의 정의만 사용; 2016년 제품 설명은 현행 정보로 사용하지 않음"
+  },
+  {
+    "id": "S14",
+    "publisher": "OpenStax",
+    "title": "Electric Potential and Potential Difference",
+    "url": "https://openstax.org/books/university-physics-volume-2/pages/7-2-electric-potential-and-potential-difference",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "전위차와 단위 전하당 에너지"
+  },
+  {
+    "id": "S15",
+    "publisher": "Toshiba",
+    "title": "pn Junction",
+    "url": "https://toshiba.semicon-storage.com/us/semiconductor/knowledge/e-learning/discrete/chap1/chap1-6.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "공핍층·바이어스 개요. 역전류 0·0.7 V 고정 표현은 이상화로 제한"
+  },
+  {
+    "id": "S16",
+    "publisher": "Infineon",
+    "title": "What Is a MOSFET?",
+    "url": "https://www.infineon.com/technology/mosfets",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "게이트 제어·VGS/VDS·선형/포화 개요. power MOSFET 제품 수치·단순 ON/OFF 보증은 제외"
+  },
+  {
+    "id": "S17",
+    "publisher": "Texas Instruments",
+    "title": "CMOS Power Consumption and Cpd Calculation (SCAA035B)",
+    "url": "https://www.ti.com/lit/pdf/scaa035",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "정적·동적 전력과 부하·주파수·전압 관계. 1997년 특정 로직 제품 수치는 제외"
+  },
+  {
+    "id": "S18",
+    "publisher": "TU Wien / L. Filipovic",
+    "title": "Traditional Semiconductor Process Technologies",
+    "url": "https://www.iue.tuwien.ac.at/phd/filipovic/node9.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "공정 종류와 반복 조합의 개요"
+  },
+  {
+    "id": "S19",
+    "publisher": "TU Wien / L. Filipovic",
+    "title": "Lithography",
+    "url": "https://www.iue.tuwien.ac.at/phd/filipovic/node10.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "마스크·레지스트·노광·현상의 기본 역할"
+  },
+  {
+    "id": "S20",
+    "publisher": "TU Wien / L. Filipovic",
+    "title": "Etching",
+    "url": "https://www.iue.tuwien.ac.at/phd/filipovic/node11.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "선택비·등방성·습식/건식 식각"
+  },
+  {
+    "id": "S21",
+    "publisher": "TU Wien / L. Filipovic",
+    "title": "Deposition",
+    "url": "https://www.iue.tuwien.ac.at/phd/filipovic/node12.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "기본 PVD/CVD 메커니즘. 모든 변형 공정에 대한 우열로 해석하지 않음"
+  },
+  {
+    "id": "S22",
+    "publisher": "TU Wien / L. Filipovic",
+    "title": "Chemical Mechanical Planarization",
+    "url": "https://www.iue.tuwien.ac.at/phd/filipovic/node13.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "평탄화와 후속 리소그래피의 관계. 매 증착 후 CMP가 필수라는 보편 규칙으로 사용하지 않음"
+  },
+  {
+    "id": "S23",
+    "publisher": "TU Wien / L. Filipovic",
+    "title": "Oxidation",
+    "url": "https://www.iue.tuwien.ac.at/phd/filipovic/node14.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "실리콘 열산화와 산화막 증착의 구분"
+  },
+  {
+    "id": "S24",
+    "publisher": "TU Wien / L. Filipovic",
+    "title": "Ion Implantation",
+    "url": "https://www.iue.tuwien.ac.at/phd/filipovic/node15.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "이온 주입과 열처리의 역할. 100% 활성화 보증으로 사용하지 않음"
+  },
+  {
+    "id": "S25",
+    "publisher": "TU Wien / L. Filipovic",
+    "title": "Diffusion",
+    "url": "https://www.iue.tuwien.ac.at/phd/filipovic/node16.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "도펀트 분포와 후속 열처리 영향"
+  },
+  {
+    "id": "S26",
+    "publisher": "ASM",
+    "title": "Atomic Layer Deposition",
+    "url": "https://www.asm.com/our-technology-products/ald",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "교대 반응·퍼지·표면 포화 반응. 1사이클=정확히 원자 1층·무결함 보증으로 사용하지 않음"
+  },
+  {
+    "id": "S27",
+    "publisher": "NIST",
+    "title": "Critical Dimension and Overlay Metrology",
+    "url": "https://www.nist.gov/publications/critical-dimension-and-overlay-metrology",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "CD·overlay 정의. 2003년 장비 동향은 현재 동향으로 사용하지 않음"
+  },
+  {
+    "id": "S28",
+    "publisher": "ASML",
+    "title": "Measuring accuracy",
+    "url": "https://www.asml.com/en/technology/lithography-principles/measuring-accuracy",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "광학 계측·전자빔 검사·측정 타깃·공정 피드백"
+  },
+  {
+    "id": "S29",
+    "publisher": "SK hynix",
+    "title": "Semiconductor Back-End Process Episode 1: Understanding Semiconductor Testing",
+    "url": "https://news.skhynix.com/en/semiconductor-back-end-process-episode-1-understanding-semiconductor-testing/",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "웨이퍼·패키지 테스트와 EPM·재시험. 공개 예시 흐름을 모든 제품의 고정 순서로 사용하지 않음"
+  },
+  {
+    "id": "S30",
+    "publisher": "SK hynix",
+    "title": "People Who Put a Uniform Drawing Paper on a Wafer: Thinfilm Technology",
+    "url": "https://news.skhynix.com/en/people-who-put-a-uniform-drawing-paper-on-a-wafer-thinfilm-technology/",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "박막·금속 배선·다마신 공정 개요"
+  },
+  {
+    "id": "S31",
+    "publisher": "Lam Research",
+    "title": "Reliant Clean Products",
+    "url": "https://www.lamresearch.com/product/reliant-strip-clean-products/",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "공정 사이 오염물 제거와 다음 공정 표면 준비"
+  },
+  {
+    "id": "S32",
+    "publisher": "AGC",
+    "title": "CMP Slurry",
+    "url": "https://www.agc.com/en/products/electoric/detail/cmp.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "패드·슬러리와 화학/기계적 평탄화"
+  },
+  {
+    "id": "S33",
+    "publisher": "OpenStax",
+    "title": "Resistivity and Resistance",
+    "url": "https://openstax.org/books/university-physics-volume-2/pages/9-3-resistivity-and-resistance",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "균일 도선의 R=ρL/A와 비저항·저항의 구분"
+  },
+  {
+    "id": "S34",
+    "publisher": "Applied Materials",
+    "title": "Applied Materials Announces Advanced Copper CMP Processes",
+    "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-advanced-copper-cmp-processes-new",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_press_release",
+    "used_for": "CMP의 dishing·erosion·스크래치 관리 항목만 사용. 2000년 장비·시장 수치는 제외"
+  },
+  {
+    "id": "S35",
+    "publisher": "imec",
+    "title": "Logic technology scaling options for 2nm and beyond",
+    "url": "https://www.imec-int.com/en/articles/logic-technology-scaling-options-2nm-and-beyond",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "FEOL·MOL·BEOL의 연결 역할만 사용. 2021년 로드맵을 현행 전망으로 사용하지 않음"
+  },
+  {
+    "id": "S36",
+    "publisher": "Carnegie Mellon University / Liu et al.",
+    "title": "RAIDR: Retention-Aware Intelligent DRAM Refresh",
+    "url": "https://users.ece.cmu.edu/~omutlu/pub/raidr-dram-refresh_isca12.pdf",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_research",
+    "used_for": "§2.1–2.2 DRAM 셀·행 버퍼·복원·리프레시 배경만 사용. 2012년 실험 수치·64 ms를 현행 보편 규격으로 사용하지 않음"
+  },
+  {
+    "id": "S37",
+    "publisher": "SK hynix",
+    "title": "How Innovative Convergence Technology Is Tackling DRAM Scaling Challenges",
+    "url": "https://news.skhynix.com/en/how-innovative-convergence-technology-is-tackling-dram-scaling-challenges/",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "셀 정전용량과 누설의 역할. 2023년 연구 재료를 양산 제품 사양으로 사용하지 않음"
+  },
+  {
+    "id": "S38",
+    "publisher": "Micron",
+    "title": "FAQs",
+    "url": "https://www.micron.com/sales-support/sales/faqs",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "bank/rank 구분, NAND 동작 후 상태 확인·read disturb·제품별 ECC 요구만 사용. FAQ의 구형 제품 수치·일반화는 제외"
+  },
+  {
+    "id": "S39",
+    "publisher": "Microchip",
+    "title": "DDR Memory — DDR Memory Timing",
+    "url": "https://onlinedocs.microchip.com/oxy/GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B-en-US-21/GUID-A29420D1-4E36-4920-B9BB-DD0B63F5E787.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "tRCD/tRP/tRAS/tREFI/tRFC의 구분. 특정 컨트롤러 설정값과 세대별 제약은 일반화하지 않음"
+  },
+  {
+    "id": "S40",
+    "publisher": "Kingston",
+    "title": "Desktop/Notebook Memory — DRAM frequency FAQ",
+    "url": "https://www.kingston.com/en/support/technical/products/desktop-notebook-memory",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "DDR 버스 클록과 MT/s 구분만 사용"
+  },
+  {
+    "id": "S41",
+    "publisher": "KIOXIA",
+    "title": "What is NAND Flash Memory?",
+    "url": "https://www.kioxia.com/en-jp/rd/technology/nand-flash.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "전하 저장·문턱전압 판정·직렬 셀 구조. 단순 SLC 비트 대응을 모든 셀의 부호화로 일반화하지 않음"
+  },
+  {
+    "id": "S42",
+    "publisher": "KIOXIA",
+    "title": "What is Multi-level Cell Technology Realizing Larger Capacity Flash Memory?",
+    "url": "https://www.kioxia.com/en-jp/rd/technology/multi-level-cell.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "문턱전압 분포와 다중 상태 저장. 전압·분포 그림을 재배포하지 않음"
+  },
+  {
+    "id": "S43",
+    "publisher": "Micron",
+    "title": "Choosing the right NAND",
+    "url": "https://www.micron.com/products/storage/nand-flash/choosing-the-right-nand",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "SLC/MLC/TLC/QLC의 bit/cell, raw NAND와 관리 기능 구분. 성능·수명 순위를 보편 보증하지 않음"
+  },
+  {
+    "id": "S44",
+    "publisher": "KIOXIA",
+    "title": "ゼロから学ぶSSD：構造、動作、耐久性のポイント",
+    "url": "https://www.kioxia.com/content/dam/kioxia/ja-jp/business/ssd/asset/SNIA-seminar-202502.pdf",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "2025년 교육 자료 pp.8–18의 페이지/블록, 쓰기/소거, 주소 변환·GC·wear leveling·예약 공간 개념만 자체 요약. 원문·도표 재배포 없음"
+  },
+  {
+    "id": "S45",
+    "publisher": "KIOXIA",
+    "title": "Why Data Retention is Becoming More Critical in Automotive Applications",
+    "url": "https://tw.kioxia.com/content/dam/kioxia/shared/business/memory/automotive/asset/KIOXIA_Automotive_NAND_Data_Retention_White_Paper.pdf",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "2020년 자료 pp.3–5의 시간·온도·P/E 이력과 retention 관계. 수명·온도별 보증 수치는 사용하지 않음"
+  },
+  {
+    "id": "S46",
+    "publisher": "Microchip",
+    "title": "Fabric DDR Subsystem — ECC",
+    "url": "https://onlinedocs.microchip.com/oxy/GUID-FF8061A7-7A15-470F-A6F5-E733C24D85F0-en-US-11/GUID-B6C8D87D-26CF-4615-8DDA-D79C915B85CE.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "SECDED와 코드워드 단위, 64 data+8 check의 구현 예. 모든 메모리가 같은 ECC 구성이라는 뜻은 아님"
+  },
+  {
+    "id": "S47",
+    "publisher": "Micron",
+    "title": "DDR5 DRAM — Feature differences",
+    "url": "https://www.micron.com/products/memory/dram-components/ddr5-sdram",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "on-die ECC의 칩 내부 SEC 보호 범위만 사용. 제품 속도·용량 수치 제외"
+  },
+  {
+    "id": "S48",
+    "publisher": "Kingston",
+    "title": "KC2500 Support — What is TRIM and Garbage Collection?",
+    "url": "https://www.kingston.com/en/support/technical/products/kc2500",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "GC의 유효 데이터 정리와 TRIM의 무효 데이터 통지 역할. 구형 RAID 지원 설명은 제외"
+  },
+  {
+    "id": "S49",
+    "publisher": "KIOXIA",
+    "title": "Analyzing Managed Flash Device Lifetime Reliability Part 1: The Fundamentals of TBW, WAF and NAND Flash Memory Endurance",
+    "url": "https://americas.kioxia.com/content/dam/kioxia/en-us/business/memory/mlc-nand/asset/KIOXIA_TBW_WAF_NAND_Endurance_Technical_Brief.pdf",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "2024년 자료의 charge trap 구분·P/E 마모·물리/호스트 쓰기 비율. TBW 근사식을 실제 수명 보증으로 사용하지 않음"
+  },
+  {
+    "id": "S50",
+    "publisher": "Kingston",
+    "title": "The Difference Between Enterprise & Client SSD",
+    "url": "https://www.kingston.com/en/blog/pc-performance/enterprise-versus-client-ssd",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "RBER와 ECC 적용 후 UBER의 측정 위치 구분만 사용. 제품 등급별 수치 제외"
+  },
+  {
+    "id": "S51",
+    "publisher": "Linux kernel documentation",
+    "title": "MTD NAND Driver Programming Interface — nand_sdr_timings",
+    "url": "https://www.kernel.org/doc/html/v4.19/driver-api/mtdnand.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "tR_max/tPROG_max/tBERS_max 필드의 읽기·프로그램·소거 시간 정의만 사용. v4.19 API를 현재 실행 환경으로 가정하지 않음"
+  },
+  {
+    "id": "S52",
+    "publisher": "SK hynix",
+    "title": "Creating New Values in DRAM Using Through-Silicon-Via Technology for Continued Scaling in Memory System Performance and Capacity",
+    "url": "https://news.skhynix.com/en/creating-new-values-in-dram-using-through-silicon-via-technology-for-continued-scaling-in-memory-system-performance-and-capacity/",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "2019년 자료의 TSV 수직 연결·HBM 인터페이스와 적층 개념. 당시 제품 수치를 최신 세대 사양으로 사용하지 않음"
+  },
+  {
+    "id": "S53",
+    "publisher": "TSMC",
+    "title": "CoWoS",
+    "url": "https://3dfabric.tsmc.com/english/dedicatedFoundry/technology/cowos.htm",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "2.5D 통합·인터포저·RDL/국소 연결 구조의 역할만 사용. 제품 옵션·생산능력·로드맵 제외"
+  },
+  {
+    "id": "S54",
+    "publisher": "imec",
+    "title": "Wafer-to-wafer hybrid bonding: pushing the boundaries to 400nm interconnect pitch",
+    "url": "https://www.imec-int.com/en/articles/wafer-wafer-hybrid-bonding-pushing-boundaries-400nm-interconnect-pitch",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "Cu/유전체 접합, CMP·정렬·표면 준비의 역할. 연구 시연 치수를 HBM 양산 규격으로 사용하지 않음"
+  },
+  {
+    "id": "S55",
+    "publisher": "SK hynix",
+    "title": "How MR-MUF’s Heat Control Breakthrough Elevated HBM to New Heights",
+    "url": "https://news.skhynix.com/en/rulebreaker-revolutions-mr-muf-unlocks-hbm-heat-control/",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "2024년 설명의 MR-MUF·TC-NCF·EMC 역할. 비교 제품의 개선율을 일반 보증값으로 사용하지 않음"
+  },
+  {
+    "id": "S56",
+    "publisher": "Texas Instruments",
+    "title": "nFBGA Packaging (SPRAA99C)",
+    "url": "https://www.ti.com/lit/pdf/spraa99",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "2021년 문서 §3의 열팽창 불일치·휨·솔더 피로. 패키지별 시험 수치·수명 계수는 HBM에 전용하지 않음"
+  },
+  {
+    "id": "S57",
+    "publisher": "Texas Instruments",
+    "title": "Semiconductor and IC Package Thermal Metrics (SPRA953D)",
+    "url": "https://www.ti.com/lit/pdf/spra953",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "2024년 문서의 θJA/θJC/ΨJT 구분과 측정 조건. 표의 패키지 수치는 HBM에 전용하지 않음"
+  },
+  {
+    "id": "S58",
+    "publisher": "Texas Instruments",
+    "title": "Power Delivery Network Analysis (SWPA222A)",
+    "url": "https://www.ti.com/lit/an/swpa222a/swpa222a.pdf",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "2012년 자료의 DC 저항·루프 인덕턴스·주파수별 임피던스 개념. 특정 OMAP 전원망 목표값 제외"
+  },
+  {
+    "id": "S59",
+    "publisher": "Siemens",
+    "title": "Affordable and comprehensive design for test of 3D stacking die devices",
+    "url": "https://resources.sw.siemens.com/pl-PL/white-paper-affordable-and-comprehensive-testing-of-3d-stacked-die-devices/",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "공개 소개 페이지의 KGD 재검사·D2D 연결 검사 필요성만 사용. 미취득 본문이나 규격 전체를 읽었다고 주장하지 않음"
+  },
+  {
+    "id": "S60",
+    "publisher": "Toshiba",
+    "title": "Reliability Handbook (Apr 2026 Ver.4)",
+    "url": "https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v3/master/en/semiconductor/knowledge/reliability/reliability-handbook-tdsc-en.pdf",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "§1.1 FIT/수명, §2.1 EM·TDDB·NBTI의 기초 정의. 제품별 가속계수·고장률을 전용하지 않음"
+  },
+  {
+    "id": "S61",
+    "publisher": "Texas Instruments",
+    "title": "Reliability testing",
+    "url": "https://www.ti.com/quality-reliability/reliability/testing.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "HTOL·HTSL·TC·THB/BHAST/uHAST·ESD의 스트레스 차이. 연결 규격의 최신 판정 조건을 대신하지 않음"
+  },
+  {
+    "id": "S62",
+    "publisher": "NIST/SEMATECH",
+    "title": "Maximum likelihood estimation",
+    "url": "https://www.itl.nist.gov/div898/handbook/apr/section4/apr412.htm",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "검열 데이터와 지수모형의 고장 수/총 시험시간 추정식"
+  },
+  {
+    "id": "S63",
+    "publisher": "NIST/SEMATECH",
+    "title": "Constant repair rate (HPP/exponential) model",
+    "url": "https://www.itl.nist.gov/div898/handbook/apr/section4/apr451.htm",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "지수/HPP 가정과 무고장 고정시간 시험의 단측 신뢰한계. 다른 중단 규칙에 무조건 적용하지 않음"
+  },
+  {
+    "id": "S64",
+    "publisher": "NIST/SEMATECH",
+    "title": "Arrhenius",
+    "url": "https://www.itl.nist.gov/div898/handbook/apr/section1/apr151.htm",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "동일 메커니즘의 온도 가속 모형. 섭씨→켈빈은 273.15를 사용하며 예제 활성화에너지는 가정값"
+  },
+  {
+    "id": "S65",
+    "publisher": "Texas Instruments",
+    "title": "Failure analysis",
+    "url": "https://www.ti.com/quality-reliability/faqs/failure-analysis.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "불량 재현·비파괴 검사·고장 위치 분석·물리 증거 결합 절차"
+  },
+  {
+    "id": "S66",
+    "publisher": "NIST/SEMATECH",
+    "title": "Exponential",
+    "url": "https://www.itl.nist.gov/div898/handbook/apr/section1/apr161.htm",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "일정 hazard 가정의 R(t)·MTTF 식. 마모 구간 전체에 적용하지 않음"
+  },
+  {
+    "id": "S67",
+    "publisher": "NIST/SEMATECH",
+    "title": "How do you choose an appropriate physical acceleration model?",
+    "url": "https://www.itl.nist.gov/div898/handbook/apr/section2/apr24.htm",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "실패 메커니즘·스트레스에 맞춘 가속 모형 선택"
+  },
+  {
+    "id": "S68",
+    "publisher": "NIST/SEMATECH",
+    "title": "Weibull",
+    "url": "https://www.itl.nist.gov/div898/handbook/apr/section1/apr162.htm",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "2모수 Weibull의 생존함수·hazard·특성수명. 원문의 alpha/gamma를 본문 eta/beta로 명시해 대응"
+  },
+  {
+    "id": "S69",
+    "publisher": "pandas",
+    "title": "pandas.merge",
+    "url": "https://pandas.pydata.org/docs/reference/api/pandas.merge.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "결합 키·카디널리티 검증·미매칭·null 키 주의. 라이브러리 설치 요구가 아님"
+  },
+  {
+    "id": "S70",
+    "publisher": "NIST/SEMATECH",
+    "title": "Confidence intervals",
+    "url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "이항 비율 Wilson 신뢰구간과 표본 수 조건"
+  },
+  {
+    "id": "S71",
+    "publisher": "NIST/SEMATECH",
+    "title": "Proportions Control Charts",
+    "url": "https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "불량 개체 비율·독립 이항 가정·p 관리도. 가변 분모 예제는 해당 식을 각 n에 적용"
+  },
+  {
+    "id": "S72",
+    "publisher": "NIST/SEMATECH",
+    "title": "What is Process Capability?",
+    "url": "https://www.itl.nist.gov/div898/handbook/pmc/section1/pmc16.htm",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "안정 공정의 Cp/Cpk·정규모형·규격과 변동의 구분"
+  },
+  {
+    "id": "S73",
+    "publisher": "NIST/SEMATECH",
+    "title": "Assessing Process Stability",
+    "url": "https://www.itl.nist.gov/div898/handbook/ppc/section4/ppc45.htm",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "시간 순서·평균/분산·자기상관을 통한 안정성 점검"
+  },
+  {
+    "id": "S74",
+    "publisher": "NIST/SEMATECH",
+    "title": "How do you select an experimental design?",
+    "url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri33.htm",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "비교·요인 선별·상호작용 등 목적별 실험 설계 구분"
+  },
+  {
+    "id": "S75",
+    "publisher": "pandas",
+    "title": "pandas.merge_asof",
+    "url": "https://pandas.pydata.org/docs/reference/api/pandas.merge_asof.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "backward/forward/nearest·그룹·허용 시간차. 이벤트/가용 시각의 추가 검증은 자체 적용 절차"
+  },
+  {
+    "id": "S76",
+    "publisher": "scikit-learn",
+    "title": "Common pitfalls and recommended practices",
+    "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "분할 후 전처리 적합·테스트 누수 방지·재현성"
+  },
+  {
+    "id": "S77",
+    "publisher": "scikit-learn",
+    "title": "Cross-validation: evaluating estimator performance",
+    "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "그룹 분리와 시간 분리의 목적. 두 제약을 동시에 만족하는 설계는 별도 필요"
+  },
+  {
+    "id": "S78",
+    "publisher": "scikit-learn",
+    "title": "Metrics and scoring: quantifying the quality of predictions",
+    "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "precision/recall/F1·AP·MAE/RMSE·R²·MAPE의 정의와 적용 조건"
+  },
+  {
+    "id": "S79",
+    "publisher": "scikit-learn",
+    "title": "Novelty and Outlier Detection",
+    "url": "https://scikit-learn.org/stable/modules/outlier_detection.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "정상 학습 기준의 신규 이상 탐지와 오염된 학습 자료의 이상치 탐지 구분"
+  },
+  {
+    "id": "S80",
+    "publisher": "scikit-learn",
+    "title": "Imputation of missing values",
+    "url": "https://scikit-learn.org/stable/modules/impute.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "결측 대치·결측 표시 변수. 결측 원인을 해결하거나 정답을 대치한다는 뜻은 아님"
+  },
+  {
+    "id": "S81",
+    "publisher": "NIST/SEMATECH",
+    "title": "Gauge R & R studies",
+    "url": "https://www.itl.nist.gov/div898/handbook/mpc/section4/mpc4.htm",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "측정 장비의 반복성·재현성·안정성·편향 점검"
+  },
+  {
+    "id": "S82",
+    "publisher": "NIST/SEMATECH",
+    "title": "Scatter Plot",
+    "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/scatterp.htm",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "관계·비선형·조건부 부분집합·산포 탐색. 자체 교란 예제를 원인 증거로 사용하지 않음"
+  },
+  {
+    "id": "S83",
+    "publisher": "scikit-learn",
+    "title": "DummyClassifier",
+    "url": "https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "입력 특징을 무시하는 단순 분류 기준선의 역할"
+  },
+  {
+    "id": "S84",
+    "publisher": "OpenStax",
+    "title": "Capacitor with a Dielectric",
+    "url": "https://openstax.org/books/university-physics-volume-2/pages/8-4-capacitor-with-a-dielectric",
+    "checked_at": "2026-10-30",
+    "source_type": "primary_educational",
+    "used_for": "§8.4 식8.11의 균일 유전체 완전 충전 시 C=κC0. S03의 진공 평행판 식과 결합해 ε=κ ε0 및 단위·자체 예제를 설명"
+  }
+]

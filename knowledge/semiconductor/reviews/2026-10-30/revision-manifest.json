@@ -1,0 +1,13 @@
+{
+  "base_commit": "731eecb0acf12f2d65f045c87a6a51889ea1dbd5",
+  "patch_sha256": "1bfcadd87156adedab8dbed3482c1a11c90160efbae6fa34e5bd40bcfc0e57ad",
+  "changed_file_sha256": {
+    "README.md": "7397bfb36083872a78cffd9ace30a491bae0f1a3cf5998976db6d555529d5a7e",
+    "knowledge/semiconductor/application-playbook.md": "f607038091c09a7b9d0c6e8e0159d79d112ec8d4efbf2a615dbbb1c18cbd45ce",
+    "knowledge/semiconductor/checks/application_checks.py": "9e4bd95564ac6cffcef530b2949e6f6bc79f70c9fd5a6b564274d602255feb61",
+    "knowledge/semiconductor/data-application/spc.md": "9548900af4ce2860fc8ec0a6371dc491285b25d1cee892a4e6c073474c1dad1a",
+    "knowledge/semiconductor/fundamentals/capacity-bandwidth-latency.md": "ef3c65e5c37910e2beb0e2b0d85b569cb829d4e731e497bca8d9e3d5b403db53",
+    "knowledge/semiconductor/index.jsonl": "26cb7aa27b59fd4c2b860f0b01dc941dce66ead243184e8f7498aa3a35dde4cb",
+    "knowledge/semiconductor/packaging-reliability/thermal-metrics.md": "e894657faec178a738b4fd53df1fe473cef81082a8fd65673ea73c588585154f"
+  }
+}

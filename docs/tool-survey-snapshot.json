@@ -1,0 +1,252 @@
+{
+  "checked_date": "2026-10-31",
+  "method": "GitHub REST repository metadata; README and selected SKILL/MCP documentation review",
+  "runtime_installation_tested": false,
+  "repositories": [
+    {
+      "full_name": "upstash/context7",
+      "html_url": "https://github.com/upstash/context7",
+      "stargazers_count": 63961,
+      "pushed_at": "2026-10-30T15:31:30Z",
+      "archived": false,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "full_name": "modelcontextprotocol/servers",
+      "html_url": "https://github.com/modelcontextprotocol/servers",
+      "stargazers_count": 91696,
+      "pushed_at": "2026-10-29T05:27:40Z",
+      "archived": false,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    },
+    {
+      "full_name": "github/github-mcp-server",
+      "html_url": "https://github.com/github/github-mcp-server",
+      "stargazers_count": 34090,
+      "pushed_at": "2026-10-30T11:41:10Z",
+      "archived": false,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "full_name": "microsoft/playwright-mcp",
+      "html_url": "https://github.com/microsoft/playwright-mcp",
+      "stargazers_count": 38859,
+      "pushed_at": "2026-10-30T04:53:12Z",
+      "archived": false,
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "full_name": "ChromeDevTools/chrome-devtools-mcp",
+      "html_url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "stargazers_count": 54490,
+      "pushed_at": "2026-10-30T10:15:13Z",
+      "archived": false,
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "full_name": "exa-labs/exa-mcp-server",
+      "html_url": "https://github.com/exa-labs/exa-mcp-server",
+      "stargazers_count": 5201,
+      "pushed_at": "2026-10-28T19:55:10Z",
+      "archived": false,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "full_name": "tavily-ai/tavily-mcp",
+      "html_url": "https://github.com/tavily-ai/tavily-mcp",
+      "stargazers_count": 2464,
+      "pushed_at": "2026-10-29T15:09:45Z",
+      "archived": false,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "full_name": "firecrawl/firecrawl-mcp-server",
+      "html_url": "https://github.com/firecrawl/firecrawl-mcp-server",
+      "stargazers_count": 7728,
+      "pushed_at": "2026-10-29T15:06:42Z",
+      "archived": false,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "full_name": "openai/skills",
+      "html_url": "https://github.com/openai/skills",
+      "stargazers_count": 28415,
+      "pushed_at": "2026-10-28T17:31:41Z",
+      "archived": false,
+      "license": null
+    },
+    {
+      "full_name": "anthropics/skills",
+      "html_url": "https://github.com/anthropics/skills",
+      "stargazers_count": 185093,
+      "pushed_at": "2026-10-28T19:20:39Z",
+      "archived": false,
+      "license": null
+    },
+    {
+      "full_name": "obra/superpowers",
+      "html_url": "https://github.com/obra/superpowers",
+      "stargazers_count": 309250,
+      "pushed_at": "2026-10-29T23:35:34Z",
+      "archived": false,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "full_name": "mattpocock/skills",
+      "html_url": "https://github.com/mattpocock/skills",
+      "stargazers_count": 307231,
+      "pushed_at": "2026-10-30T14:00:30Z",
+      "archived": false,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "full_name": "vercel-labs/agent-skills",
+      "html_url": "https://github.com/vercel-labs/agent-skills",
+      "stargazers_count": 33250,
+      "pushed_at": "2026-10-28T19:17:28Z",
+      "archived": false,
+      "license": null
+    },
+    {
+      "full_name": "huggingface/skills",
+      "html_url": "https://github.com/huggingface/skills",
+      "stargazers_count": 11239,
+      "pushed_at": "2026-10-30T14:12:53Z",
+      "archived": false,
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "full_name": "trailofbits/skills",
+      "html_url": "https://github.com/trailofbits/skills",
+      "stargazers_count": 7893,
+      "pushed_at": "2026-10-28T19:41:17Z",
+      "archived": false,
+      "license": {
+        "key": "cc-by-sa-4.0",
+        "name": "Creative Commons Attribution Share Alike 4.0 International",
+        "spdx_id": "CC-BY-SA-4.0",
+        "url": "https://api.github.com/licenses/cc-by-sa-4.0",
+        "node_id": "MDc6TGljZW5zZTI2"
+      }
+    },
+    {
+      "full_name": "anthropics/claude-code",
+      "html_url": "https://github.com/anthropics/claude-code",
+      "stargazers_count": 153947,
+      "pushed_at": "2026-10-30T16:40:04Z",
+      "archived": false,
+      "license": null
+    },
+    {
+      "full_name": "oraios/serena",
+      "html_url": "https://github.com/oraios/serena",
+      "stargazers_count": 30877,
+      "pushed_at": "2026-10-28T10:45:55Z",
+      "archived": false,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    },
+    {
+      "full_name": "microsoft/markitdown",
+      "html_url": "https://github.com/microsoft/markitdown",
+      "stargazers_count": 193036,
+      "pushed_at": "2026-10-28T15:33:14Z",
+      "archived": false,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "full_name": "duckdb/duckdb",
+      "html_url": "https://github.com/duckdb/duckdb",
+      "stargazers_count": 42690,
+      "pushed_at": "2026-10-30T17:04:24Z",
+      "archived": false,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    }
+  ],
+  "unavailable": [
+    "MotherDuck-Open-Source/mcp-server-motherduck (404)"
+  ]
+}

@@ -1,0 +1,785 @@
+{
+  "kind": "public_integration_original_sources",
+  "license_note": "Original ownership and notices preserved; no new blanket license applied.",
+  "files": [
+    {
+      "path": "upstream/chichochoi/.gitattributes",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "baef2a4bda599907484a50d4d54c250749bbabaf2d8b3ef0b8ae22057709d319",
+      "original_path": ".gitattributes"
+    },
+    {
+      "path": "upstream/chichochoi/.gitignore",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "dbb5d0340586f288195169097eee1a4fee03b519decfa2c62020c7dacab23604",
+      "original_path": ".gitignore"
+    },
+    {
+      "path": "upstream/chichochoi/AGENTS.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "f38b32478dae660cdc07ded92b4befde0437268eee4e2d82dae3512db984f722",
+      "original_path": "AGENTS.md"
+    },
+    {
+      "path": "upstream/chichochoi/README.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "eac6037eebedc6582cf2da7f5be77868815b5e6b8901f693c82803cc8a47a76c",
+      "original_path": "README.md"
+    },
+    {
+      "path": "upstream/chichochoi/SUB_AGENTS.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "f37107505f13b5b5a8f8f0511e548b8aea659a6422dd9eeb19c2636ffdde037f",
+      "original_path": "SUB_AGENTS.md"
+    },
+    {
+      "path": "upstream/chichochoi/config.toml",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "ab9dcc425e55662dc79c7bef411ee158f92867aab55dc2d0b524db16cd85784a",
+      "original_path": "config.toml"
+    },
+    {
+      "path": "upstream/chichochoi/dm_question.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "b8fa195be5cfca1a2c46665152bcaa54f05d743e5865681c97aee86ddc7ea012",
+      "original_path": "dm_question.md"
+    },
+    {
+      "path": "upstream/chichochoi/foruser.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "f66e0627adbdc9a401236b34c0682105c801e4f7616f7f2343b8f785fc06c87a",
+      "original_path": "foruser.md"
+    },
+    {
+      "path": "upstream/chichochoi/init.sh",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "f491b9ae42c4b4a17c3c7c31c7d89ca7a176b1805fb8ebcd5e2449a22c1eb7d2",
+      "original_path": "init.sh"
+    },
+    {
+      "path": "upstream/chichochoi/prompts/02_codex_prompts.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "39761f8b03e8f16abb8183dfac116c49f0a04bea47f31c4cf0ae5d621dc3d62f",
+      "original_path": "prompts/02_codex_prompts.md"
+    },
+    {
+      "path": "upstream/chichochoi/prompts/03_post_qna_formula.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "7012b1b13294781f1ea0611e94dbe170904326fb33553bcbffee068d258848ff",
+      "original_path": "prompts/03_post_qna_formula.md"
+    },
+    {
+      "path": "upstream/chichochoi/runtime/SUB_RESULT.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "e12904c026af234d84a6a15148108497af71a1bb578c117df4c2e4d40841af5d",
+      "original_path": "runtime/SUB_RESULT.md"
+    },
+    {
+      "path": "upstream/chichochoi/runtime/TASK_SPEC.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "cd57c9141f25a94fc246a40a332ac8d6d4ea24ec74a4f924f170592e3a923ed9",
+      "original_path": "runtime/TASK_SPEC.md"
+    },
+    {
+      "path": "upstream/chichochoi/scripts/eda_scan.py",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "aa947fd42f1e00ae022f5348a3fb336217b2f92e91958dfb0aefc8fb1252753e",
+      "original_path": "scripts/eda_scan.py"
+    },
+    {
+      "path": "upstream/chichochoi/scripts/handoff.py",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "de9fe2fb79634b6094db40b2cdd7cafe9e4f2435da88e5cfc859821baaed2323",
+      "original_path": "scripts/handoff.py"
+    },
+    {
+      "path": "upstream/chichochoi/scripts/handoff.sh",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "d19fd2c4932f46533cd350546e5868fd4ef1789bf67c1705a7313c5290d8713e",
+      "original_path": "scripts/handoff.sh"
+    },
+    {
+      "path": "upstream/chichochoi/scripts/init.sh",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "4b667f50e0a4c79487f6a948985b4947897d3f8825c0df0a8ea375fe7cd4219c",
+      "original_path": "scripts/init.sh"
+    },
+    {
+      "path": "upstream/chichochoi/scripts/pre_submit_audit.py",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "9590d39f73cdd63f1eb4b2f0aed7bfb48b717f74af0118d7e1e2690753fda8dc",
+      "original_path": "scripts/pre_submit_audit.py"
+    },
+    {
+      "path": "upstream/chichochoi/scripts/pre_submit_audit.sh",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "30fb016e340ec9e6dcd8dfc6d5ba15f725d737971071dbcf7ae4578de0fc9071",
+      "original_path": "scripts/pre_submit_audit.sh"
+    },
+    {
+      "path": "upstream/chichochoi/scripts/sample_check_template.py",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "5d93a623305d44580995c5a530b421386f5069a3e0e56d432fc870372d6b8167",
+      "original_path": "scripts/sample_check_template.py"
+    },
+    {
+      "path": "upstream/chichochoi/scripts/subagent.sh",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "dcee585ca8e808205ae9dafa89544d3e446e208a459ca3a40163fd3ba40c6a90",
+      "original_path": "scripts/subagent.sh"
+    },
+    {
+      "path": "upstream/chichochoi/skills/case1_data_pipeline.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "b20167b9b74becc89041a80eec10372732492b986c4803e7922983e81818c770",
+      "original_path": "skills/case1_data_pipeline.md"
+    },
+    {
+      "path": "upstream/chichochoi/skills/case2_web_service.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "4f1fd9a852a1e5556d5a1a58f8040cd5586293359ef5cf37f6bab96f6dae7a97",
+      "original_path": "skills/case2_web_service.md"
+    },
+    {
+      "path": "upstream/chichochoi/skills/case3_legacy_debug.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "8624b89927213dbca757a19cb8c2db24b259267dcefd173a1461ecf1361c6ecd",
+      "original_path": "skills/case3_legacy_debug.md"
+    },
+    {
+      "path": "upstream/chichochoi/skills/case4_policy_rag_doc.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "91fc195a70eff2018345e1b7628168c04bad3afa16c84ac4bd29893d353a8aa7",
+      "original_path": "skills/case4_policy_rag_doc.md"
+    },
+    {
+      "path": "upstream/chichochoi/skills/handoff.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "1d15e91718e12aaf5ae45769c1279de628c8c7c17465f09bd49479b44fa06a7a",
+      "original_path": "skills/handoff.md"
+    },
+    {
+      "path": "upstream/chichochoi/templates/HANDOFF.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "5f39ee188122c4d715de1a34530d92ee9d15610b23fca437671d16be3ae47794",
+      "original_path": "templates/HANDOFF.md"
+    },
+    {
+      "path": "upstream/chichochoi/templates/NOTES.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "1fe9409db9627a50ec49a5e0871be7529e8860a6081e6748060b2e7788006728",
+      "original_path": "templates/NOTES.md"
+    },
+    {
+      "path": "upstream/chichochoi/templates/SUBMISSION_REPORT.md",
+      "source": "https://github.com/chichochoi/sk",
+      "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
+      "sha256": "93b811b317985bfc4c3a087d7d6335da22d234b0efabd8e42ac2cec8e2a24cf0",
+      "original_path": "templates/SUBMISSION_REPORT.md"
+    },
+    {
+      "path": "knowledge/semiconductor/README.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "34eaecadc1c5ea393949b238c8be0ccdb5730be6cb6e8c2a9f7a4ba7a6d5c362"
+    },
+    {
+      "path": "knowledge/semiconductor/VALIDATION.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "32ee501dce1606a5235f466a62fc2dfd0367675aefb53b868952451f7062ecd3"
+    },
+    {
+      "path": "knowledge/semiconductor/application-playbook.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "396c036649730198df2e78229c49cd2b0b0379814dbbbc6bf4d6f9327f464a02"
+    },
+    {
+      "path": "knowledge/semiconductor/checks/application_checks.py",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "782c374de48d58385084724b04b85896d001a1997f23f7d53a820b2e0601a7a1"
+    },
+    {
+      "path": "knowledge/semiconductor/curriculum.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "cb66268f6250fc7b13b0f81b0368dbe606080aff268ae9cd6d23e5700c49ca74"
+    },
+    {
+      "path": "knowledge/semiconductor/data-application/anomaly-drift.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "a3423906083638fa95db9b95cd2bd8d7b32e76d2eb6d823134c01b0da078e727"
+    },
+    {
+      "path": "knowledge/semiconductor/data-application/capability-measurement.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "747260f9d58c2ecddb432e8b5715e57d1e794c410c6a2f1de4fd09e12654d923"
+    },
+    {
+      "path": "knowledge/semiconductor/data-application/classification.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "91407cf8a14c6b0c7ecd9780b51bbd40f8a07dc7252e67633a454d2804bcbe25"
+    },
+    {
+      "path": "knowledge/semiconductor/data-application/defects-uncertainty.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "654e65c9245ab9f94d8ee7166369f9c86fb4afc9ee688ea8da9c0aaef8ea0da8"
+    },
+    {
+      "path": "knowledge/semiconductor/data-application/grain-join.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "2b447c3bf17821bd038a18e71d55ac516d492e618462db4ca6788659835a81dc"
+    },
+    {
+      "path": "knowledge/semiconductor/data-application/regression.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "c75da700422939adb2021a35901edc00d5c423a61dfb35e89ee35b29aa05c640"
+    },
+    {
+      "path": "knowledge/semiconductor/data-application/root-cause.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "e66add79b6a8abb8959ff016ff9d6f5fb4afb89ab32fa872ba4977b561e41bff"
+    },
+    {
+      "path": "knowledge/semiconductor/data-application/spc.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "9548900af4ce2860fc8ec0a6371dc491285b25d1cee892a4e6c073474c1dad1a"
+    },
+    {
+      "path": "knowledge/semiconductor/data-application/split-leakage.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "884b2abb00f8a7b027c0b2ac83e048898b286e5e5d603c12f7c9bd7c45444f23"
+    },
+    {
+      "path": "knowledge/semiconductor/data-application/task-workflow.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "e06f70b90a82139f328fc14b58a5a3549cdd45645d860016b6f0820aa6c6480d"
+    },
+    {
+      "path": "knowledge/semiconductor/data-application/time-alignment.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "9e749c38f1704b60732e699370853c036aeb1803ceec2091de2bee9e2e6e84e5"
+    },
+    {
+      "path": "knowledge/semiconductor/data-application/yield-retest.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "064fb612dfd2f0157145f49527e72f090d565c7f4c717df1af075674bf5c22a9"
+    },
+    {
+      "path": "knowledge/semiconductor/devices-process/cleaning.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "06cf016a9352beb11ab847f753dab70642c98cdf461de0fa3b2045b0238f6475"
+    },
+    {
+      "path": "knowledge/semiconductor/devices-process/cmos-power.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "f4bcb2268e33cc91f43f26b7378f86a61668a2c3ab38c7ea8ff0b9415ea54804"
+    },
+    {
+      "path": "knowledge/semiconductor/devices-process/cmp.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "0424fde28e3a4dab1649b3f7d5880b4155ebc44170dfc68360ba43cedf39702b"
+    },
+    {
+      "path": "knowledge/semiconductor/devices-process/deposition.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "97a757e9614a19816c930978e2f8c51d2456fded0958d33c8bee539b6a5472f6"
+    },
+    {
+      "path": "knowledge/semiconductor/devices-process/electrical-test.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "528e2ec4468cedcd49edfc4badd1c74298a26d17e0435b7477957a54cf292a53"
+    },
+    {
+      "path": "knowledge/semiconductor/devices-process/etch.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "839e4e66001273e0d8268fdcb7f90ed09ab641fcf756a962d9e8b4bcb7ca5814"
+    },
+    {
+      "path": "knowledge/semiconductor/devices-process/implant-anneal.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "a195547a89c7710a1fa204aec40e9694a6eb4e20e004b494cef6887f77605a37"
+    },
+    {
+      "path": "knowledge/semiconductor/devices-process/interconnect.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "76e05d429b5fbe68b218a969df5afd45701cf739af7c0cd6498eb1b4eca7f573"
+    },
+    {
+      "path": "knowledge/semiconductor/devices-process/lithography.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "23a1c4fe3701c0ab1b539adc2b763392e91a10b9e62db04c41983c3008267b6c"
+    },
+    {
+      "path": "knowledge/semiconductor/devices-process/metrology-inspection.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "288242b0c54d3fc3a13863720d83df635a45035c2636415e45de55a9ea7ac8b4"
+    },
+    {
+      "path": "knowledge/semiconductor/devices-process/mosfet.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "90f6c28e3922131359c19c22dc669b1b733573b64769db514b959d42b1a302be"
+    },
+    {
+      "path": "knowledge/semiconductor/devices-process/oxidation.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "060cf7b10a115a7404914a73df671ab5b30cc5a52c86c543414005ea94a84f42"
+    },
+    {
+      "path": "knowledge/semiconductor/devices-process/pn-junction.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "0c63a6bb3f135383279801e58627a02b617bd2658a2caef0aace8b7c981bbcef"
+    },
+    {
+      "path": "knowledge/semiconductor/devices-process/process-flow.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "dd6aa9df0785278693f153e37feb23f1fccd94c88ffcac569b06f8a1c438d17d"
+    },
+    {
+      "path": "knowledge/semiconductor/fundamentals/bits-bytes-prefixes.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "001e34fc5c0a876c4cd0c926d6d52222258f2e41562727cb5d68cda9585412d6"
+    },
+    {
+      "path": "knowledge/semiconductor/fundamentals/capacitance.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "5acfa917403e3db3938f590ff3bee08c5f35f39805f4e438108666f1abca5a6d"
+    },
+    {
+      "path": "knowledge/semiconductor/fundamentals/capacity-bandwidth-latency.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "ef3c65e5c37910e2beb0e2b0d85b569cb829d4e731e497bca8d9e3d5b403db53"
+    },
+    {
+      "path": "knowledge/semiconductor/fundamentals/charge-current-voltage.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "cb4aa793038fe1135041e77b773446f1fa16175d750d655872077e932078ed9f"
+    },
+    {
+      "path": "knowledge/semiconductor/fundamentals/digital-clock-logic.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "1fd3c3c0accae2fa9fd410014ccd3a4dc941c9174e3d82b3f17a6ee418588f9a"
+    },
+    {
+      "path": "knowledge/semiconductor/fundamentals/doping-carriers.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "92dee2a0533a3934aea94664d0ee8d571dd70b9d8d2f21fd455b0418db2369b7"
+    },
+    {
+      "path": "knowledge/semiconductor/fundamentals/memory-map.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "edc5ee0b0af21be31cb5dbbea0cf31c1d7cad1271b8725081273f37764a191d4"
+    },
+    {
+      "path": "knowledge/semiconductor/fundamentals/power-energy.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "a18da9bd4d48d87a4ccfcaf92e6c7d7b7bd1a554db2d3e8085c9b3709debe02c"
+    },
+    {
+      "path": "knowledge/semiconductor/fundamentals/resistance-ohm.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "c029f5a4f18e4b1eed0831b71386663bf55b8074b633ea2416722f3df83fcf9d"
+    },
+    {
+      "path": "knowledge/semiconductor/fundamentals/semiconductor-bands.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "f9fb9cb496489c6782be79c24b42384be102a3f4e9aa2829a4f8b7882d8d3ebd"
+    },
+    {
+      "path": "knowledge/semiconductor/fundamentals/wafer-die-ic.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "2f04f79a1243b895e969256e795e6b78db505371554dd8a04fecfeb43b104855"
+    },
+    {
+      "path": "knowledge/semiconductor/index.jsonl",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "fb6a373cd00e695ef00d93e86f7c76a2756e282ff110860cdcff941f3341e97f"
+    },
+    {
+      "path": "knowledge/semiconductor/memory-operation/ddr-transfer.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "2711bfccfbb712b3f6b464bc99bd830bc6825af1dd658a90b811174849e0bb56"
+    },
+    {
+      "path": "knowledge/semiconductor/memory-operation/dram-cell.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "d84d9aabeeb019e48a2014c2ca9c376a8d927f7606e0377eb675e494c6c2fe1e"
+    },
+    {
+      "path": "knowledge/semiconductor/memory-operation/dram-organization.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "5610e9fd02ec6390dc565154be733f7ed0bb9d5ec53a77ac92b9ac769cb4f1ed"
+    },
+    {
+      "path": "knowledge/semiconductor/memory-operation/dram-refresh.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "0aa1a0e52b28d3548a6229b03a0544343b52b5ea371be5d2b26761db0e9e64e4"
+    },
+    {
+      "path": "knowledge/semiconductor/memory-operation/dram-timing.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "80e86bb15712b972427561e4f7cb9c38e72975b191a96fb3c9d1697393ca31fc"
+    },
+    {
+      "path": "knowledge/semiconductor/memory-operation/ecc-codeword.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "308803878be3cd9504150f6461d02dc4307bbb76f1daaac15077058e83560080"
+    },
+    {
+      "path": "knowledge/semiconductor/memory-operation/ftl-gc-waf.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "7d69ab8e899ddb3f3da2ff593aec49ab9472dd516a1c9bfd3959879a1b9ffc30"
+    },
+    {
+      "path": "knowledge/semiconductor/memory-operation/memory-error-metrics.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "450bb70fc29550a9e2515d8c35590e6a46911e0002653894e93d23d6d8e553b0"
+    },
+    {
+      "path": "knowledge/semiconductor/memory-operation/nand-cell.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "733483c4bb54b3e3e17aec910565ee32d8f71cc6cf88417377e08149c414ae3e"
+    },
+    {
+      "path": "knowledge/semiconductor/memory-operation/nand-geometry.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "66dcd97f583c0d61eace0ce1cd3fc3b5af0f6fc26b5a0b1b4ce43a06bea035e8"
+    },
+    {
+      "path": "knowledge/semiconductor/memory-operation/nand-multilevel.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "7dc7ebf7294d3be4d7f8de453132f716ce4bc3fc3e81c5d3670406c552aad0e0"
+    },
+    {
+      "path": "knowledge/semiconductor/memory-operation/nand-operations.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "00cfa90ce2dc96c34241abc970a47c896f58c4c8d48a47e299209112dd8f31c3"
+    },
+    {
+      "path": "knowledge/semiconductor/memory-operation/nand-retention-disturb.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "6b65dba2a2f6602a3c0f204eed463fdc8a92f7b070a27ebd8b8a605bb336c7c0"
+    },
+    {
+      "path": "knowledge/semiconductor/metadata.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "f9d8f063ff1890dd07463764eb08c2eab2a528875abadfd8939e68da399253d0"
+    },
+    {
+      "path": "knowledge/semiconductor/packaging-reliability/accelerated-life.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "fb7fa30d4de8fcdca6d037506c26579b864f3ee465faafd0e744825d96e49ddf"
+    },
+    {
+      "path": "knowledge/semiconductor/packaging-reliability/failure-analysis.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "4fe8e6b7c3562164568c85a02c641e806f7a6835056ee1ef3e8d5e1ee23182ff"
+    },
+    {
+      "path": "knowledge/semiconductor/packaging-reliability/failure-mechanisms.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "4389a71f5b72c107bc6c660a51711f3b7df44e77b87c6b647752ff91e8971cbe"
+    },
+    {
+      "path": "knowledge/semiconductor/packaging-reliability/hbm-architecture.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "872f417f6d15793c07f4112a115ef651682539b32aa5bb7c027a32971c062632"
+    },
+    {
+      "path": "knowledge/semiconductor/packaging-reliability/hybrid-bonding.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "9f254e43fc4c743e8a183002cc1d5785f40aef896f49102061adb36e3503308f"
+    },
+    {
+      "path": "knowledge/semiconductor/packaging-reliability/muf-ncf.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "035fb2a9c60b30f34a3d956dd096f04c9ea2f7267bdac2cd8da7e70052a59c98"
+    },
+    {
+      "path": "knowledge/semiconductor/packaging-reliability/package-interposer.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "a2f52e26927ba478dcfb02d967eb78b4485d4c68adf529e0d9804a91c6df178e"
+    },
+    {
+      "path": "knowledge/semiconductor/packaging-reliability/power-delivery.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "56cc5965b25902088608172ecc7ed8f9352a3d7411f029ea17c7016c6120e63f"
+    },
+    {
+      "path": "knowledge/semiconductor/packaging-reliability/reliability-metrics.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "0a179033eff3c7ec167ce798de592f8b27cea7263e91a691172af2bc7cb1cae7"
+    },
+    {
+      "path": "knowledge/semiconductor/packaging-reliability/reliability-tests.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "01f4fbab9e62daf51b904fa9af0fcf31b596883c118865a49fbbc34e56d10797"
+    },
+    {
+      "path": "knowledge/semiconductor/packaging-reliability/stack-test-yield.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "32ae38d70502b910e0e11711fea8d4f14cecf2fdbdcb640b41bf3f31cb7c0858"
+    },
+    {
+      "path": "knowledge/semiconductor/packaging-reliability/thermal-metrics.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "e894657faec178a738b4fd53df1fe473cef81082a8fd65673ea73c588585154f"
+    },
+    {
+      "path": "knowledge/semiconductor/packaging-reliability/thermomechanical.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "0b093279ad1437bc02af3af6cbcbb1f430b87aea9ee40250d0abff2331eed6c7"
+    },
+    {
+      "path": "knowledge/semiconductor/packaging-reliability/tsv.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "79ad9cdb49fe6c0a537dd58f13d4952e4303648a5305c39374d363be3bfd17e1"
+    },
+    {
+      "path": "knowledge/semiconductor/packaging-reliability/weibull-life.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "5f4109a5d170a0bff0086ac7d8741bdbe0dd2052dc18ce614701a8e1c55100b3"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30/README.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "994ba266007ff559f55b8b4f72140a8af669ac0bf072f4d426d87b9a79107b85"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30/reviewed-fixes.diff.gz",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "c2b6270db8f207c4011532f1d21967d7ed811fe12d990cc340b8a6282553a10a"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30/revision-manifest.json",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "7ec7cf2142605808bef112b315bb10800ec544b004b557ce3b0b5d3e9d518011"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30/sol-a-initial.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "90bae1fbdd99e0c3199f1d89eec9edc41c5559e2bb67ed891ac52d6c2378bda2"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30/sol-a-recheck.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "67f1f10b2e170f79ac8c00b6c76fcae168a43ca265ec4a458bc77b03fd22295b"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30/sol-b-initial.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "632369da7e74c9cb278a653a6e9ba41301edc493e0493f620876601ca1c6d44d"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30/sol-b-recheck.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "af39a62a4065c409235cf60f8a7566a03c49c1e00a9b9dcc47786832673e7b5c"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30/source-review-coverage.json",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "be902ac6193e2273b12e22c3494c8b23ef6832c103f5397c3bbaf1c5d4b3840c"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30-remaining-sources/README.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "ec9a16efd9961589ca1bd49ccd0fb7a1084e98ba77896e628314cfc4141f3e28"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30-remaining-sources/copyedit-manifest.json",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "6c296ccf029aa3f6f26808475e9ab45a1b21f5d94d7a30857ba125ad1ec9e6be"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30-remaining-sources/coverage-a.json",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "f32371ab898d55e6330f2fc1118ddb14995de789af5a7fddece898958c192d95"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30-remaining-sources/coverage-b.json",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "e63d70e8c2624693e8a27027ef26380869be040b7a682260f2423b81f366759e"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30-remaining-sources/cumulative-source-coverage.json",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "c897544e1b541627f69e6f66c77b8747340e5dc5af34b83f2f00c722d356cd30"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30-remaining-sources/reviewed-fixes.diff.gz",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "5bd22a88cecbdcc48e4781720c44ca5cda9c0b7e0dfcfb4a9e1465aa130a6ba0"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30-remaining-sources/revision-manifest.json",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "995046cbd557330e7d0d21ef5c013aa0a82067109784dae2181154730d63210d"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30-remaining-sources/sol-a-initial.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "4535f65ed4d3c04241ce8281bfa158e3238f655e585c6a194c2cb5ced3a40a8b"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30-remaining-sources/sol-a-recheck.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "75915c318c03cfd79d2c38752a3ace8eec652b8a477d11d29cc60848b022e451"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30-remaining-sources/sol-b-initial.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "6729835ef0180131bce43d5f1e5057235b7a76f4cb93a5b26a49639236a3f939"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30-remaining-sources/sol-b-recheck.md",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "6ac3f009dc25e8b2506a821e6f7abdf091501b0f3de445d07f4a04d84ead8edf"
+    },
+    {
+      "path": "knowledge/semiconductor/reviews/2026-10-30-remaining-sources/targets.json",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "68a9126ba2892f1daaa59b72aff4ff85787f8ab5c34f26743f0a570f1e620c29"
+    },
+    {
+      "path": "knowledge/semiconductor/sources.json",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "94f74c1d2b66f3ee29733e58f358e27cb7d384c92cb44a511d74ed52767f1b6f"
+    },
+    {
+      "path": "knowledge/semiconductor/verify.py",
+      "source": "https://github.com/xodbs1021/kty-codex-harness-template",
+      "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
+      "sha256": "d46bb7b40e07869ff3f52cabab17ea8cc846e6d8f13129f1f1dbb81fd8a2899a"
+    },
+    {
+      "path": "references/written-prep.original.md",
+      "source": "https://github.com/hamjoon2003/sk-hynix-2nd-harness",
+      "commit": "222a3119559c2b282ab3252a9ffb13e86c2749c1",
+      "sha256": "4d2c8d2f12c02581f6026271b92acbf90b22ae742baa241173dd0f6dcead69f0"
+    },
+    {
+      "path": "references/hamjoon-LICENSE",
+      "source": "https://github.com/hamjoon2003/sk-hynix-2nd-harness",
+      "commit": "222a3119559c2b282ab3252a9ffb13e86c2749c1",
+      "sha256": "8aefb3688ad7330ae84400bc739718923e1eeebb29e656b46654e08c877c871e"
+    }
+  ]
+}

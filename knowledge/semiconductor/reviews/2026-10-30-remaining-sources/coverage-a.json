@@ -1,0 +1,1408 @@
+[
+  {
+    "id": "S01",
+    "status": "verified",
+    "canonical_url": "https://openstax.org/books/university-physics-volume-2/pages/9-1-electrical-current",
+    "retrieved_url": "https://openstax.org/books/university-physics-volume-2/pages/9-1-electrical-current",
+    "locations": [
+      "§9.1 Defining Current and the Ampere; Current in a Circuit, eq9.1–9.3"
+    ],
+    "linked_cards": [
+      {
+        "id": "F01",
+        "path": "fundamentals/charge-current-voltage.md"
+      }
+    ],
+    "checked_claims": [
+      "평균/순간 전류, A=C/s, 관습 방향과 전자 방향; 6μC/2ms=3mA",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "회로 배선·장비 진단은 자체 적용 질문"
+    ]
+  },
+  {
+    "id": "S02",
+    "status": "verified",
+    "canonical_url": "https://openstax.org/books/university-physics-volume-2/pages/9-4-ohms-law",
+    "retrieved_url": "https://openstax.org/books/university-physics-volume-2/pages/9-4-ohms-law",
+    "locations": [
+      "§9.4 Description/Ohm experiment, eq9.11; temperature example"
+    ],
+    "linked_cards": [
+      {
+        "id": "F02",
+        "path": "fundamentals/resistance-ohm.md"
+      }
+    ],
+    "checked_claims": [
+      "옴성 비례와 원점 직선, V=IR, 온도 조건; 1V/2kΩ=0.5mA",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "미분저항 비교와 결측 처리 경고는 원문의 직접 설명보다 넓은 교육용 보완"
+    ]
+  },
+  {
+    "id": "S03",
+    "status": "verified",
+    "canonical_url": "https://openstax.org/books/university-physics-volume-2/pages/8-1-capacitors-and-capacitance",
+    "retrieved_url": "https://openstax.org/books/university-physics-volume-2/pages/8-1-capacitors-and-capacitance",
+    "locations": [
+      "§8.1 capacitance definition, parallel-plate derivation eq8.1–8.3; 공식 동권 §8.4 eq8.11 보충"
+    ],
+    "linked_cards": [
+      {
+        "id": "F03",
+        "path": "fundamentals/capacitance.md"
+      }
+    ],
+    "checked_claims": [
+      "Q=CV·F=C/V·평행판의 작은 간격/가장자리 무시 조건; 20fF×1V=20fC",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "등록 절은 진공 ε0 유도; 균일 유전체 확장은 같은 출판사 §8.4에서 별도 확인. 전체 교재 미독"
+    ]
+  },
+  {
+    "id": "S04",
+    "status": "verified",
+    "canonical_url": "https://openstax.org/books/physics/pages/19-4-electric-power",
+    "retrieved_url": "https://openstax.org/books/physics/pages/19-4-electric-power",
+    "locations": [
+      "§19.4 Electric Power, eq19.47–19.50 및 I²R/V²R 유도"
+    ],
+    "linked_cards": [
+      {
+        "id": "F04",
+        "path": "fundamentals/power-energy.md"
+      }
+    ],
+    "checked_claims": [
+      "전력=에너지/시간, P=VI, 저항 전력; 2W×3s=6J와 1W×8s=8J",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "시간 적분과 평균 곱의 한계는 원리에서 도출한 자체 보완"
+    ]
+  },
+  {
+    "id": "S05",
+    "status": "verified",
+    "canonical_url": "https://openstax.org/books/university-physics-volume-3/pages/9-6-semiconductors-and-doping",
+    "retrieved_url": "https://openstax.org/books/university-physics-volume-3/pages/9-6-semiconductors-and-doping",
+    "locations": [
+      "§9.6 opening; donor/acceptor and impurity bands, fig9.18–9.21 설명"
+    ],
+    "linked_cards": [
+      {
+        "id": "F05",
+        "path": "fundamentals/semiconductor-bands.md"
+      }
+    ],
+    "checked_claims": [
+      "정공·전자·가전자대/전도대·도핑; eV와 V를 구분하는 예제",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "Hall effect 상세나 모든 밴드갭 값 확인 범위 아님"
+    ]
+  },
+  {
+    "id": "S06",
+    "status": "verified",
+    "canonical_url": "https://toshiba.semicon-storage.com/us/semiconductor/knowledge/faq/common_common/what-is-an-n-type-semiconductor.html",
+    "retrieved_url": "https://toshiba.semicon-storage.com/us/semiconductor/knowledge/faq/common_common/what-is-an-n-type-semiconductor.html",
+    "locations": [
+      "N-type FAQ 본문"
+    ],
+    "linked_cards": [
+      {
+        "id": "F06",
+        "path": "fundamentals/doping-carriers.md"
+      }
+    ],
+    "checked_claims": [
+      "Si에 P/As 도핑·자유전자 공급과 n형; 농도 단위 변환 예제 점검",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "짧은 FAQ는 보상/불완전 이온화까지 설명하지 않음; 그 한계 문구는 자체 보완"
+    ]
+  },
+  {
+    "id": "S07",
+    "status": "verified",
+    "canonical_url": "https://toshiba.semicon-storage.com/us/semiconductor/knowledge/faq/common_common/what-is-a-p-type-semiconductor.html",
+    "retrieved_url": "https://toshiba.semicon-storage.com/us/semiconductor/knowledge/faq/common_common/what-is-a-p-type-semiconductor.html",
+    "locations": [
+      "P-type FAQ 본문"
+    ],
+    "linked_cards": [
+      {
+        "id": "F06",
+        "path": "fundamentals/doping-carriers.md"
+      }
+    ],
+    "checked_claims": [
+      "B/In 도핑, 결합 전자 부족과 정공 이동; F06의 p형 설명",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "짧은 FAQ는 모든 농도/온도 조건을 다루지 않음"
+    ]
+  },
+  {
+    "id": "S09",
+    "status": "verified",
+    "canonical_url": "https://faculty.etsu.edu/tarnoff/ntes2150/dig_bin/dig_bin.htm",
+    "retrieved_url": "https://faculty.etsu.edu/tarnoff/ntes2150/dig_bin/dig_bin.htm",
+    "locations": [
+      "Digital waveforms/Periodic Pulse Train/Duty cycle; Digital Signals in Real-World; NOT AND OR XOR truth tables"
+    ],
+    "linked_cards": [
+      {
+        "id": "F08",
+        "path": "fundamentals/digital-clock-logic.md"
+      }
+    ],
+    "checked_claims": [
+      "f=1/T·duty=high/T·실제 전환·4개 논리; 500MHz=2ns, duty25%",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "미갱신 고지 확인; 2003년 특정 하드웨어 수치는 비교 대상 아님"
+    ]
+  },
+  {
+    "id": "S10",
+    "status": "verified",
+    "canonical_url": "https://www.nist.gov/semiconductors/semiconductor-glossary",
+    "retrieved_url": "https://www.nist.gov/semiconductors/semiconductor-glossary",
+    "locations": [
+      "Semiconductor Glossary: transistor, integrated circuit, wafer, chip, fab 항목"
+    ],
+    "linked_cards": [
+      {
+        "id": "F09",
+        "path": "fundamentals/wafer-die-ic.md"
+      }
+    ],
+    "checked_claims": [
+      "웨이퍼 기반 IC, 구성 소자, fab/집계 단위; 단일다이=단일패키지 가정 금지",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "용어집의 chip은 패키지 제품 의미; 문맥별 die 용례는 카드의 범위 보완"
+    ]
+  },
+  {
+    "id": "S11",
+    "status": "verified",
+    "canonical_url": "https://www.asml.com/en/company/stories/2021/semiconductor-manufacturing-process-steps",
+    "retrieved_url": "https://www.asml.com/en/company/stories/2021/semiconductor-manufacturing-process-steps",
+    "locations": [
+      "Six crucial steps: Packaging 절"
+    ],
+    "linked_cards": [
+      {
+        "id": "F09",
+        "path": "fundamentals/wafer-die-ic.md"
+      }
+    ],
+    "checked_claims": [
+      "웨이퍼 절단→개별 die→패키지 개요와 다중 집계 구분",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "교육 기사 다른 절의 식각/현상 단순화를 카드 근거로 사용하지 않음; 제품 수치 미검토"
+    ]
+  },
+  {
+    "id": "S12",
+    "status": "verified",
+    "canonical_url": "https://news.skhynix.com/en/semiconductor-101-sk-hynix-explains-whats-what-in-the-semiconductor-world/",
+    "retrieved_url": "https://news.skhynix.com/en/semiconductor-101-sk-hynix-explains-whats-what-in-the-semiconductor-world/",
+    "locations": [
+      "What are different types; What does semiconductor memory actually do"
+    ],
+    "linked_cards": [
+      {
+        "id": "F10",
+        "path": "fundamentals/memory-map.md"
+      }
+    ],
+    "checked_claims": [
+      "memory/logic·DRAM/SRAM 휘발성·NAND 비휘발성·전원 차단 조건",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "기사 permanent를 무한 보존으로 취급하지 않는 카드 제한 확인; 제품 성능 수치 미검토"
+    ]
+  },
+  {
+    "id": "S14",
+    "status": "verified",
+    "canonical_url": "https://openstax.org/books/university-physics-volume-2/pages/7-2-electric-potential-and-potential-difference",
+    "retrieved_url": "https://openstax.org/books/university-physics-volume-2/pages/7-2-electric-potential-and-potential-difference",
+    "locations": [
+      "§7.2 Electric Potential/Potential Difference eq7.4–7.5"
+    ],
+    "linked_cards": [
+      {
+        "id": "F01",
+        "path": "fundamentals/charge-current-voltage.md"
+      }
+    ],
+    "checked_claims": [
+      "전하당 위치에너지·ΔU=qΔV·V=J/C·기준점; F01 에너지 크기식",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "정전기 위치에너지 관계를 일정 전압 예제로 사용한 범위"
+    ]
+  },
+  {
+    "id": "S15",
+    "status": "verified",
+    "canonical_url": "https://toshiba.semicon-storage.com/us/semiconductor/knowledge/e-learning/discrete/chap1/chap1-6.html",
+    "retrieved_url": "https://toshiba.semicon-storage.com/us/semiconductor/knowledge/e-learning/discrete/chap1/chap1-6.html",
+    "locations": [
+      "pn Junction 전체 설명: no/forward/reverse bias"
+    ],
+    "linked_cards": [
+      {
+        "id": "P01",
+        "path": "devices-process/pn-junction.md"
+      }
+    ],
+    "checked_claims": [
+      "PN 경계·공핍층·순/역바이어스·항복; Vp−Vn=-2V 예제",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "원문 역전류0/0.7V 이상화를 카드가 실제 누설/연속특성으로 제한함"
+    ]
+  },
+  {
+    "id": "S18",
+    "status": "verified",
+    "canonical_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node9.html",
+    "retrieved_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node9.html",
+    "locations": [
+      "§1.1 Traditional Semiconductor Process Technologies 전체 짧은 본문"
+    ],
+    "linked_cards": [
+      {
+        "id": "P04",
+        "path": "devices-process/process-flow.md"
+      }
+    ],
+    "checked_claims": [
+      "여러 공정 조합으로 형상 생성; 고정 8단계 해석 금지",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "실제 route/run 키는 자체 데이터 적용; 개별 양산 레시피 미확인"
+    ]
+  },
+  {
+    "id": "S19",
+    "status": "verified",
+    "canonical_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node10.html",
+    "retrieved_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node10.html",
+    "locations": [
+      "§1.1.1 Lithography 전체 본문"
+    ],
+    "linked_cards": [
+      {
+        "id": "P07",
+        "path": "devices-process/lithography.md"
+      }
+    ],
+    "checked_claims": [
+      "마스크·PR·노광·현상·positive/negative 구분·후속 식각; dose 차원과 20mJ/cm² 산술",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "bake/정렬/dose 운영 상세는 짧은 절에 없음; 물리적으로 양립하는 자체 보완"
+    ]
+  },
+  {
+    "id": "S20",
+    "status": "verified",
+    "canonical_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node11.html",
+    "retrieved_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node11.html",
+    "locations": [
+      "§1.1.2 Etching 전체 본문"
+    ],
+    "linked_cards": [
+      {
+        "id": "P08",
+        "path": "devices-process/etch.md"
+      }
+    ],
+    "checked_claims": [
+      "선택비·등방성·습식 결정방향/건식 중성종; 10:1/2min/20nm 예제",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "정확한 rate 비율 정의·고정률 산술은 카드가 명시한 자체 근사"
+    ]
+  },
+  {
+    "id": "S21",
+    "status": "verified",
+    "canonical_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node12.html",
+    "retrieved_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node12.html",
+    "locations": [
+      "§1.1.3 Deposition 전체 본문"
+    ],
+    "linked_cards": [
+      {
+        "id": "P06",
+        "path": "devices-process/deposition.md"
+      }
+    ],
+    "checked_claims": [
+      "PVD 물질 전달·evaporation/sputtering, CVD 반응; 보편 우열 금지",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "ALD는 이 원문 범위 밖이며 별도 S26 인용 사항; 이번 검토에서 S26 재평가하지 않음"
+    ]
+  },
+  {
+    "id": "S22",
+    "status": "verified",
+    "canonical_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node13.html",
+    "retrieved_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node13.html",
+    "locations": [
+      "§1.1.4 Chemical Mechanical Planarization 전체 본문"
+    ],
+    "linked_cards": [
+      {
+        "id": "P10",
+        "path": "devices-process/cmp.md"
+      }
+    ],
+    "checked_claims": [
+      "화학/물리 제거·평탄화와 리소그래피 초점 관계; 제거율 1nm/s",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "원문의 매 증착 뒤 CMP 표현을 카드가 보편 규칙으로 확대하지 않음"
+    ]
+  },
+  {
+    "id": "S23",
+    "status": "verified",
+    "canonical_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node14.html",
+    "retrieved_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node14.html",
+    "locations": [
+      "§1.1.5 Oxidation 전체 본문"
+    ],
+    "linked_cards": [
+      {
+        "id": "P05",
+        "path": "devices-process/oxidation.md"
+      }
+    ],
+    "checked_claims": [
+      "O2/H2O 열산화와 외부 증착 구분, 고온 Si 반응; 8→10nm=25%",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "실제 성장속도·gate 재료별 신뢰성값 미검토"
+    ]
+  },
+  {
+    "id": "S24",
+    "status": "verified",
+    "canonical_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node15.html",
+    "retrieved_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node15.html",
+    "locations": [
+      "§1.1.6 Ion Implantation 전체 본문"
+    ],
+    "linked_cards": [
+      {
+        "id": "P09",
+        "path": "devices-process/implant-anneal.md"
+      }
+    ],
+    "checked_claims": [
+      "가속 이온 도핑·후속 어닐링/활성화; dose/두께 가정농도=10^18cm^-3",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "원문의 원자당 운반자 서술을 카드가 100%활성화 보증으로 쓰지 않음; 각도/손상 상세 자체 보완"
+    ]
+  },
+  {
+    "id": "S25",
+    "status": "verified",
+    "canonical_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node16.html",
+    "retrieved_url": "https://www.iue.tuwien.ac.at/phd/filipovic/node16.html",
+    "locations": [
+      "§1.1.7 Diffusion 전체 본문"
+    ],
+    "linked_cards": [
+      {
+        "id": "P09",
+        "path": "devices-process/implant-anneal.md"
+      }
+    ],
+    "checked_claims": [
+      "도펀트 확산·온도/후속 고온공정으로 분포 변화; dose와 농도 구분",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "확산계수·개별 깊이 프로파일 계산은 범위 아님"
+    ]
+  },
+  {
+    "id": "S27",
+    "status": "verified",
+    "canonical_url": "https://www.nist.gov/publications/critical-dimension-and-overlay-metrology",
+    "retrieved_url": "https://www.nist.gov/publications/critical-dimension-and-overlay-metrology",
+    "locations": [
+      "공식 출판물 페이지 Abstract (2003)"
+    ],
+    "linked_cards": [
+      {
+        "id": "P12",
+        "path": "devices-process/metrology-inspection.md"
+      }
+    ],
+    "checked_claims": [
+      "CD의 설계 목표/overlay 층 정렬 역할; 32−30=2nm, 3–4–5 벡터",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "공개 초록으로 등록 used_for의 정의만 확인; 유료 장 전체·2003장비 동향 미독"
+    ]
+  },
+  {
+    "id": "S28",
+    "status": "verified",
+    "canonical_url": "https://www.asml.com/en/technology/lithography-principles/measuring-accuracy",
+    "retrieved_url": "https://www.asml.com/en/technology/lithography-principles/measuring-accuracy",
+    "locations": [
+      "Types of metrology and inspection; Optical metrology/How it works; e-beam 관련 설명"
+    ],
+    "linked_cards": [
+      {
+        "id": "P12",
+        "path": "devices-process/metrology-inspection.md"
+      }
+    ],
+    "checked_claims": [
+      "광학/전자빔·타깃·marked locations·feedback; 실제 결함과 후보 구분",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "공급사 시스템별 성능 수치나 검사 알고리즘 개별 구현 검증 아님"
+    ]
+  },
+  {
+    "id": "S29",
+    "status": "verified",
+    "canonical_url": "https://news.skhynix.com/en/semiconductor-back-end-process-episode-1-understanding-semiconductor-testing/",
+    "retrieved_url": "https://news.skhynix.com/en/semiconductor-back-end-process-episode-1-understanding-semiconductor-testing/",
+    "locations": [
+      "Back-end Process; Testing Temperature/Speed/Movement; Wafer Test/EPM/Repair/Test; Package Test"
+    ],
+    "linked_cards": [
+      {
+        "id": "P04",
+        "path": "devices-process/process-flow.md"
+      },
+      {
+        "id": "P13",
+        "path": "devices-process/electrical-test.md"
+      }
+    ],
+    "checked_claims": [
+      "BEOL/후공정 문맥·EPM·wafer/package test·재시험; 최초90%/최종95%",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "공개 예시 순서를 모든 제품 고정 route로 해석하지 않음; 실제 test limits 미확인"
+    ]
+  },
+  {
+    "id": "S30",
+    "status": "verified",
+    "canonical_url": "https://news.skhynix.com/en/people-who-put-a-uniform-drawing-paper-on-a-wafer-thinfilm-technology/",
+    "retrieved_url": "https://news.skhynix.com/en/people-who-put-a-uniform-drawing-paper-on-a-wafer-thinfilm-technology/",
+    "locations": [
+      "Uniform Thinfilm; PVD/metal line discussion; Damascene 각주"
+    ],
+    "linked_cards": [
+      {
+        "id": "P11",
+        "path": "devices-process/interconnect.md"
+      }
+    ],
+    "checked_claims": [
+      "배선 전달·SiO2 패턴→금속 채움→CMP; interconnect 정의와 R 예제",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "기사의 RIE=PVD 식 과도한 단순화는 카드에 옮겨지지 않음"
+    ]
+  },
+  {
+    "id": "S31",
+    "status": "verified",
+    "canonical_url": "https://www.lamresearch.com/product/reliant-strip-clean-products/",
+    "retrieved_url": "https://www.lamresearch.com/product/reliant-strip-clean-products/",
+    "locations": [
+      "Overview/Industry Challenges/Key Applications"
+    ],
+    "linked_cards": [
+      {
+        "id": "P14",
+        "path": "devices-process/cleaning.md"
+      }
+    ],
+    "checked_claims": [
+      "공정 사이 unwanted material 제거·다음 표면 준비·fragile structure 손상; 50→10=80%",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "약액/레시피·실제 입자 검출 성능은 범위 아님"
+    ]
+  },
+  {
+    "id": "S32",
+    "status": "verified",
+    "canonical_url": "https://www.agc.com/en/products/electoric/detail/cmp.html",
+    "retrieved_url": "https://www.agc.com/en/products/electoric/detail/cmp.html",
+    "locations": [
+      "CMP Slurry introduction; Chemical Mechanical Polishing"
+    ],
+    "linked_cards": [
+      {
+        "id": "P10",
+        "path": "devices-process/cmp.md"
+      }
+    ],
+    "checked_claims": [
+      "slurry/abrasive/chemicals/pad와 높은 영역 우선 제거; 평균만으로 국소품질 판정 금지",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "제품 zero defects 광고를 보증으로 사용하지 않음"
+    ]
+  },
+  {
+    "id": "S33",
+    "status": "verified",
+    "canonical_url": "https://openstax.org/books/university-physics-volume-2/pages/9-3-resistivity-and-resistance",
+    "retrieved_url": "https://openstax.org/books/university-physics-volume-2/pages/9-3-resistivity-and-resistance",
+    "locations": [
+      "§9.3 Resistance eq9.8–9.9; uniform cylinder discussion"
+    ],
+    "linked_cards": [
+      {
+        "id": "P11",
+        "path": "devices-process/interconnect.md"
+      },
+      {
+        "id": "H02",
+        "path": "packaging-reliability/tsv.md"
+      }
+    ],
+    "checked_claims": [
+      "R=ρL/A와 재료/형상 구분; P11=20Ω·H02≈0.05093Ω/AR10",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "미세크기/접촉/라이너는 이상모형 밖이라는 한계 확인"
+    ]
+  },
+  {
+    "id": "S34",
+    "status": "verified",
+    "canonical_url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-advanced-copper-cmp-processes-new",
+    "retrieved_url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-advanced-copper-cmp-processes-new",
+    "locations": [
+      "May17 2000 release: copper CMP solutions and process control paragraphs"
+    ],
+    "linked_cards": [
+      {
+        "id": "P10",
+        "path": "devices-process/cmp.md"
+      }
+    ],
+    "checked_claims": [
+      "dishing·erosion·particles/microscratches 관리 근거",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "2000장비 성능·시장/양산 현황은 사용·검토 범위 아님"
+    ]
+  },
+  {
+    "id": "S35",
+    "status": "verified",
+    "canonical_url": "https://www.imec-int.com/en/articles/logic-technology-scaling-options-2nm-and-beyond",
+    "retrieved_url": "https://www.imec-int.com/en/articles/logic-technology-scaling-options-2nm-and-beyond",
+    "locations": [
+      "BEOL/MOL 질문답변"
+    ],
+    "linked_cards": [
+      {
+        "id": "P04",
+        "path": "devices-process/process-flow.md"
+      }
+    ],
+    "checked_claims": [
+      "BEOL 배선망, MOL=FEOL-BEOL 연결과 contact S/D/G; P04 구분",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "2021 roadmap의 현재성·수치 검증 범위 아님"
+    ]
+  },
+  {
+    "id": "S37",
+    "status": "verified",
+    "canonical_url": "https://news.skhynix.com/en/how-innovative-convergence-technology-is-tackling-dram-scaling-challenges/",
+    "retrieved_url": "https://news.skhynix.com/en/how-innovative-convergence-technology-is-tackling-dram-scaling-challenges/",
+    "locations": [
+      "DRAM scaling challenges opening; capacitor material rationale"
+    ],
+    "linked_cards": [
+      {
+        "id": "M01",
+        "path": "memory-operation/dram-cell.md"
+      }
+    ],
+    "checked_claims": [
+      "셀 축소시 정전용량 유지·고유전율/저누설 필요; M01의 전하공유 산술0.55V/0.45V",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "이 기사 단독으로 M01 센싱 모든 단계를 뒷받침하지 않음; 그 부분은 별도 S36. 연구를 양산 규격으로 취급 안함"
+    ]
+  },
+  {
+    "id": "S38",
+    "status": "verified",
+    "canonical_url": "https://www.micron.com/sales-support/sales/faqs",
+    "retrieved_url": "https://www.micron.com/sales-support/sales/faqs",
+    "locations": [
+      "FAQ: What is a rank; bank versus rank; READ DISTURB; ECC requirement; READ STATUS"
+    ],
+    "linked_cards": [
+      {
+        "id": "M02",
+        "path": "memory-operation/dram-organization.md"
+      },
+      {
+        "id": "M08",
+        "path": "memory-operation/nand-operations.md"
+      },
+      {
+        "id": "M10",
+        "path": "memory-operation/nand-retention-disturb.md"
+      },
+      {
+        "id": "M11",
+        "path": "memory-operation/ecc-codeword.md"
+      }
+    ],
+    "checked_claims": [
+      "M02 bank/rank와8×x8=64bit; M08 program/erase status; M10 반복읽기; M11 제품별ECC",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "구형 FAQ의 per512B/retire 정책/제품 수명 숫자를 모든 NAND 보편값으로 적용하지 않음"
+    ]
+  },
+  {
+    "id": "S40",
+    "status": "verified",
+    "canonical_url": "https://www.kingston.com/en/support/technical/products/desktop-notebook-memory",
+    "retrieved_url": "https://www.kingston.com/en/support/technical/products/desktop-notebook-memory",
+    "locations": [
+      "FAQ KTM-071015-GEN-20 DRAM frequency"
+    ],
+    "linked_cards": [
+      {
+        "id": "M05",
+        "path": "memory-operation/ddr-transfer.md"
+      }
+    ],
+    "checked_claims": [
+      "DDR2 transfers/clock, MHz와MT/s 구분; 3200MT/s×64/8=25.6GB/s",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "BL8/버스트는 다른 인용 S39 범위; 이번 원문은 주파수 구분만"
+    ]
+  },
+  {
+    "id": "S42",
+    "status": "verified",
+    "canonical_url": "https://www.kioxia.com/en-jp/rd/technology/multi-level-cell.html",
+    "retrieved_url": "https://www.kioxia.com/en-jp/rd/technology/multi-level-cell.html",
+    "locations": [
+      "Threshold voltage/read/write; Mechanism of capacity increases through multi-level cell technology"
+    ],
+    "linked_cards": [
+      {
+        "id": "M09",
+        "path": "memory-operation/nand-multilevel.md"
+      }
+    ],
+    "checked_claims": [
+      "문턱전압 분포/읽기기준·bit/cell과 상태수; TLC8/QLC16·7/15경계",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "상태 경계 수를 실제 페이지 읽기 횟수로 확대하지 않음; 도표 재배포 없음"
+    ]
+  },
+  {
+    "id": "S43",
+    "status": "verified",
+    "canonical_url": "https://www.micron.com/products/storage/nand-flash/choosing-the-right-nand",
+    "retrieved_url": "https://www.micron.com/products/storage/nand-flash/choosing-the-right-nand",
+    "locations": [
+      "Raw NAND; SLC/MLC/TLC/QLC; Managed NAND; On-die ECC NAND"
+    ],
+    "linked_cards": [
+      {
+        "id": "M07",
+        "path": "memory-operation/nand-geometry.md"
+      },
+      {
+        "id": "M09",
+        "path": "memory-operation/nand-multilevel.md"
+      },
+      {
+        "id": "M12",
+        "path": "memory-operation/ftl-gc-waf.md"
+      }
+    ],
+    "checked_claims": [
+      "M07 raw/managed; M09 1/2/3/4bit; M12 controller FTL/ECC/wear management",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "geometry 숫자 자체는 S44와 자체 가정; bit/cell을 모든 성능·수명 보증으로 쓰지 않음"
+    ]
+  },
+  {
+    "id": "S44",
+    "status": "verified",
+    "canonical_url": "https://www.kioxia.com/content/dam/kioxia/ja-jp/business/ssd/asset/SNIA-seminar-202502.pdf",
+    "retrieved_url": "https://www.kioxia.com/content/dam/kioxia/ja-jp/business/ssd/asset/SNIA-seminar-202502.pdf",
+    "locations": [
+      "2025교육PDF 인쇄pp8–18: geometry, write/erase, update, GC, LBA/PBA, WL, OP"
+    ],
+    "linked_cards": [
+      {
+        "id": "M07",
+        "path": "memory-operation/nand-geometry.md"
+      },
+      {
+        "id": "M08",
+        "path": "memory-operation/nand-operations.md"
+      },
+      {
+        "id": "M12",
+        "path": "memory-operation/ftl-gc-waf.md"
+      }
+    ],
+    "checked_claims": [
+      "M07 page/block·500MiB; M08 소거/업데이트 제약·70.48μs 산술; M12 주소/GC/WL/예약",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "23페이지 전체 정독 아님. 본문 추출 관련절 확인; 제조 도표 복제 없이 원리 대조"
+    ]
+  },
+  {
+    "id": "S45",
+    "status": "verified",
+    "canonical_url": "https://tw.kioxia.com/content/dam/kioxia/shared/business/memory/automotive/asset/KIOXIA_Automotive_NAND_Data_Retention_White_Paper.pdf",
+    "retrieved_url": "https://www.kioxia.com/content/dam/kioxia/shared/business/memory/automotive/asset/KIOXIA_Automotive_NAND_Data_Retention_White_Paper.pdf",
+    "locations": [
+      "2020PDF 인쇄pp3–5: Data Retention/Temperature/Wear/WAF"
+    ],
+    "linked_cards": [
+      {
+        "id": "M10",
+        "path": "memory-operation/nand-retention-disturb.md"
+      }
+    ],
+    "checked_claims": [
+      "시간·P/E 산화막열화·고온 보존 저하; M10 data age와읽기 이력 구분",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "tw 원본 도구 접근오류; www 공식 동일제목/2020Rev1.0 PDF 확보. 제품 보증·도표 수치 전용 안함"
+    ]
+  },
+  {
+    "id": "S46",
+    "status": "verified",
+    "canonical_url": "https://onlinedocs.microchip.com/oxy/GUID-FF8061A7-7A15-470F-A6F5-E733C24D85F0-en-US-11/GUID-B6C8D87D-26CF-4615-8DDA-D79C915B85CE.html",
+    "retrieved_url": "https://onlinedocs.microchip.com/oxy/GUID-FF8061A7-7A15-470F-A6F5-E733C24D85F0-en-US-11/GUID-B6C8D87D-26CF-4615-8DDA-D79C915B85CE.html",
+    "locations": [
+      "§2.4.1.7 ECC opening and RMW/status description"
+    ],
+    "linked_cards": [
+      {
+        "id": "M11",
+        "path": "memory-operation/ecc-codeword.md"
+      }
+    ],
+    "checked_claims": [
+      "64data+8ECC·SECDED·쓰기전 초기화; 12.5%/11.11%와 1/2bit배치 예제",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "특정 Fabric DDR 구현이며 모든 메모리 동일72bit라는 주장 없음"
+    ]
+  },
+  {
+    "id": "S47",
+    "status": "verified",
+    "canonical_url": "https://www.micron.com/products/memory/dram-components/ddr5-sdram",
+    "retrieved_url": "https://www.micron.com/products/memory/dram-components/ddr5-sdram",
+    "locations": [
+      "DDR5 versus DDR4 feature differences table: On-die ECC"
+    ],
+    "linked_cards": [
+      {
+        "id": "M05",
+        "path": "memory-operation/ddr-transfer.md"
+      },
+      {
+        "id": "M11",
+        "path": "memory-operation/ecc-codeword.md"
+      }
+    ],
+    "checked_claims": [
+      "칩 내부128b+8b SEC/RAS; M05/M11의 내부 보호와 시스템 ECC 구분",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "제품 속도/용량 수치 미검토; 시스템 ECC 전체 설계 근거는 다른 출처"
+    ]
+  },
+  {
+    "id": "S48",
+    "status": "verified",
+    "canonical_url": "https://www.kingston.com/en/support/technical/products/kc2500",
+    "retrieved_url": "https://www.kingston.com/en/support/technical/products/kc2500",
+    "locations": [
+      "KC2500 FAQ KSD-011411-GEN-13 TRIM and garbage collection"
+    ],
+    "linked_cards": [
+      {
+        "id": "M12",
+        "path": "memory-operation/ftl-gc-waf.md"
+      }
+    ],
+    "checked_claims": [
+      "GC 데이터 통합과 OS TRIM 통지; 즉시 소거/보안삭제 보장 금지",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "오래된 RAID 지원 일반화는 카드에 없음"
+    ]
+  },
+  {
+    "id": "S49",
+    "status": "verified",
+    "canonical_url": "https://americas.kioxia.com/content/dam/kioxia/en-us/business/memory/mlc-nand/asset/KIOXIA_TBW_WAF_NAND_Endurance_Technical_Brief.pdf",
+    "retrieved_url": "https://americas.kioxia.com/content/dam/kioxia/en-us/business/memory/mlc-nand/asset/KIOXIA_TBW_WAF_NAND_Endurance_Technical_Brief.pdf",
+    "locations": [
+      "2024Rev1.0 3pp brief: TBW/WAF; NAND Flash Memory Endurance"
+    ],
+    "linked_cards": [
+      {
+        "id": "M06",
+        "path": "memory-operation/nand-cell.md"
+      },
+      {
+        "id": "M10",
+        "path": "memory-operation/nand-retention-disturb.md"
+      },
+      {
+        "id": "M12",
+        "path": "memory-operation/ftl-gc-waf.md"
+      }
+    ],
+    "checked_claims": [
+      "M06 비전도 charge trap; M10 P/E 마모; M12 physical/logical WAF=2.5",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "TBW근사→수명 보증 확대 없음; 원문의 모든3D가CT라는 일반화 카드가 제한"
+    ]
+  },
+  {
+    "id": "S50",
+    "status": "verified",
+    "canonical_url": "https://www.kingston.com/en/blog/pc-performance/enterprise-versus-client-ssd",
+    "retrieved_url": "https://www.kingston.com/en/blog/pc-performance/enterprise-versus-client-ssd",
+    "locations": [
+      "Reliability: raw BER paragraph and UBER definition"
+    ],
+    "linked_cards": [
+      {
+        "id": "M11",
+        "path": "memory-operation/ecc-codeword.md"
+      },
+      {
+        "id": "M13",
+        "path": "memory-operation/memory-error-metrics.md"
+      }
+    ],
+    "checked_claims": [
+      "ECC전RBER/ECC후복구불가 UBER; 200/10^8=2×10^-6와 요청/bit 분모 구분",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "기사의 JEDEC 표/클래스별 수치를 규격 전체 읽음 또는 제품보증으로 사용하지 않음"
+    ]
+  },
+  {
+    "id": "S51",
+    "status": "verified",
+    "canonical_url": "https://www.kernel.org/doc/html/v4.19/driver-api/mtdnand.html",
+    "retrieved_url": "https://www.kernel.org/doc/html/v4.19/driver-api/mtdnand.html",
+    "locations": [
+      "nand_sdr_timings Definition/Members tBERS_max/tPROG_max/tR_max"
+    ],
+    "linked_cards": [
+      {
+        "id": "M08",
+        "path": "memory-operation/nand-operations.md"
+      }
+    ],
+    "checked_claims": [
+      "block erase/page program/page read 시간 명칭과 전송시간을 분리한 예제",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "v4.19 API 전체나 현재 커널 환경 검증 아님"
+    ]
+  },
+  {
+    "id": "S53",
+    "status": "verified",
+    "canonical_url": "https://3dfabric.tsmc.com/english/dedicatedFoundry/technology/cowos.htm",
+    "retrieved_url": "https://3dfabric.tsmc.com/english/dedicatedFoundry/technology/cowos.htm",
+    "locations": [
+      "CoWoS introduction and CoWoS-S/R/L descriptions"
+    ],
+    "linked_cards": [
+      {
+        "id": "H03",
+        "path": "packaging-reliability/package-interposer.md"
+      }
+    ],
+    "checked_claims": [
+      "2.5D logic/HBM 통합·silicon interposer·RDL/polymer/Cu·LSI 역할",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "옵션별 치수/생산능력·로드맵·실제HBM BOM 미검토"
+    ]
+  },
+  {
+    "id": "S54",
+    "status": "verified",
+    "canonical_url": "https://www.imec-int.com/en/articles/wafer-wafer-hybrid-bonding-pushing-boundaries-400nm-interconnect-pitch",
+    "retrieved_url": "https://www.imec-int.com/en/articles/wafer-wafer-hybrid-bonding-pushing-boundaries-400nm-interconnect-pitch",
+    "locations": [
+      "Promise of W2W; process flow; pitfalls; CMP/topography; SiCN"
+    ],
+    "linked_cards": [
+      {
+        "id": "H04",
+        "path": "packaging-reliability/hybrid-bonding.md"
+      }
+    ],
+    "checked_claims": [
+      "Cu/유전체 직접접합·정렬/CMP/clean/recess/anneal; square pitch 반감4배 산술",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "원문 hex-grid 연구 치수는 카드 square 가상모형과 충돌 안함; 양산HBM 규격 아님"
+    ]
+  },
+  {
+    "id": "S56",
+    "status": "verified",
+    "canonical_url": "https://www.ti.com/lit/pdf/spraa99",
+    "retrieved_url": "https://www.ti.com/lit/pdf/spraa99",
+    "locations": [
+      "SPRAA99C May2021 §3 Reliability/3.1 calculations/3.2 characteristics (인쇄pp10–12)"
+    ],
+    "linked_cards": [
+      {
+        "id": "H06",
+        "path": "packaging-reliability/thermomechanical.md"
+      }
+    ],
+    "checked_claims": [
+      "CTE 불일치·warping·solder fatigue·시간/형상/물성 의존; 12ppm×100K=0.12%",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "62페이지 전체 정독 아님; nFBGA 수명모델 계수/시험치를 HBM에 전용하지 않음"
+    ]
+  },
+  {
+    "id": "S59",
+    "status": "verified",
+    "canonical_url": "https://resources.sw.siemens.com/pl-PL/white-paper-affordable-and-comprehensive-testing-of-3d-stacked-die-devices/",
+    "retrieved_url": "https://resources.sw.siemens.com/pl-PL/white-paper-affordable-and-comprehensive-testing-of-3d-stacked-die-devices/",
+    "locations": [
+      "공개 소개 Design for test 3D stacking considerations"
+    ],
+    "linked_cards": [
+      {
+        "id": "H09",
+        "path": "packaging-reliability/stack-test-yield.md"
+      }
+    ],
+    "checked_claims": [
+      "D2D interconnect testing·KGD 재검사로 postassembly 결함 확인; q^8a≈90.43%",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "공개 소개만 취득/대조. 미취득 whitepaper 본문·IEEE1838 전체를 읽지 않았음; 독립수율식은 명시적 자체예제"
+    ]
+  },
+  {
+    "id": "S60",
+    "status": "verified",
+    "canonical_url": "https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v3/master/en/semiconductor/knowledge/reliability/reliability-handbook-tdsc-en.pdf",
+    "retrieved_url": "https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v3/master/en/semiconductor/knowledge/reliability/reliability-handbook-tdsc-en.pdf",
+    "locations": [
+      "Apr2026Ver4 §1.1 reliability/hazard/product life/FIT; §2.1.1 TDDB/2.1.4 NBTI/2.1.5 EM"
+    ],
+    "linked_cards": [
+      {
+        "id": "H10",
+        "path": "packaging-reliability/failure-mechanisms.md"
+      },
+      {
+        "id": "H12",
+        "path": "packaging-reliability/reliability-metrics.md"
+      }
+    ],
+    "checked_claims": [
+      "H10메커니즘·회복/측정지연·J=10^6A/cm²; H12FIT와MTTF/MTBF 구분",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "150페이지 전체 정독 아님. 가속계수/제품고장률은 전용하지 않음; CI식은 별도 인용 사항"
+    ]
+  },
+  {
+    "id": "S62",
+    "status": "verified",
+    "canonical_url": "https://www.itl.nist.gov/div898/handbook/apr/section4/apr412.htm",
+    "retrieved_url": "https://www.itl.nist.gov/div898/handbook/apr/section4/apr412.htm",
+    "locations": [
+      "§8.4.1.2 전체: censored likelihood and exponential MLE"
+    ],
+    "linked_cards": [
+      {
+        "id": "H12",
+        "path": "packaging-reliability/reliability-metrics.md"
+      },
+      {
+        "id": "H13",
+        "path": "packaging-reliability/weibull-life.md"
+      }
+    ],
+    "checked_claims": [
+      "검열 기여·r/총노출시간·작은고장수 모수불확실성; H12 2/10^6=2000FIT",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "Weibull식은 별도S68; 이 절이 모든 수명분포에 r/T를 허용한다고 읽지 않음"
+    ]
+  },
+  {
+    "id": "S65",
+    "status": "verified",
+    "canonical_url": "https://www.ti.com/quality-reliability/faqs/failure-analysis.html",
+    "retrieved_url": "https://www.ti.com/quality-reliability/faqs/failure-analysis.html",
+    "locations": [
+      "Failure analysis process; confirmation; non-destructive; internal/global/local isolation; conclusion"
+    ],
+    "linked_cards": [
+      {
+        "id": "H15",
+        "path": "packaging-reliability/failure-analysis.md"
+      }
+    ],
+    "checked_claims": [
+      "재현→비파괴→위치/물리증거·파괴분석 증거보존·재검사; void/open 인과 단정 금지",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "특정샘플 판정/장비해상도·HBM 원인 확정 아님"
+    ]
+  },
+  {
+    "id": "S67",
+    "status": "verified",
+    "canonical_url": "https://www.itl.nist.gov/div898/handbook/apr/section2/apr24.htm",
+    "retrieved_url": "https://www.itl.nist.gov/div898/handbook/apr/section2/apr24.htm",
+    "locations": [
+      "§8.2.4 전체"
+    ],
+    "linked_cards": [
+      {
+        "id": "H14",
+        "path": "packaging-reliability/accelerated-life.md"
+      }
+    ],
+    "checked_claims": [
+      "실패모드/스트레스에맞는모형·CoffinManson 피로·가정과적합확인",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "Arrhenius수치≈77.65는 카드자체가정; 원문이 모든스트레스에 같은AF 허용 안함"
+    ]
+  },
+  {
+    "id": "S73",
+    "status": "verified",
+    "canonical_url": "https://www.itl.nist.gov/div898/handbook/ppc/section4/ppc45.htm",
+    "retrieved_url": "https://www.itl.nist.gov/div898/handbook/ppc/section4/ppc45.htm",
+    "locations": [
+      "§3.4.5 전체"
+    ],
+    "linked_cards": [
+      {
+        "id": "D04",
+        "path": "data-application/spc.md"
+      },
+      {
+        "id": "D07",
+        "path": "data-application/time-alignment.md"
+      },
+      {
+        "id": "D11",
+        "path": "data-application/anomaly-drift.md"
+      }
+    ],
+    "checked_claims": [
+      "시간순서·constant mean/variance/distribution·자기공분산과 안정성; D04/D07/D11 한계",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "시점누수 계약/알람병합은 자체 적용, NIST가 해당 구현을 처방했다는 주장 없음"
+    ]
+  },
+  {
+    "id": "S74",
+    "status": "verified",
+    "canonical_url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri33.htm",
+    "retrieved_url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri33.htm",
+    "locations": [
+      "§5.3.3 Objectives/Design Selection Guideline 전체"
+    ],
+    "linked_cards": [
+      {
+        "id": "D06",
+        "path": "data-application/root-cause.md"
+      }
+    ],
+    "checked_claims": [
+      "비교·screening·interaction/RSM 목적별선택; D06 교란 역전산술",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "실제제조DOE 수행·랜덤배정 보장 아님"
+    ]
+  },
+  {
+    "id": "S79",
+    "status": "verified",
+    "canonical_url": "https://scikit-learn.org/stable/modules/outlier_detection.html",
+    "retrieved_url": "https://scikit-learn.org/stable/modules/outlier_detection.html",
+    "locations": [
+      "§2.7 introduction; threshold/contamination; LOF novelty warning"
+    ],
+    "linked_cards": [
+      {
+        "id": "D11",
+        "path": "data-application/anomaly-drift.md"
+      }
+    ],
+    "checked_claims": [
+      "오염학습outlier와정상학습novelty 구분·contamination 임계값; D11 이벤트분모",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "개별알고리즘성능·확률보정 검증 아님; 점수는 고장확률이 아님"
+    ]
+  },
+  {
+    "id": "S80",
+    "status": "verified",
+    "canonical_url": "https://scikit-learn.org/stable/modules/impute.html",
+    "retrieved_url": "https://scikit-learn.org/stable/modules/impute.html",
+    "locations": [
+      "§8.4 intro/univariate; Keeping features constant; MissingIndicator; train/test example"
+    ],
+    "linked_cards": [
+      {
+        "id": "D01",
+        "path": "data-application/grain-join.md"
+      }
+    ],
+    "checked_claims": [
+      "결측추론·전부결측열·indicator·학습통계 적용; D01 라벨결측 정상대치 금지",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "join semantics는 S69 사항. 현 stable1.9.1로 읽었으나 코드실행 환경 버전 보증 없음"
+    ]
+  },
+  {
+    "id": "S81",
+    "status": "verified",
+    "canonical_url": "https://www.itl.nist.gov/div898/handbook/mpc/section4/mpc4.htm",
+    "retrieved_url": "https://www.itl.nist.gov/div898/handbook/mpc/section4/mpc4.htm",
+    "locations": [
+      "§2.4 Gauge R&R study index and listed dimensions"
+    ],
+    "linked_cards": [
+      {
+        "id": "D05",
+        "path": "data-application/capability-measurement.md"
+      }
+    ],
+    "checked_claims": [
+      "repeatability/reproducibility/stability/bias·operator/artifact/gauge 조건; D05 측정변동 구분",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "하위장 전체·개별GRR분산공식 미독; Cp/Cpk는 S72 별도범위"
+    ]
+  },
+  {
+    "id": "S82",
+    "status": "verified",
+    "canonical_url": "https://www.itl.nist.gov/div898/handbook/eda/section3/scatterp.htm",
+    "retrieved_url": "https://www.itl.nist.gov/div898/handbook/eda/section3/scatterp.htm",
+    "locations": [
+      "§1.3.3.26 Purpose/Questions/Combining/Causality"
+    ],
+    "linked_cards": [
+      {
+        "id": "D06",
+        "path": "data-application/root-cause.md"
+      }
+    ],
+    "checked_claims": [
+      "관계·비선형·산포·조건부부분집합·association≠causality; Simpson 예제산술",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "산점도 자체가공정원인을 증명하지 않는 제한과 일치"
+    ]
+  },
+  {
+    "id": "S83",
+    "status": "verified",
+    "canonical_url": "https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html",
+    "retrieved_url": "https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html",
+    "locations": [
+      "DummyClassifier class opening, strategy list and example"
+    ],
+    "linked_cards": [
+      {
+        "id": "D09",
+        "path": "data-application/classification.md"
+      },
+      {
+        "id": "D12",
+        "path": "data-application/task-workflow.md"
+      }
+    ],
+    "checked_claims": [
+      "특징무시기준선·majority/constant 역할; D09정확도99% recall0, D12기준선절차",
+      "연결 카드 전문(공식·가정·자작예제·한계·질문 포함)을 읽고, 이 출처 담당 원리와 자체 종합을 구분해 대조함."
+    ],
+    "findings": [],
+    "limitations": [
+      "전체API정독아님. metrics공식은 S78 별도; 실제성능 주장 없음"
+    ]
+  }
+]

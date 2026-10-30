@@ -1,0 +1,14 @@
+{
+  "base_commit": "9dab381bcccfc70d9c6596e13efff9d1879a2a0a",
+  "patch_sha256": "7deada885538951378429a65ef51b870af010c8708517a57d758b67e0ed8777f",
+  "changed_file_sha256": {
+    "README.md": "07eb66d57846653062c6e2022939a52904f87fc32ebeeffad87c9b655e8e31c9",
+    "knowledge/semiconductor/README.md": "db0b80ab79e44949d9657d5b7dafa51e33ecdc5ac555f638b0429e74b56303f0",
+    "knowledge/semiconductor/application-playbook.md": "e6490f77f79deac78a24ece11e5da58252a20fbed98e4da0d4a186b8abbb346b",
+    "knowledge/semiconductor/checks/application_checks.py": "782c374de48d58385084724b04b85896d001a1997f23f7d53a820b2e0601a7a1",
+    "knowledge/semiconductor/fundamentals/capacitance.md": "5acfa917403e3db3938f590ff3bee08c5f35f39805f4e438108666f1abca5a6d",
+    "knowledge/semiconductor/index.jsonl": "fb6a373cd00e695ef00d93e86f7c76a2756e282ff110860cdcff941f3341e97f",
+    "knowledge/semiconductor/sources.json": "94f74c1d2b66f3ee29733e58f358e27cb7d384c92cb44a511d74ed52767f1b6f",
+    "knowledge/semiconductor/verify.py": "d46bb7b40e07869ff3f52cabab17ea8cc846e6d8f13129f1f1dbb81fd8a2899a"
+  }
+}

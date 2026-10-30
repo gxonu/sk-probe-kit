@@ -1,0 +1,16 @@
+Original source bundle with a separate integration layer.
+
+chichochoi/sk original files are preserved under upstream/chichochoi and mostly at the root.
+The root init.sh and scripts/subagent.sh are replaced to preserve platform settings.
+Original texts are retained; AGENTS.override.md and docs/RULES.md define conflict resolution.
+
+knowledge/semiconductor is copied unchanged from xodbs1021/kty-codex-harness-template.
+No license was found for these two upstream repositories at the recorded revisions.
+This integration does not assign a new blanket license or claim ownership of their contents.
+
+references/written-prep.original.md and docs/written-prep.md originate from
+hamjoon2003/sk-hynix-2nd-harness, Copyright (c) 2026 Ham Jimin.
+The MIT notice is preserved in references/hamjoon-LICENSE and licenses/hamjoon-MIT.txt.
+
+See ORIGINS.json for original file hashes and UPSTREAMS.json for pinned source commits.
+Integration files and modifications were prepared for gxonu; provenance is not removed.

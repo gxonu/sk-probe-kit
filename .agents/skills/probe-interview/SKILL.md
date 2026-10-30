@@ -1,0 +1,12 @@
+---
+name: probe-interview
+description: 과제 README와 받은 답변을 바탕으로 구현에 영향을 주는 담당자 질문을 고르고 답변을 요구사항과 검증에 연결한다.
+---
+
+먼저 `.probe-kit/AGENTS.override.md`와 `.probe-kit/docs/interview.md`를 읽는다.
+
+질문을 준비하는 경우 기존 요구와 답에서 해결되지 않은 조건만 고른다. 영향이 큰 질문 최대 3개와 각 답이 바꿀 구현을 제시한다. 질문 수를 채우려고 질문을 늘리지 않는다. 전송은 사용자에게 맡긴다.
+
+답을 받은 경우 `.probe-kit/runtime/QUESTION_LOG.md`에 Q-ID와 출처를 기록하고 REQUIREMENTS.md의 관련 R-ID를 갱신한다. 중요한 선택은 DECISIONS.md에 이유, 대안, 검증 및 한계를 적는다. 기존 구현 범위에서 영향을 받는 코드와 테스트를 확인하고, 범위 변경이 필요할 때만 다시 합의한다.
+
+README가 불완전하다거나 담당자가 숨은 정답을 알고 있다고 단정하지 않는다. 플랫폼 오류와 규칙 질문은 업무 조건 질문과 구분한다.
