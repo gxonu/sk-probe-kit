@@ -11,7 +11,7 @@ python3 scripts/rehearse.py
 ```
 
 설치한 과제 안에서도 실행 파일은 존재하지만 실제 응시 시간에는 이 합성 점검을 반복하지 않는다.
-실전에서는 [RUNBOOK.md](RUNBOOK.md)를 따라 실제 과제의 필수 흐름을 검증한다.
+실전에서는 [foruser.md](../foruser.md)를 따라 실제 과제의 필수 흐름을 검증한다.
 
 ## 점검 순서
 

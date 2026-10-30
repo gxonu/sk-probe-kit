@@ -1,7 +1,7 @@
 # 세션 인계 연결
 
 현재 상태는 프로젝트 루트의 docs/handoff/CURRENT.md에서 확인한다.
-공유 절차는 docs/handoff/README.md, 세션별 기록은 docs/handoff/sessions/<session-id>.md를 사용한다.
+공유 절차는 docs/handoff/README.md, 세션별 기록은 docs/handoff/sessions/<session-id>/HANDOFF.md를 사용한다.
 여러 세션이 이 파일을 동시에 수정하지 않는다. 공통 상태는 통합 담당자가 갱신한다.
 
 - 연결할 세션 인계:

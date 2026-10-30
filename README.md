@@ -2,8 +2,8 @@
 
 Cofa Probe 과제를 위한 공개 자료 통합본. **공식 운영 안내와 실제 과제 지침을 최우선**으로 적용한다.
 
-**당일에는 [실전 실행 매뉴얼](docs/RUNBOOK.md)을 먼저 연다.** 설치, 시간표, MAIN/BUILD 세션, 질문과 합의, 구현과 검증, 기능 동결, 제출까지 단계별 요청과 완료 조건이 있다.
-[한 장 시작 안내](foruser.md), [실행 점검 절차](docs/REHEARSAL.md), [원본 최신 확인](docs/references/upstream-check-20261031.md).
+**당일에는 [foruser.md](foruser.md)를 먼저 연다.** chichochoi 원본의 단계와 요청 문구를 바탕으로 설치 경로, 공식 규칙, 여러 세션의 파일 공유만 맞췄다.
+[보조 요약](docs/RUNBOOK.md), [실행 점검 절차](docs/REHEARSAL.md), [원본 최신 확인](docs/references/upstream-check-20261031.md).
 
 `chichochoi/sk`를 메인으로, KTY 반도체 지식 패키지와 hamjoon 서술형 대비 원문을 포함한다. 원본 125개 파일은 출처와 고정 커밋을 기록해 보존했다. 실제 응시 문제, 정답, 개인 링크와 인증 정보는 포함하지 않는다.
 
@@ -31,7 +31,7 @@ $probe-workflow .probe-kit/AGENTS.override.md와 공식 규칙부터 확인해.
 과제 README를 읽고 사실, 가정, 열린 질문, 하지 않을 일, 성공 기준을 정리해.
 구현을 바꾸는 담당자 질문 최대 3개와 계획을 보여줘. 내가 승인하면 최소 흐름부터 진행해.
 실제 시작 시각과 전체 마감, 화면의 제한 시간은 내가 알려줄게.
-.probe-kit/docs/RUNBOOK.md를 읽고 plan_time.py로 시간표를 계산해 CURRENT에 기록해.
+.probe-kit/AGENTS.md와 .probe-kit/foruser.md를 읽고 plan_time.py로 시간표를 계산해 CURRENT에 기록해.
 ```
 
 스킬이 보이지 않으면 `.agents/skills/probe-workflow/SKILL.md`를 직접 읽도록 요청한다. 실제 응시 환경에서의 자동 발견과 모델 사용 가능 여부는 사전 체험에서 확인한다.
@@ -44,11 +44,11 @@ $probe-workflow .probe-kit/AGENTS.override.md와 공식 규칙부터 확인해.
 | `AGENTS.md`, `SUB_AGENTS.md`, `skills/`, `prompts/`, `scripts/` | chichochoi 메인/서브 흐름과 과제 유형별 원문 |
 | [질문 절차와 질문 은행](docs/interview.md) | 숨은 조건 후보, Q-ID → R-ID → 테스트 연결 |
 | [문서 시작점](docs/README.md), [현재 상태](docs/handoff/CURRENT.md) | 여러 세션의 읽는 순서와 파일 작성 범위 |
-| [실전 실행 매뉴얼](docs/RUNBOOK.md) | 당일 단계별 실행, 요청 문구, 완료 조건과 장애 대응 |
+| [원본 기반 실행 안내](foruser.md), [보조 요약](docs/RUNBOOK.md) | 원본의 질문, 합의, 명세와 결과 반복, 검증과 제출 순서 |
 | `scripts/preflight.py`, `scripts/plan_time.py` | 설치 및 Codex 시작 확인, 실제 시각 기반 작업과 제출 계획 |
 | [전체 흐름 점검](docs/REHEARSAL.md), `scripts/rehearse.py` | 새 임시 폴더에서 실패 검출, 정상 실행, 기록과 인계 보존 확인 |
 | [제작진 인터뷰 분석](docs/references/cofa-probe-interview-20261031.md) | 기술, 의도, 인지의 설명과 시간별 근거, 적용 한계 |
-| [메인/서브 요청](docs/prompts.md) | 사람이 선택해서 두 세션을 운영하거나 한 세션으로 진행 |
+| [메인/작업 세션 요청](docs/prompts.md) | 메인과 작업자 1~2개를 기본 예시로, 역할과 개수를 유연하게 운영 |
 | `runtime/`, `templates/` | 작업 명세, 결과, 요구, 질문, 결정, 증거, 인계 기록 |
 | `scripts/decision.py` | 과거 결정을 보존하며 선택, 대안, 이유, 검증과 한계를 추가 |
 | [반도체 자료](knowledge/semiconductor/README.md) | KTY 원문 94개 파일, 추가 다운로드 없이 로컬 검색 |
@@ -58,14 +58,17 @@ $probe-workflow .probe-kit/AGENTS.override.md와 공식 규칙부터 확인해.
 
 ## 여러 세션으로 이어가기
 
-사용자가 같은 프로젝트 폴더에서 필요한 세션을 연다. [공유 절차](docs/handoff/README.md)에 따라 통합 담당자가 파일 범위를 배정하고 각 세션이 자기 기록을 남긴다.
+사용자가 같은 프로젝트 폴더에서 필요한 세션을 연다. 메인 + worker-a + worker-b의 3개를 예로 쓰며, 구현, 데이터 확인, 검토 등 역할과 개수는 고정하지 않는다. [공유 절차](docs/handoff/README.md)에 따라 통합 담당자가 파일 범위를 배정하고 각 세션이 자기 기록을 남긴다.
 
 ```text
 docs/
   handoff/
     CURRENT.md            현재 목표, 세션 배정, 공통 원장과 결과 링크
-    TEMPLATE.md           세션별 명세와 인계 양식
-    sessions/             <session-id>.md, 작업 시작 시 생성
+    TEMPLATE.md           세션별 인계 양식
+    sessions/<session-id>/
+      TASK_SPEC.md        메인이 작성하는 작업 명세
+      SUB_RESULT.md       해당 작업자의 결과
+      HANDOFF.md          해당 작업자의 인계
     messages/             필요할 때 요청과 답변을 새 파일로 전달
   references/             출처와 인터뷰 분석
   reports/                세션별 변경 및 실제 검증 결과
@@ -87,7 +90,7 @@ CURRENT와 공통 요구 및 결정은 통합 담당자 한 명이 관리한다.
 
 메인 원본 전체는 `upstream/chichochoi/`에 그대로 있다. 사용 경로의 `init.sh`와 `scripts/subagent.sh`는 공식 규칙에 맞춰 교체했다. 설치는 프로젝트 범위에서만 수행하고 서브 세션은 기본 승인 설정으로 사람이 시작한다. 원본 `config.toml`을 전역에 설치하지 않는다.
 사용 경로의 `templates/HANDOFF.md`는 새 공유 문서를 가리키는 양식으로 보완했다. 해당 원본도 upstream에 보존한다.
-사용 경로의 `foruser.md`는 통합 실전 매뉴얼의 시작 안내다. 원본은 `upstream/chichochoi/foruser.md`에 보존한다.
+원본 `AGENTS.md`와 `SUB_AGENTS.md`는 그대로 유지한다. 사용 경로의 `foruser.md`는 원본 단계와 요청 문구를 중심으로 공식 규칙, 설치 경로와 세션별 공유를 맞춘 안내다. 원본은 `upstream/chichochoi/foruser.md`에 보존한다.
 
 원문의 Git 변경 금지, 고정 모델 ID, 채점 가산점 주장, 제출 확정 이후 코칭 안내보다 `AGENTS.override.md`가 우선한다. 원본 보존은 그 주장을 검증하거나 승인했다는 의미가 아니다. 다른 사람이 쓴 문서의 주장과 실제 공식 규정을 구분한다.
 

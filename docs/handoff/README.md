@@ -2,12 +2,14 @@
 
 같은 프로젝트 루트를 사용하는 여러 세션이 파일을 읽고 쓰는 방식이다. 세션 실행, 알림, 동기화, 파일 잠금을 자동 제공하지 않는다.
 사용자가 연 세션만 참여하며 각 세션은 공식 규칙과 승인된 작업 범위를 따른다.
+원본의 메인 → TASK_SPEC → 구현 → SUB_RESULT → 메인 검토 흐름을 유지한다.
+메인 + worker-a + worker-b의 3개를 예로 들며, 작업자 수와 구현, 데이터 확인, 검토 등의 역할은 필요에 따라 바꾼다.
 
 ## 읽는 순서
 
 1. 프로젝트의 공식 지침과 설치된 경우 `.probe-kit/AGENTS.override.md`, `.probe-kit/docs/RULES.md`.
 2. 프로젝트 루트의 [CURRENT.md](CURRENT.md): 목표, 남은 시간, 통합 담당자, 세션 배정, 현재 원장 경로.
-3. 자신에게 지정된 `sessions/<session-id>.md`와 수신 요청의 파일.
+3. 자신에게 지정된 `sessions/<session-id>/TASK_SPEC.md`, 기존 SUB_RESULT.md와 HANDOFF.md, 수신 요청의 파일.
 4. 해당 작업의 보고서와 근거만 읽고 현재 파일 상태를 확인한다.
 
 문서의 기준 커밋과 현재 HEAD, 미커밋 변경을 비교한다. 커밋이 같아도 작업 폴더의 파일은 달라질 수 있다.
@@ -17,8 +19,10 @@
 
 - 통합 담당 세션 하나가 CURRENT와 공통 REQUIREMENTS, QUESTION_LOG, DECISIONS, EVIDENCE를 관리한다.
 - 작업을 시작하기 전에 통합 담당자가 세션 ID, 쓰기 가능한 경로, 완료 조건을 CURRENT에 등록한다. 다른 세션은 등록 전 읽기와 제안만 한다.
-- 각 작업 세션은 [TEMPLATE.md](TEMPLATE.md)를 `sessions/<session-id>.md`로 복사해 자신의 명세, 상태, 결과를 관리한다. ID는 `YYYYMMDD-HHMM-역할-별칭`처럼 겹치지 않게 정한다.
-- 여러 작업 세션은 하나의 TASK_SPEC.md 또는 SUB_RESULT.md를 함께 수정하지 않는다. 세션별 문서에 목표와 결과를 기록한다.
+- 메인은 `sessions/<session-id>/TASK_SPEC.md`에 원본과 같은 작업 명세를 작성한다. 작업 ID, 목표, 허용 경로, 요구와 제약, 검증, 완료 조건을 담는다.
+- 작업자는 같은 폴더의 `SUB_RESULT.md`에 작업 ID, 실제 변경과 검증, 실패와 한계를 기록한다. [TEMPLATE.md](TEMPLATE.md)는 자신의 `HANDOFF.md`로 복사해 인계에 쓴다.
+- 여러 작업 세션은 하나의 TASK_SPEC.md 또는 SUB_RESULT.md를 함께 수정하지 않는다. ID는 worker-a, worker-b처럼 현재 작업에서 겹치지 않게 정한다.
+- 메인은 진행 중인 명세를 작업자에게 알리지 않고 바꾸지 않는다. 이전 결과를 확인하고 필요한 증거를 보고서에 보존한 뒤 다음 작업 ID를 발행한다. 결과의 작업 ID가 다르면 현재 완료로 처리하지 않는다.
 - 공유 원장에 반영할 내용은 세션 문서나 메시지로 제안하고 통합 담당자가 근거를 확인한 뒤 반영한다.
 - 소유 경로가 겹치면 통합 담당자가 범위를 다시 나누거나 앞 작업이 인계될 때까지 그 파일의 편집을 보류한다.
 - 파일 소유권은 합의에 따른 운영 규칙이다. 기술적인 잠금이나 자동 충돌 방지는 아니다.
@@ -26,6 +30,16 @@
 CURRENT의 세션 상태는 PLANNED / ACTIVE / WAITING / HANDOFF / CLOSED로 기록한다.
 실행 상태 자동 감지가 아니므로 마지막 갱신 시각을 함께 적는다. 오래된 ACTIVE만 보고 파일 소유권을 임의로 가져오지 않는다.
 종료된 세션의 범위 인수는 사용자 또는 현재 통합 담당자가 확인하고 기록한다.
+
+| 예시 세션 | 역할 예시 | 주로 쓰는 파일 |
+|---|---|---|
+| main | 요구, 설계, 배정, 통합 검토 | CURRENT, 공통 원장, 작업자별 TASK_SPEC |
+| worker-a | 첫 핵심 흐름 구현 | 배정된 코드, 자기 SUB_RESULT와 HANDOFF |
+| worker-b | 독립 구현, 데이터 확인 또는 검토 | 별도 배정 범위, 자기 SUB_RESULT와 HANDOFF |
+
+worker-b의 작업이 worker-a의 결과에 의존하면 먼저 완료된 결과를 읽는다. 독립적인 파일만 동시에 수정한다.
+단일 작업자에게 독점 배정했다면 원본 `.probe-kit/runtime/TASK_SPEC.md`와 SUB_RESULT.md를 그대로 써도 된다.
+기존 `sessions/<session-id>.md` 기록은 인계 자료로 보존한다. 새 작업은 폴더 구조를 사용한다.
 
 ## 요청과 답변
 

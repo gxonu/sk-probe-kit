@@ -8,6 +8,7 @@ import subprocess
 import sys
 
 REQUIRED = [
+    ".probe-kit/AGENTS.md", ".probe-kit/SUB_AGENTS.md", ".probe-kit/foruser.md",
     ".probe-kit/AGENTS.override.md", ".probe-kit/docs/RULES.md",
     ".probe-kit/docs/RUNBOOK.md", ".probe-kit/runtime/REQUIREMENTS.md",
     ".probe-kit/runtime/QUESTION_LOG.md", ".probe-kit/runtime/DECISIONS.md",

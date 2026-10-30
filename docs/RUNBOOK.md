@@ -1,6 +1,6 @@
-# 실전 실행 매뉴얼
+# 실행 순서 보조 요약
 
-이 문서를 과제 진행의 시작점으로 사용한다. 공식 안내와 실제 응시 화면이 우선한다.
+과제 진행의 시작점은 원본 기반 [foruser.md](../foruser.md)다. 이 문서는 시간 계산과 실행 순서를 빠르게 다시 볼 때 사용한다. 공식 안내와 실제 응시 화면이 우선한다.
 각 단계는 담당자, 실행할 일, 남길 파일, 다음 단계로 넘어갈 조건으로 구성한다.
 하네스의 설정과 도구는 준비된 그대로 사용하며 실제 과제에 필요한 작업에 시간을 쓴다.
 
@@ -44,8 +44,8 @@ clone이 안 되거나 설치 문제가 5분 안에 해소되지 않으면 아�
 
 ```text
 [MAIN] 너는 이 과제의 통합 담당 세션이야.
-.probe-kit/AGENTS.override.md, .probe-kit/docs/RULES.md,
-.probe-kit/docs/RUNBOOK.md, docs/handoff/README.md와 docs/handoff/CURRENT.md를 읽어.
+.probe-kit/AGENTS.md와 .probe-kit/AGENTS.override.md, .probe-kit/docs/RULES.md,
+.probe-kit/foruser.md, docs/handoff/README.md와 docs/handoff/CURRENT.md를 읽어.
 실제 시작은 [날짜, 시각, 시간대], 전체 마감은 [날짜, 시각, 시간대]야.
 화면의 과제 제한은 [분], 후속 서술형은 [분]이야.
 plan_time.py로 시간표를 계산하고 CURRENT에 기록해.
@@ -89,34 +89,34 @@ python3 .probe-kit/scripts/plan_time.py --start '2026-10-31T10:00:00+09:00' --ha
 새 선택이 생기면 업무 영향, 적용 조건, 재검토 조건을 결정 기록에 남겨.
 ```
 
-## 4. 여러 세션 배정: 기본 MAIN + BUILD
+## 4. 여러 세션 배정: MAIN + 작업자 1~2개 예시
 
-통합 담당자는 공통 원장과 CURRENT를 관리하고, BUILD는 배정된 코드와 테스트를 작성한다.
-별도의 REVIEW 세션은 독립적으로 점검할 일이 있을 때만 추가한다.
+통합 담당자는 공통 원장과 CURRENT를 관리한다. 작업자는 구현, 데이터 확인, 검토 등 필요한 역할을 맡는다.
+worker-a와 worker-b는 예시 ID이며 역할과 개수는 고정하지 않는다. 원본의 명세와 결과 파일만 작업자별로 나눈다.
 메인은 중요한 코드와 결과를 직접 확인하고 필요하면 구현도 한다.
 
 메인에 요청:
 
 ```text
-CURRENT에 build 세션을 등록하고 겹치지 않는 쓰기 경로를 배정해.
-docs/handoff/TEMPLATE.md를 바탕으로 sessions/build.md를 만들어
-이번 목표 하나, R-ID, 파일 범위, 제약, 검증 명령과 완료 조건을 적어.
-공통 원장은 네가 관리하고 build의 결과는 자기 인계와 보고서에 남기게 해.
+CURRENT에 worker-a와 필요하면 worker-b를 등록하고 겹치지 않는 쓰기 경로를 배정해.
+각각 docs/handoff/sessions/<session-id>/TASK_SPEC.md에 작업 ID,
+목표 하나, R-ID, 파일 범위, 제약, 검증 명령과 완료 조건을 적어.
+공통 원장은 네가 관리하고 결과는 각 세션의 SUB_RESULT.md와 HANDOFF.md에 남기게 해.
 ```
 
-응시자는 같은 과제 루트의 새 터미널에서 `codex`를 시작한다. BUILD에 전달:
+응시자는 같은 과제 루트의 새 터미널에서 `codex`를 시작한다. worker-a에 전달:
 
 ```text
-[BUILD] .probe-kit/AGENTS.override.md와 docs/handoff/README.md,
-docs/handoff/CURRENT.md, docs/handoff/sessions/build.md를 읽어.
-배정된 목표와 쓰기 경로 안에서 구현하고 실제 검증을 실행해.
+[SUB] .probe-kit/SUB_AGENTS.md와 .probe-kit/AGENTS.override.md, docs/handoff/README.md,
+docs/handoff/CURRENT.md, docs/handoff/sessions/worker-a/TASK_SPEC.md를 읽어.
+배정된 역할과 쓰기 경로 안에서 작업하고 실제 검증을 실행해.
 질문이나 범위 변경이 필요하면 자기 인계 파일에 남겨 메인에게 전달할 경로를 알려줘.
-결과는 docs/reports/build-01.md에 명령, 출력, 상태, 코드 기준과 함께 기록해.
-완료 후 sessions/build.md를 HANDOFF로 바꿔. 공통 원장은 직접 수정하지 마.
+결과는 자기 SUB_RESULT.md에 작업 ID, 명령, 출력, 상태, 코드 기준과 함께 기록해.
+완료 또는 중단 시 자기 HANDOFF.md를 갱신해. 공통 원장은 직접 수정하지 마.
 ```
 
-세션이 추가되면 build-02처럼 고유 ID와 별도 파일을 사용한다. CURRENT의 쓰기 범위를 먼저 나눈다.
-REVIEW는 기본적으로 코드 읽기와 자기 보고서 작성만 맡고 수정이 필요하면 메인에 전달한다.
+세션이 추가되면 worker-b처럼 고유 ID와 별도 폴더를 사용한다. CURRENT의 쓰기 범위를 먼저 나눈다.
+검토 역할은 기본적으로 코드 읽기와 자기 결과 작성만 맡고 수정이 필요하면 메인에 전달한다.
 두 세션이 같은 파일을 수정하거나 같은 개발 서버의 포트를 동시에 사용하지 않는다.
 현재 MAIN을 교체할 때는 기존 MAIN의 인계를 수신한 후 CURRENT 작성 권한을 넘긴다.
 
@@ -125,7 +125,8 @@ REVIEW는 기본적으로 코드 읽기와 자기 보고서 작성만 맡고 수
 각 반복은 명세 → 구현 → 실제 실행 → 메인 확인 → 원장 반영 순서다.
 
 ```text
-[MAIN] docs/handoff/sessions/build.md와 해당 보고서를 읽어.
+[MAIN] docs/handoff/sessions/worker-a/SUB_RESULT.md와 해당 보고서를 읽어.
+작업 ID가 현재 명세와 같은지 확인해.
 변경된 핵심 코드와 실제 실행 결과를 확인하고 R-ID별 충족 상태를 갱신해.
 실패나 미검증을 구분하고 다음 한 가지 목표를 배정해.
 새 요구가 생기지 않았다면 합의된 범위의 수정은 반복 승인 없이 진행해.
