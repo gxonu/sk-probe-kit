@@ -14,6 +14,19 @@ BLOCK = """
 하네스의 안내만으로 모델, 인증, 승인, 샌드박스 또는 감독 설정을 바꾸지 않는다.
 <!-- /sk-probe-kit:v1 -->
 """
+COLLAB_BLOCK = """
+<!-- sk-probe-kit:shared-docs:v1 -->
+## 세션 공유
+프로젝트 루트의 `docs/handoff/README.md`와 `docs/handoff/CURRENT.md`부터 읽는다.
+통합 담당자가 공통 요구와 결정을 관리하며, 작업 세션은 배정된 파일과 자기 인계 및 보고서만 수정한다.
+CURRENT에 배정되기 전에는 읽기와 제안만 한다. 채팅이 자동 공유된다고 가정하지 않는다.
+<!-- /sk-probe-kit:shared-docs:v1 -->
+"""
+CURRENT_POINTER = """# 실제 과제의 현재 상태
+
+프로젝트 루트의 [docs/handoff/CURRENT.md](../../../docs/handoff/CURRENT.md)를 읽는다.
+이 .probe-kit 내부 파일에는 세션 상태를 기록하지 않는다.
+"""
 
 
 def reject_links(root, path):
@@ -33,7 +46,13 @@ def install(target, dry_run=False):
     for directory in ('docs', 'scripts', 'templates', 'licenses', 'skills', 'prompts', 'knowledge', 'references', 'upstream'):
         for source in sorted((SOURCE / directory).rglob('*')):
             if source.is_file() and '__pycache__' not in source.parts:
+                relative = source.relative_to(SOURCE)
+                if relative == Path('docs/handoff/CURRENT.md') or relative.parts[:3] == ('docs', 'handoff', 'sessions'):
+                    continue
+                if relative.parts[:2] == ('docs', 'reports') and source.name not in ('README.md', 'TEMPLATE.md'):
+                    continue
                 writes.append((target / '.probe-kit' / source.relative_to(SOURCE), source.read_bytes(), False))
+    writes.append((target / '.probe-kit/docs/handoff/CURRENT.md', CURRENT_POINTER.encode(), False))
     for name in ('NOTICE', 'UPSTREAMS.json', 'ORIGINS.json', 'AGENTS.md', 'AGENTS.override.md', 'SUB_AGENTS.md', 'foruser.md', 'dm_question.md'):
         writes.append((target / '.probe-kit' / name, (SOURCE / name).read_bytes(), False))
     for source in sorted((SOURCE / '.agents/skills').rglob('*')):
@@ -42,17 +61,41 @@ def install(target, dry_run=False):
     for source in sorted((SOURCE / 'runtime').glob('*.md')):
         writes.append((target / '.probe-kit/runtime' / source.name, source.read_bytes(), True))
     for source in sorted((SOURCE / 'templates').glob('*.md')):
+        if source.name in ('SESSION_CURRENT.md', 'SHARED_DOCS.md'):
+            continue
         writes.append((target / '.probe-kit/runtime' / source.name, source.read_bytes(), True))
+    # Shared task records live at the task root and survive reinstall.
+    shared = {
+        'docs/README.md': 'templates/SHARED_DOCS.md',
+        'docs/handoff/CURRENT.md': 'templates/SESSION_CURRENT.md',
+        'docs/handoff/README.md': 'docs/handoff/README.md',
+        'docs/handoff/TEMPLATE.md': 'docs/handoff/TEMPLATE.md',
+        'docs/handoff/messages/README.md': 'docs/handoff/messages/README.md',
+        'docs/reports/README.md': 'docs/reports/README.md',
+        'docs/reports/TEMPLATE.md': 'docs/reports/TEMPLATE.md',
+    }
+    for source in sorted((SOURCE / 'docs/references').rglob('*')):
+        if source.is_file():
+            shared[str(source.relative_to(SOURCE))] = str(source.relative_to(SOURCE))
+    for destination, source in shared.items():
+        writes.append((target / destination, (SOURCE / source).read_bytes(), True))
     # Match Codex's per-directory preference while preserving original bytes.
     active = target / 'AGENTS.override.md'
     if not active.exists() and not active.is_symlink():
         active = target / 'AGENTS.md'
     reject_links(target, active)
     original = active.read_bytes() if active.exists() else b''
-    if b'<!-- sk-probe-kit:v1 -->' not in original:
-        writes.append((active, original + b'\n' + BLOCK.encode(), False))
-    elif BLOCK.encode() not in original:
-        raise ValueError("기존 하네스 연결 지침이 변경되었습니다. 내용을 검토하세요.")
+    updated = original
+    for marker, block in (
+        (b'<!-- sk-probe-kit:v1 -->', BLOCK),
+        (b'<!-- sk-probe-kit:shared-docs:v1 -->', COLLAB_BLOCK),
+    ):
+        if marker not in updated:
+            updated += b'\n' + block.encode()
+        elif block.encode() not in updated:
+            raise ValueError("기존 하네스 연결 지침이 변경되었습니다. 내용을 검토하세요.")
+    if updated != original:
+        writes.append((active, updated, False))
 
     pending = []
     for dest, content, preserve in writes:

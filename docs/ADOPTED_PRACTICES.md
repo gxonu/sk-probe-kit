@@ -12,3 +12,16 @@
 | [ColdTbrew/cofa-skills](https://github.com/ColdTbrew/cofa-skills) | 누수와 결측 의미 확인, 의사결정 이력, 실제 사용 조건에 맞는 검증 | docs/interview.md, probe-decisions, decision.py | 모든 과제를 학습 모델 문제로 가정하지 않음 |
 
 질문 → 받은 답(Q-ID) → 요구(R-ID) → 선택과 이유(DECISIONS) → 구현 → 실제 테스트(EVIDENCE) → 인계(HANDOFF)가 이어지도록 구성했다. 원본이 아닌 통합 문서는 이 작업을 위해 작성했다.
+
+## 제작진 인터뷰 반영
+
+[인터뷰 분석](references/cofa-probe-interview-20261031.md)은 사용자 제공 자동 자막에 근거한다. 평가 철학의 설명과 이번 대회의 공식 규칙을 구분한다.
+
+| 근거 | 보완 | 적용 위치 |
+|---|---|---|
+| 16:19~19:45 질문으로 업무 맥락 파악 | 열린 업무 질문에서 사례와 구체적 조건으로 좁히기 | interview.md, probe-interview |
+| 23:57~26:42 이해와 설계 적합성 | 업무 영향, 적용 조건, 더 단순한 대안과 재검토 조건 | REQUIREMENTS, DECISIONS, probe-decisions |
+| 23:57~26:42 인지 평가 | 설명이 막히면 코드와 작은 입력으로 확인 후 다시 설명 | written-prep.md, probe-explain |
+| 08:21~10:22 공유 맥락과 사용자 다중 세션 요청 | CURRENT, 세션별 인계, 출처와 실행 보고서 | docs/handoff, docs/references, docs/reports |
+
+세션 폴더와 파일 소유권 절차는 사용자 요청을 위해 설계한 운영 방식이며 공식 평가 요구사항이 아니다.

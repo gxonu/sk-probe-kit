@@ -56,6 +56,52 @@ class InstallTests(unittest.TestCase):
         self.assertEqual((self.target / 'AGENTS.md').read_text(), 'ordinary')
         self.assertIn('sk-probe-kit:v1', (self.target / 'AGENTS.override.md').read_text())
 
+    def test_shared_docs_seed_and_existing_records_survive(self):
+        readme = self.target / 'docs/README.md'
+        readme.parent.mkdir()
+        readme.write_text('existing project docs')
+        self.assertEqual(self.run_install().returncode, 0)
+        self.assertEqual(readme.read_text(), 'existing project docs')
+        current = self.target / 'docs/handoff/CURRENT.md'
+        self.assertEqual(current.read_bytes(), (ROOT / 'templates/SESSION_CURRENT.md').read_bytes())
+        # The harness development session must not become the task's active session.
+        self.assertFalse((self.target / 'docs/handoff/sessions').exists())
+        self.assertFalse((self.target / '.probe-kit/docs/handoff/sessions').exists())
+        pointer = self.target / '.probe-kit/docs/handoff/CURRENT.md'
+        self.assertIn('../../../docs/handoff/CURRENT.md', pointer.read_text())
+        self.assertFalse((self.target / '.probe-kit/docs/reports/20261031-session-docs.md').exists())
+        current.write_text('active task with decisions')
+        session = self.target / 'docs/handoff/sessions/my-session.md'
+        session.parent.mkdir()
+        session.write_text('my handoff and uncommitted work')
+        report = self.target / 'docs/reports/my-result.md'
+        report.write_text('actual evidence')
+        self.assertEqual(self.run_install().returncode, 0)
+        self.assertEqual(current.read_text(), 'active task with decisions')
+        self.assertEqual(session.read_text(), 'my handoff and uncommitted work')
+        self.assertEqual(report.read_text(), 'actual evidence')
+        self.assertTrue((self.target / 'docs/references/cofa-probe-interview-20261031.md').is_file())
+
+    def test_shared_docs_symlink_fails_before_any_write(self):
+        external = self.root / 'external docs'
+        external.mkdir()
+        (self.target / 'docs').symlink_to(external, target_is_directory=True)
+        self.assertNotEqual(self.run_install().returncode, 0)
+        self.assertFalse((self.target / '.probe-kit').exists())
+        self.assertFalse((self.target / 'AGENTS.md').exists())
+        self.assertEqual(list(external.iterdir()), [])
+
+    def test_existing_v1_instruction_gets_shared_docs_once(self):
+        legacy = '# Existing platform rules\n' + module('install').BLOCK
+        active = self.target / 'AGENTS.md'
+        active.write_text(legacy)
+        self.assertEqual(self.run_install().returncode, 0)
+        first = active.read_text()
+        self.assertTrue(first.startswith(legacy))
+        self.assertEqual(first.count('<!-- sk-probe-kit:shared-docs:v1 -->'), 1)
+        self.assertEqual(self.run_install().returncode, 0)
+        self.assertEqual(active.read_text(), first)
+
     def test_dry_run_does_not_write(self):
         self.assertEqual(self.run_install('--dry-run').returncode, 0)
         self.assertEqual(list(self.target.iterdir()), [])

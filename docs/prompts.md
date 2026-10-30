@@ -6,9 +6,11 @@
 
 ```text
 [MAIN] .probe-kit/docs/RULES.md를 읽고 요구 확인과 설계를 맡아줘.
+docs/handoff/README.md와 CURRENT.md를 읽고 통합 담당 세션으로 공통 원장을 관리해.
 README와 작은 파일 목록에서 사실, 가정, 질문, 제외 범위, 성공 기준을 REQUIREMENTS.md에 정리해.
 내가 담당자 답변을 옮기면 반영하고 최초 계획을 승인받아.
-별도 서브를 쓰면 TASK_SPEC.md에 한 번에 한 목표, 파일 범위, 제약, 검증 명령, 완료 조건을 적어줘.
+별도 세션을 쓰면 CURRENT에 세션 ID, 겹치지 않는 쓰기 경로와 완료 조건을 배정해.
+각 작업 명세와 결과는 docs/handoff/sessions/<session-id>.md로 분리해.
 서브의 결과는 실제 코드와 검증 증거로 확인해. 중요한 코드는 직접 읽어도 돼.
 ```
 
@@ -17,10 +19,12 @@ README와 작은 파일 목록에서 사실, 가정, 질문, 제외 범위, 성�
 응시자가 같은 과제 루트에서 별도 `codex`를 시작하고, 환경에 제공된 허용 모델을 선택한 뒤 입력한다. 자동 실행기나 승인 우회 플래그는 사용하지 않는다.
 
 ```text
-[SUB] .probe-kit/docs/RULES.md와 .probe-kit/runtime/TASK_SPEC.md를 읽어.
+[SUB] .probe-kit/docs/RULES.md와 docs/handoff/README.md, CURRENT.md를 읽어.
+내 세션 ID에 해당하는 docs/handoff/sessions/<session-id>.md를 확인해.
 승인된 목표와 파일 범위 안에서 구현하고 지정된 검증을 실행해.
 요구사항의 모호함이 결과에 영향을 주면 먼저 알려줘.
-변경 파일, 실제 실행 명령과 출력, 실패, 미검증, 한계를 SUB_RESULT.md에 기록해.
+변경 파일, 실제 실행 명령과 출력, 실패, 미검증, 한계를 자기 인계와 docs/reports의 자기 보고서에 기록해.
+공통 요구와 결정의 변경안은 통합 담당자에게 파일 경로로 전달해.
 다른 세션이 맡은 파일은 수정하지 마.
 ```
 
@@ -39,8 +43,9 @@ REQUIREMENTS의 성공 기준마다 실제 근거와 PASS / FAIL / NOT_RUN / HUM
 ```
 
 ```text
-새 세션에서 이어갈 수 있도록 HANDOFF.md를 갱신해.
+새 세션에서 이어갈 수 있도록 자기 docs/handoff/sessions/<session-id>.md를 갱신해.
 현재 요구와 담당자 확인 내용, 결정, 파일 상태, 실제 실행 결과, 남은 일 3개, 남은 시간을 적어.
+통합 담당자라면 CURRENT의 상태, 배정과 결과 링크를 갱신해.
 ```
 
 ## 이해도 점검

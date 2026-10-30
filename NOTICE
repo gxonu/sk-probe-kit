@@ -2,6 +2,8 @@ Original source bundle with a separate integration layer.
 
 chichochoi/sk original files are preserved under upstream/chichochoi and mostly at the root.
 The root init.sh and scripts/subagent.sh are replaced to preserve platform settings.
+The active templates/HANDOFF.md is adapted for shared session records; its original
+is retained under upstream/chichochoi/templates/HANDOFF.md.
 Original texts are retained; AGENTS.override.md and docs/RULES.md define conflict resolution.
 
 knowledge/semiconductor is copied unchanged from xodbs1021/kty-codex-harness-template.
@@ -14,3 +16,5 @@ The MIT notice is preserved in references/hamjoon-LICENSE and licenses/hamjoon-M
 
 See ORIGINS.json for original file hashes and UPSTREAMS.json for pinned source commits.
 Integration files and modifications were prepared for gxonu; provenance is not removed.
+The interview reference is an analysis of a user-provided automatic transcript.
+The full transcript is not redistributed; timestamped claims and limitations are recorded.
