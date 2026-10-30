@@ -42,6 +42,7 @@ $probe-workflow .probe-kit/AGENTS.override.md와 공식 규칙부터 확인해.
 |---|---|
 | [공식 우선 지침](AGENTS.override.md), [일곱 가지 작업 원칙](docs/RULES.md) | 원본과 충돌할 때 적용할 기준 |
 | `AGENTS.md`, `SUB_AGENTS.md`, `skills/`, `prompts/`, `scripts/` | chichochoi 메인/서브 흐름과 과제 유형별 원문 |
+| [유형과 스킬 연결](docs/scenarios.md) | README의 9개 유형을 기존 스킬 4개와 질문 묶음에 연결 |
 | [질문 절차와 질문 은행](docs/interview.md) | 숨은 조건 후보, Q-ID → R-ID → 테스트 연결 |
 | [문서 시작점](docs/README.md), [현재 상태](docs/handoff/CURRENT.md) | 여러 세션의 읽는 순서와 파일 작성 범위 |
 | [원본 기반 실행 안내](foruser.md), [보조 요약](docs/RUNBOOK.md) | 원본의 질문, 합의, 명세와 결과 반복, 검증과 제출 순서 |

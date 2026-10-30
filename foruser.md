@@ -99,12 +99,17 @@ CURRENT에 겹치지 않는 파일 범위를 배정한 뒤 진행해.
 아직 비즈니스 코드는 절대 작성하거나 수정하지 마.
 현재 워크스페이스 루트에 있는 과제 지시서(README.md)와 작은 파일 목록 및 필요한 데이터 요약을 분석해줘. (키트 내부 README가 아닌 과제 문제 지시서여야 함)
 다음 항목을 핵심 위주로 명확하게 브리핑하고, .probe-kit/runtime/REQUIREMENTS.md 에 기록해줘:
-1. 이번 과제가 아래 Case 1~4 중 어느 유형에 해당하는지 판별하고, 연동할 .probe-kit/skills/ 스킬 파일 경로를 지정해줘:
-   - Case 1: 데이터 정제, 집계, 이상치/반도체 수율 판정 -> .probe-kit/skills/case1_data_pipeline.md
-   - Case 2: 실무형 웹 서비스 / 웹앱 / 대시보드 구축 -> .probe-kit/skills/case2_web_service.md
-   - Case 3: 기존 레거시 코드베이스 디버깅 및 기능 확장 -> .probe-kit/skills/case3_legacy_debug.md
-   - Case 4: 규정 색인, 판정, 사내 업무 자동화, RAG -> .probe-kit/skills/case4_policy_rag_doc.md
-   - 위 유형에 없으면 설명하고 복합 유형이면 해당 점검 항목을 함께 적용해.
+1. 원본 README의 9개 유형 중 해당하는 Case와 사용할 스킬을 각각 지정해줘. 유형 9개를 스킬 4개가 나눠 담당하는 구조야:
+   - Case 1: 데이터 정제, 집계, 리포팅 -> .probe-kit/skills/case1_data_pipeline.md
+   - Case 2: 실무형 웹 서비스 / 웹앱 -> .probe-kit/skills/case2_web_service.md
+   - Case 3: 기존 코드 디버깅 및 기능 확장 -> .probe-kit/skills/case3_legacy_debug.md
+   - Case 4: 사내 업무 자동화 / 운영 도구 -> .probe-kit/skills/case4_policy_rag_doc.md
+   - Case 5: 반도체 / 제조 데이터 판정 -> .probe-kit/skills/case1_data_pipeline.md
+   - Case 6: 규정 / 정책 문서 기반 판단과 보고서 -> .probe-kit/skills/case4_policy_rag_doc.md
+   - Case 7: 챗봇 / RAG / 자동 분류기 -> .probe-kit/skills/case4_policy_rag_doc.md
+   - Case 8: 대안 비교 / 전략 의사결정 -> .probe-kit/skills/case4_policy_rag_doc.md
+   - Case 9: 복합형 -> 구성하는 Case의 스킬을 조합하고 입력과 출력의 의존 관계를 적어.
+   - 판별 근거가 부족하면 미확인으로 남겨. 작성자의 예상 등급을 과제 요구나 공식 확률로 사용하지 마.
 2. 과제 요구사항 요약 (필수 제출 파일명, 입출력 포맷, 대상 파일 범위)
 3. 절대 변경하면 안 되는 기존 시스템의 불변 제약 (API 규격, 인증 방식, 함수 시그니처 등)
 4. 불필요한 오버엔지니어링을 배제한 최소 핵심 기능(MVP) 목표
@@ -113,7 +118,7 @@ CURRENT에 겹치지 않는 파일 범위를 배정한 뒤 진행해.
 ```
 
 ✅ **완료 시그널:**
-메인 에이전트가 과제 유형(Case 1~4)과 매핑된 스킬 파일명을 보고하고, `.probe-kit/runtime/REQUIREMENTS.md`에 문제 개요가 기록되며, CURRENT에 다음 작업이 연결됨.
+메인 에이전트가 과제 유형(Case 1~9)과 사용할 스킬 파일명을 구분해 보고하고, `.probe-kit/runtime/REQUIREMENTS.md`에 문제 개요가 기록되며, CURRENT에 다음 작업이 연결됨.
 
 ---
 
@@ -182,8 +187,8 @@ README에서 확인한 사실과 구현을 바꿀 미확인 조건을 구분합�
 
 ### 👉 수행 행동:
 1. 에디터에서 `.probe-kit/dm_question.md` 파일을 엽니다.
-2. 3단계에서 식별한 Case 섹션(Case 1, Case 2, Case 3, Case 4)으로 이동합니다.
-3. 해당 Case에 특화된 심층 질문을 복사하여 우측 DM 창에 질문합니다.
+2. 질문 은행은 4개 묶음입니다. 과제 Case 1과 5는 질문 은행 Case 1, 과제 Case 2와 3은 같은 번호, 과제 Case 4와 6~8은 질문 은행 Case 4로 이동합니다. Case 9는 해당 묶음들과 복합형 질문을 함께 봅니다.
+3. 해당 묶음 안에서 실제 과제에 필요한 질문만 골라 우측 DM 창에 질문합니다. 유형별 연결은 `.probe-kit/docs/scenarios.md`에도 있습니다.
 4. 실무자 답변을 받는 즉시 워크스페이스 루트의 `.probe-kit/runtime/REQUIREMENTS.md`를 열고 `## 1. 실무자 DM 확인 사항` 섹션에 아래 형식으로 기록합니다:
 
 ```markdown
@@ -314,14 +319,16 @@ scripts/subagent.sh는 시작 방법을 출력하는 안내다. 실제 세션은
 
 ---
 
-### 🔍 케이스별 특화 추가 지침 (Case-Specific Extra Instructions)
+### 🔍 스킬 4개 묶음별 추가 지침
+
+아래는 9개 유형을 묶어 처리하는 스킬별 점검입니다. Case 9는 해당 묶음을 조합합니다.
 
 | 케이스 구분 | 연동 스킬 | 서브 지시 시 반드시 포함해야 할 특화 지침 |
 | :--- | :--- | :--- |
-| **Case 1**<br>(데이터 파이프라인 / 반도체 판정) | `case1_data_pipeline.md` | - 대용량 데이터는 data_scan.py로 요약하고 필요한 범위만 확인<br>- 전처리 단계별(중복 제거 건수, 취소 건수, 유효 행 수) 필터링 로그 출력<br>- 작은 독립 기준 사례로 검산하고 기대값 및 허용 오차 확인 |
+| **Case 1, 5**<br>(데이터 파이프라인 / 반도체 판정) | `case1_data_pipeline.md` | - 대용량 데이터는 data_scan.py로 요약하고 필요한 범위만 확인<br>- 전처리 단계별(중복 제거 건수, 취소 건수, 유효 행 수) 필터링 로그 출력<br>- 작은 독립 기준 사례로 검산하고 기대값 및 허용 오차 확인 |
 | **Case 2**<br>(실무형 웹 서비스) | `case2_web_service.md` | - 서버 기동 시 반드시 **`0.0.0.0` 호스트 바인딩** (`127.0.0.1` 금지)<br>- 서버 터미널 탭 유지, 응시자가 플랫폼 내장 Browser에서 직접 클릭, 입력 동작 수행 (확인한 동작과 결과를 기록)<br>- 회원가입 등 부가기능 제외, 핵심 유저 동선 1개(입력->처리->화면) 수직 완성 |
 | **Case 3**<br>(레거시 코드 디버깅) | `case3_legacy_debug.md` | - 코드 수정 전 기존 테스트 스위트 1회 먼저 실행하여 **베이스라인 로그 보존**<br>- 기존 API URL 엔드포인트, 응답 JSON 스키마, 함수 시그니처 100% 불변 유지<br>- `git diff`로 합의된 최소 범위(1~3개 파일) 외 무단 변경 절대 차단 |
-| **Case 4**<br>(규정 색인 / 자동화 / RAG) | `case4_policy_rag_doc.md` | - 문서를 통째 요약하지 말고 관련 조항/페이지 위치를 먼저 색인화<br>- 모호한 케이스는 임의 추측하지 않고 `'수동 검토 필요'` 또는 `'확인 불가'` 플래그 분리<br>- 단순 O/X가 아닌 판단 근거 조항(출처)을 결과물에 함께 출력 |
+| **Case 4, 6, 7, 8**<br>(규정 색인 / 자동화 / RAG) | `case4_policy_rag_doc.md` | - 문서를 통째 요약하지 말고 관련 조항/페이지 위치를 먼저 색인화<br>- 모호한 케이스는 임의 추측하지 않고 `'수동 검토 필요'` 또는 `'확인 불가'` 플래그 분리<br>- 단순 O/X가 아닌 판단 근거 조항(출처)을 결과물에 함께 출력 |
 
 ✅ **완료 시그널:**
 `TASK_SPEC.md` 작성 ➔ 서브 구현 및 온더플라이 테스트 통과 ➔ `SUB_RESULT.md` 기록 ➔ 메인이 실제 변경과 검증 결과 확인.

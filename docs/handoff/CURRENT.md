@@ -32,6 +32,7 @@
 - 실제 과제의 공유 위치는 루트 docs다. 기존 .probe-kit/runtime 원장은 호환성을 위해 유지한다.
 - 원본 AGENTS.md와 SUB_AGENTS.md는 줄이거나 재구성하지 않는다. foruser.md가 주 안내이며 RUNBOOK은 보조 요약이다.
 - 메인 + worker-a + worker-b는 예시다. 작업자는 역할과 수를 조정하고 명세, 결과, 인계 파일을 세션별 폴더로 나눈다.
+- 04:01 KST 재확인: upstream README의 유형은 9개이며 스킬과 질문 은행은 4개 묶음이다. foruser와 docs/scenarios에 연결을 정정했다. 출제 확률 등급은 작성자 예상이다.
 
 ## 다음 행동
 
