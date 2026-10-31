@@ -10,6 +10,96 @@
 
 ---
 
+## 본시험 8단계: 문서와 스킬 사용 순서
+
+기본은 S1-main과 S2-worker-a이며, 독립 작업이 있을 때 S3-worker-b를 추가한다.
+아래 순서는 뒤의 원본 기반 상세 단계와 대응한다. 고정 시각보다 CURRENT의 실제 남은 시간을 따른다.
+
+| 순서 | 응시자가 할 일 | 세션이 읽고 남길 문서 | 스킬과 상세 위치 |
+|---|---|---|---|
+| 1. 입장과 설치 | 감독 연결, 과제 폴더 확인, 설치 명령 실행 | 실제 과제 README, .probe-kit/docs/RULES.md | 아직 스킬 호출 없음. 아래 1단계와 2단계 점검 명령 |
+| 2. 메인 시작 | S1-main을 열고 실제 시작, 마감과 제한 시간 전달 | 원본 AGENTS, AGENTS.override, 공유 규칙 → docs/handoff/CURRENT.md | S1에서 $probe-workflow. 2단계 |
+| 3. 과제 파악 | 목표, 제출물과 성공 기준 확인 | docs/scenarios.md의 9개 유형 → .probe-kit/runtime/REQUIREMENTS.md | 앞서 시작한 workflow에서 진행. 해당 case 지침 선택. 3단계 |
+| 4. 담당자 질문 | 초안을 검토해 직접 전송하고 답을 S1에 전달 | docs/interview.md, dm_question.md → QUESTION_LOG와 REQUIREMENTS | S1에서 $probe-interview. 질문 준비 또는 새 답변 반영 시. 4~5단계 |
+| 5. 방향 합의와 배정 | 방식과 범위 승인 | DECISIONS → 작업자별 TASK_SPEC | S1에서 $probe-decisions. 중요한 선택이나 방향 변경 때. 6단계와 6.5단계 |
+| 6. 구현과 검토 반복 | S2를 시작하고 완료 결과 경로를 S1에 전달 | TASK_SPEC과 지정 case 지침 → SUB_RESULT, 자기 보고서 | 오류가 나면 담당 세션의 $probe-debug, 완료 판단에는 $probe-verify. 6.5~7단계 |
+| 7. 제출 전 확인 | 실제 동작, 미충족 조건과 선택 이유 확인 | REQUIREMENTS와 EVIDENCE 대조, DECISIONS와 docs/written-prep.md | S1에서 $probe-verify, 이해도 확인에는 확정 전 $probe-explain. 8~12단계 |
+| 8. 제출 확정 | 실제 요구 파일과 저장 상태를 확인하고 직접 제출 | 제출 파일명과 형식은 실제 과제 README 기준 | 확정 후 스킬과 AI 작업 종료. 12단계 |
+
+이 표에서 docs/scenarios.md, docs/interview.md, docs/written-prep.md는 설치된 .probe-kit/docs 아래 안내다.
+QUESTION_LOG, REQUIREMENTS, DECISIONS, EVIDENCE는 .probe-kit/runtime 아래 공통 기록이다.
+TASK_SPEC과 SUB_RESULT는 과제 루트 docs/handoff/sessions/<세션 ID>/ 아래에 둔다.
+
+### 스킬 두 종류와 입력 위치
+
+- 원본 `.probe-kit/skills/case*.md` 4개는 과제 유형별 작업 지침이다. 3단계에서 선택하고 S1이 TASK_SPEC에 경로를 적으면 작업자가 읽고 적용한다. `$case1_data_pipeline` 같은 호출명으로 등록한 것은 아니다.
+- 프로젝트 `.agents/skills/` 아래 SKILL.md 6개는 아래 `$probe-…` 이름으로 요청하는 보조 스킬이다.
+- 아래 요청은 셸 명령창이 아니라 **실행 중인 Codex의 대화 입력창**에 넣는다.
+- 여섯 개를 매 단계 전부 호출하지 않는다. 이미 해당 절차를 수행 중이면 같은 지시를 반복하지 않고 필요한 상황에서 선택한다.
+- 자동 선택에만 의존하지 않고 명시적으로 호출할 수 있다. 설치본에서 스킬이 보이지 않으면 `.agents/skills/<스킬 이름>/SKILL.md`를 직접 읽고 따르도록 요청한다.
+- 실제 응시 환경의 설치와 제공 버전이 우선한다. 호출 방식은 [OpenAI 공식 스킬 안내](https://learn.chatgpt.com/docs/build-skills)에 근거한다.
+
+### 그대로 입력할 호출 예시
+
+**S1-main: 처음 시작할 때**
+```text
+$probe-workflow 나는 이 세션을 S1-main으로 사용할 거야.
+아래 2단계의 실제 시간과 세션 배정을 적용해.
+과제 README에서 사실, 가정, 열린 질문, 제외 범위와 성공 기준을 정리해.
+아직 구현하지 말고 담당자 질문과 최초 계획을 보여줘.
+```
+결과 확인: CURRENT와 REQUIREMENTS가 작성되고, 실제 조건과 가정이 구분되어 있다.
+
+**S1-main: 질문을 준비하거나 답을 받았을 때**
+```text
+$probe-interview 현재 요구와 받은 답을 확인해.
+[질문 준비 / 다음 실제 답변 반영: 답변, 출처, 받은 시각]
+구현을 바꿀 미확인 조건을 최대 3개로 좁히거나,
+받은 답을 Q-ID와 R-ID, 구현 및 검증에 연결해. 메신저 전송은 내가 할게.
+```
+대괄호에서 현재 상황을 선택한다. 답변이 없다면 답을 만들어 기록하지 않는다.
+결과 확인: 질문 초안 또는 QUESTION_LOG와 관련 REQUIREMENTS가 갱신되어 있다.
+
+**S1-main: 내가 방향을 선택했거나 기존 결정을 바꿨을 때**
+```text
+$probe-decisions 내가 확정한 선택은 [실제 선택]이고 이유는 [실제 이유]야.
+버린 대안, 업무 영향, 근거와 한계, 재검토 조건을 DECISIONS에 기록해.
+검증 전이면 NOT_RUN으로 남겨. 이전 결정을 바꾸는 경우 정정 이력을 보존해.
+```
+결과 확인: 실제 선택과 이유가 기록되어 있다. 작업자는 결정 제안을 자기 결과에 남기고 S1이 공통 원장에 반영한다.
+
+**오류가 난 담당 세션: S2-worker-a 또는 S3-worker-b**
+```text
+$probe-debug 내 TASK_SPEC의 파일 범위 안에서 이 실패를 재현해.
+실행 명령과 오류: [실제 명령과 관련 오류]
+원인을 좁혀 최소 수정하고 같은 명령으로 다시 확인해.
+결과는 내 SUB_RESULT와 보고서에 남기고 공통 원장 변경은 S1에 제안해.
+```
+결과 확인: 수정 전 실패와 수정 후 결과가 구분된다. 플랫폼 연결이나 감독 문제는 이 코드 수정 흐름 대신 공식 신고를 사용한다.
+
+**작업 완료 때는 담당 세션, 제출 전 전체 확인은 S1-main**
+```text
+$probe-verify [내 TASK_SPEC의 범위 / 전체 필수 REQUIREMENTS]를 확인해.
+요구마다 실제 명령, 기대값의 근거와 출력, PASS/FAIL/NOT_RUN/HUMAN_CHECK를 연결해.
+담당 범위의 결과를 자기 보고서에 기록하고, S1이면 공통 EVIDENCE에 반영해.
+미충족 조건과 저장 및 제출 형식의 문제를 알려줘.
+```
+결과 확인: 결과 보고만 보고 완료를 단정하지 않고 실제 코드와 실행 근거를 대조했다.
+
+**S1-main: 제출물 확정 전에 이해도를 확인할 때**
+```text
+$probe-explain 아직 제출물 확정 전이야.
+내 구현과 결정 기록에서 중요한 질문 하나를 골라줘.
+내가 답한 뒤 실제 코드, 검증 기록, 선택 이유와 한계가 맞는지 확인해줘.
+```
+완성 답변을 대신 받는 용도가 아니다. 실제 후속 서술형 문항을 입력하지 않는다.
+검증 구간이나 주요 기능 완성 후 시간을 확보해 사용하고, 제출 확정 이후에는 호출하지 않는다.
+
+세션 교체에는 별도 스킬 호출이 필수는 아니다. 자기 HANDOFF를 저장하고 새 세션이 CURRENT와 자기 명세, 결과, 인계를 읽도록 한다.
+S1이 공통 원장과 배정을 관리하며, S2와 S3는 자기 SUB_RESULT, HANDOFF 및 보고서를 쓴다.
+
+---
+
 ## 📑 타임라인 요약 (Timeline Overview)
 
 | 시각 | 단계 | 핵심 수행 내용 | 주요 도구 / 명령어 |
@@ -60,24 +150,25 @@ python3 .probe-kit/scripts/preflight.py --workspace .
 local_status PASS는 로컬 구성과 CLI 시작 점검이다. 감독, 로그인과 제공 모델은 직접 확인한다.
 Git 저장소라면 `git status --short`로 변경을 확인한다. 하네스가 표시되는 것 자체는 실패가 아니다.
 
-### 터미널 1: MAIN
+### 터미널 1: S1-main (MAIN)
 과제 루트에서 `codex`를 실행하고 Codex 입력창의 `/model`에서 실제 제공된 허용 모델을 고른다.
 원본의 설계, 명세 발행, 결과 검토 흐름을 맡는다. 중요한 코드와 실행 결과는 직접 확인한다.
 
-### 터미널 2: worker-a
+### 터미널 2: S2-worker-a
 새 터미널에서 같은 과제 루트인지 `pwd`로 확인하고 `codex`를 실행한다. 메인이 배정한 구현을 맡는다.
 
-### 터미널 3: worker-b, 필요할 때
+### 터미널 3: S3-worker-b, 필요할 때
 독립 구현, 데이터 확인, 테스트 또는 검토 등 과제에 맞는 역할을 맡는다.
 메인 1개와 작업 세션 1~2개는 예시이며 개수나 모델을 고정하지 않는다.
 
-메인에 입력:
+메인에 입력한다. 앞의 workflow 예시로 이미 같은 내용을 전달했다면 실제 시간과 배정만 보완한다:
 ```text
+$probe-workflow
 [MAIN] .probe-kit/AGENTS.md와 .probe-kit/AGENTS.override.md를 읽어.
-공식 규칙을 우선하고 docs/handoff/CURRENT.md의 통합 담당을 main으로 등록해.
+공식 규칙을 우선하고 docs/handoff/CURRENT.md의 통합 담당을 S1-main으로 등록해.
 실제 시작과 전체 마감은 [실제 값], 제한 시간은 [분]이야.
 plan_time.py로 시간표를 계산해서 CURRENT에 기록해.
-작업자는 worker-a와 필요하면 worker-b를 쓸게.
+작업자는 S2-worker-a와 필요하면 S3-worker-b를 쓸게.
 원본 TASK_SPEC → 구현 → SUB_RESULT → 메인 검토 흐름을 유지하고,
 docs/handoff/sessions/<세션 ID>/에 TASK_SPEC.md, SUB_RESULT.md, HANDOFF.md를 나눠 둬.
 CURRENT에 겹치지 않는 파일 범위를 배정한 뒤 진행해.
@@ -227,6 +318,7 @@ README에서 확인한 사실과 구현을 바꿀 미확인 조건을 구분합�
 *(수험생이 분석 결과를 확인한 후, 아래 템플릿의 대괄호 내용을 채워 터미널 1에 입력합니다)*
 
 ```text
+$probe-decisions
 [MAIN] 네 분석을 검토했어. [외부 의존성 배제 및 실무자 DM의 취소, 중복 예외 처리 신뢰성 보장] 장점 때문에 나는 [파이썬 표준 라이브러리(csv, json) 기반의 단일 스트림 파이프라인] 단계별 해결법을 쓰고 싶어. 가능해?
 가능하다면 .probe-kit/runtime/REQUIREMENTS.md에 합의한 범위를 반영해.
 내가 결정한 [채택한 방식], [배제한 대안 및 이유], 업무 영향과 재검토 조건은 .probe-kit/runtime/DECISIONS.md에 기록하고 CURRENT를 갱신해.
@@ -246,7 +338,7 @@ README에서 확인한 사실과 구현을 바꿀 미확인 조건을 구분합�
 ## 6.5단계: ⏱ 10:35 ~ 12:20 | 👉 범용 `TASK_SPEC.md` 발행 및 서브 위임 사이클
 
 원본의 명세와 결과 반복을 세션별로 수행하는 구간입니다.
-아래 worker-a 예시는 worker-b에도 동일하게 적용합니다. 역할과 쓰기 경로는 CURRENT에서 먼저 배정합니다.
+아래 S2-worker-a 예시는 S3-worker-b에도 동일하게 적용합니다. 역할과 쓰기 경로는 CURRENT에서 먼저 배정합니다.
 읽기 검토 세션은 코드를 수정하지 않고 자기 결과 파일에 검토를 기록합니다.
 메인이 명세를 발행하고 각 작업 세션이 결과를 돌려주는 사이클을 단계마다 반복합니다. 의존하는 작업은 앞 결과를 확인한 뒤 배정합니다.
 
@@ -256,13 +348,13 @@ sequenceDiagram
     actor User as 수험생 (인간)
     participant T1 as 터미널 1 (Main)
     participant FS as 파일시스템 (TASK_SPEC / SUB_RESULT)
-    participant T2 as 작업 터미널 (worker-a 또는 worker-b)
+    participant T2 as 작업 터미널 (S2-worker-a 또는 S3-worker-b)
 
     User->>T1: 메인 지시서 작성 프롬프트 주입
-    T1->>FS: docs/handoff/sessions/worker-a/TASK_SPEC.md 생성, CURRENT 배정
+    T1->>FS: docs/handoff/sessions/S2-worker-a/TASK_SPEC.md 생성, CURRENT 배정
     User->>T2: 서브 구현 및 온더플라이 검증 프롬프트 주입
     T2->>FS: 코드 최소 수정 & 테스트 작성/실행
-    T2->>FS: docs/handoff/sessions/worker-a/SUB_RESULT.md 작성, 자기 HANDOFF 갱신
+    T2->>FS: docs/handoff/sessions/S2-worker-a/SUB_RESULT.md 작성, 자기 HANDOFF 갱신
     User->>T2: 필요할 때 HANDOFF 작성 후 세션 교체
     User->>T1: 메인 결과 검수 및 다음 모듈 지시
 ```
@@ -270,7 +362,7 @@ sequenceDiagram
 ### 1) 범용 `TASK_SPEC.md` 작성 지시 프롬프트 (터미널 1 - 메인 `메인 모델`)
 ```text
 [MAIN] 비즈니스 코드는 절대 직접 작성하거나 수정하지 마.
-우리가 확정한 의사결정과 실무자 DM 조건을 반영하여, 서브 에이전트(작업 모델)가 수행할 [Step N: X 모듈] 작업 명세서를 docs/handoff/sessions/worker-a/TASK_SPEC.md 파일에 작성해줘.
+우리가 확정한 의사결정과 실무자 DM 조건을 반영하여, 서브 에이전트(작업 모델)가 수행할 [Step N: X 모듈] 작업 명세서를 docs/handoff/sessions/S2-worker-a/TASK_SPEC.md 파일에 작성해줘.
 TASK_SPEC.md 에는 다음 6대 필수 요소를 반드시 누락 없이 포함해야 해:
 1. 작업 ID, 이번 단계의 명확한 단일 목표와 관련 R-ID
 2. 수정이 허용된 정확한 파일 경로 (지정 외 파일 수정 절대 금지)
@@ -283,7 +375,7 @@ TASK_SPEC.md 에는 다음 6대 필수 요소를 반드시 누락 없이 포함�
 5. 서브 에이전트가 구현 직후 실행할 검증 요구사항:
    - 기존 베이스라인 테스트 실행으로 회귀(Regression) 없음 증명
    - 이번 태스크의 실무자 DM 요구사항에 맞춘 온더플라이 ad-hoc 테스트 코드(tests/test_*.py 등)를 즉석 작성하여 정상 경로(Happy Path) 및 예외 케이스(빈 값, 결측치, 중복 등)를 직접 실행 검증 (실제 요구에 맞는 기대값과 입력 사용)
-6. 완료 조건(Definition of Done) 및 docs/handoff/sessions/worker-a/SUB_RESULT.md 기록 요구
+6. 완료 조건(Definition of Done) 및 docs/handoff/sessions/S2-worker-a/SUB_RESULT.md 기록 요구
 작성이 완료되면 CURRENT에 이 명세와 파일 배정을 연결해. 진행 중인 명세는 작업자에게 알리지 않고 교체하지 마.
 담당자나 나에게 물어볼게 있으면 언제든 나에게 말해.
 
@@ -294,12 +386,12 @@ TASK_SPEC.md 에는 다음 6대 필수 요소를 반드시 누락 없이 포함�
 
 ```text
 [SUB] 먼저 .probe-kit/SUB_AGENTS.md와 .probe-kit/AGENTS.override.md를 읽고 공식 규칙을 우선해.
-docs/handoff/sessions/worker-a/TASK_SPEC.md 와 지정된 스킬 파일을 읽고, 명시된 파일 범위와 제약 조건을 엄격히 준수하여 코드를 구현해줘.
+docs/handoff/sessions/S2-worker-a/TASK_SPEC.md 와 지정된 스킬 파일을 읽고, 명시된 파일 범위와 제약 조건을 엄격히 준수하여 코드를 구현해줘.
 구현 직후 다음 검증을 터미널에서 직접 실행해:
 1. 기존 베이스라인 테스트를 실행하여 기존 기능이 깨지지 않았는지 확인해.
 2. 이번 태스크의 실무자 DM 요구사항에 맞춘 전용 테스트 코드(tests/test_*.py 등)를 온더플라이로 즉석 작성하여 정상 경로와 예외 케이스를 모두 실행 검증해 (실제 요구에 맞춘 검증과 기존 파일 보존).
 3. 테스트 실패 시 무작정 덮어쓰지 말고 실패 원인과 수정 범위를 먼저 진단해.
-완료 또는 중단 시 작업 ID, 변경 파일, 실제 검증과 PASS/FAIL/NOT_RUN, 남은 한계를 docs/handoff/sessions/worker-a/SUB_RESULT.md에 기록해.
+완료 또는 중단 시 작업 ID, 변경 파일, 실제 검증과 PASS/FAIL/NOT_RUN, 남은 한계를 docs/handoff/sessions/S2-worker-a/SUB_RESULT.md에 기록해.
 자기 세션 폴더의 HANDOFF.md를 갱신하고 메인에 전달할 경로를 알려줘.
 ```
 scripts/subagent.sh는 시작 방법을 출력하는 안내다. 실제 세션은 응시자가 연다.
@@ -311,8 +403,8 @@ scripts/subagent.sh는 시작 방법을 출력하는 안내다. 실제 세션은
 터미널 1 창으로 돌아와 아래 프롬프트를 입력합니다:
 
 ```text
-[MAIN] docs/handoff/sessions/worker-a/SUB_RESULT.md의 작업 ID가 현재 명세와 같은지 확인하고 중요한 코드 변경과 실제 검증 결과를 확인해서 Step N이 실무자 DM 조건에 맞게 검증되었는지 엣지 케이스 관점에서 비판적으로 검토해줘.
-현재 결과를 검토하고 이전 결과와 핵심 증거를 자기 보고서에 보존한 뒤 다음 모듈인 [Step N+1]에 대한 docs/handoff/sessions/worker-a/TASK_SPEC.md 를 작성해줘.
+[MAIN] docs/handoff/sessions/S2-worker-a/SUB_RESULT.md의 작업 ID가 현재 명세와 같은지 확인하고 중요한 코드 변경과 실제 검증 결과를 확인해서 Step N이 실무자 DM 조건에 맞게 검증되었는지 엣지 케이스 관점에서 비판적으로 검토해줘.
+현재 결과를 검토하고 이전 결과와 핵심 증거를 자기 보고서에 보존한 뒤 다음 모듈인 [Step N+1]에 대한 docs/handoff/sessions/S2-worker-a/TASK_SPEC.md 를 작성해줘.
 담당자나 나에게 물어볼게 있으면 언제든 나에게 말해.
 
 ```
@@ -354,6 +446,7 @@ scripts/subagent.sh는 시작 방법을 출력하는 안내다. 실제 세션은
 
 ### 1) 터미널 1에서 실제 검증
 ```text
+$probe-verify
 [MAIN] CURRENT의 기능 동결 시각이야. 새 기능을 멈춰.
 README의 실제 실행 명령으로 필수 흐름을 다시 실행해.
 각 R-ID에 명령, 실제 출력, PASS/FAIL/NOT_RUN/HUMAN_CHECK와 근거를 연결해.
@@ -510,11 +603,11 @@ docs/
   handoff/
     CURRENT.md                  메인이 관리하는 현재 상태와 배정
     sessions/
-      worker-a/
+      S2-worker-a/
         TASK_SPEC.md            메인이 작성하는 명세
-        SUB_RESULT.md           worker-a의 결과
-        HANDOFF.md              worker-a의 인계
-      worker-b/                 필요할 때 같은 구조로 추가
+        SUB_RESULT.md           S2-worker-a의 결과
+        HANDOFF.md              S2-worker-a의 인계
+      S3-worker-b/                 필요할 때 같은 구조로 추가
   references/                   출처와 인터뷰 분석
   reports/                      세션별 실행 증거
 ```

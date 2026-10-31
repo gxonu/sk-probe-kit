@@ -33,6 +33,7 @@
 - 원본 AGENTS.md와 SUB_AGENTS.md는 줄이거나 재구성하지 않는다. foruser.md가 주 안내이며 RUNBOOK은 보조 요약이다.
 - 메인 + worker-a + worker-b는 예시다. 작업자는 역할과 수를 조정하고 명세, 결과, 인계 파일을 세션별 폴더로 나눈다.
 - 04:01 KST 재확인: upstream README의 유형은 9개이며 스킬과 질문 은행은 4개 묶음이다. foruser와 docs/scenarios에 연결을 정정했다. 출제 확률 등급은 작성자 예상이다.
+- 사용자 세션명 S1-main, S2-worker-a, S3-worker-b를 foruser의 예시에 적용했다. 앞부분에 본시험 8단계와 보조 스킬 6개의 호출 시점, 입력 예시 및 결과 확인을 추가했다. 스킬을 실제 실행한 결과는 아니다.
 
 ## 다음 행동
 
