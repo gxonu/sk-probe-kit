@@ -9,7 +9,7 @@
 ## 완료한 일
 
 - 최신 main은 a08f364, 기존 원본과 동일, 추가 커밋 없음.
-- [RUNBOOK](../../RUNBOOK.md)에 설치, 시간, 질문과 합의, 세션 분업, 구현과 검증, 제출과 장애 대응을 연결.
+- [RUNBOOK](../../../foruser.md)에 설치, 시간, 질문과 합의, 세션 분업, 구현과 검증, 제출과 장애 대응을 연결.
 - preflight.py, plan_time.py, rehearse.py 추가.
 - README와 foruser.md, 작업 스킬과 시간 지침을 새 매뉴얼에 연결.
 - 실제 합성 실행과 21개 테스트 통과. [검증 보고서](../../reports/20261031-live-pipeline.md).

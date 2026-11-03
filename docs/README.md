@@ -1,7 +1,7 @@
 # 문서 시작점
 
 공식 규칙은 [RULES.md](RULES.md), 현재 작업과 세션 배정은 [handoff/CURRENT.md](handoff/CURRENT.md)에서 확인한다.
-당일 실행은 원본 기반 [foruser.md](../foruser.md)를 중심으로 하고 [RUNBOOK.md](RUNBOOK.md)는 보조 요약이다. 재현 가능한 구성 점검은 [REHEARSAL.md](REHEARSAL.md)를 따른다.
+당일 실행은 원본 기반 [foruser.md](../foruser.md)를 중심으로 한다. 재현 가능한 구성 점검은 [REHEARSAL.md](REHEARSAL.md)를 따른다.
 
 | 폴더 | 목적 | 먼저 읽을 문서 |
 |---|---|---|
@@ -14,8 +14,9 @@
 
 ## 작업 가이드
 
+- [기본 7개 세션 운영](TEAM_PLAYBOOK.md): 단계별 활성화, 파일/실행 자원 소유권, 독립 검증과 기록 담당의 전달 방식.
+- [제출 전 20분 설명 연습](mock-exam.md), [가상 few-shot](mock-examples.md): 현재 코드로 예상 5문항을 만들고 답변 뒤 피드백한다.
 - [질문](interview.md): 현재 업무와 사례를 이해하고 구체적인 조건을 확인한다.
-- [요청 프롬프트](prompts.md): 메인, 작업 세션, 인계와 검증 요청.
 - [설명 연습](written-prep.md): 제출물 확정 전에 코드와 실제 결과의 이해를 점검한다.
 - [공개 레포 채택 내역](ADOPTED_PRACTICES.md), [도구 조사](TOOL_SURVEY.md).
 - [Cofa Probe 제작진 인터뷰 분석](references/cofa-probe-interview-20261031.md).

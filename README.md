@@ -3,7 +3,8 @@
 Cofa Probe 과제를 위한 공개 자료 통합본. **공식 운영 안내와 실제 과제 지침을 최우선**으로 적용한다.
 
 **당일에는 [foruser.md](foruser.md)를 먼저 연다.** chichochoi 원본의 단계와 요청 문구를 바탕으로 설치 경로, 공식 규칙, 여러 세션의 파일 공유만 맞췄다.
-[보조 요약](docs/RUNBOOK.md), [실행 점검 절차](docs/REHEARSAL.md), [원본 최신 확인](docs/references/upstream-check-20261031.md).
+[실행 점검 절차](docs/REHEARSAL.md), [원본 최신 확인](docs/references/upstream-check-20261031.md).
+[7개 세션 운영](docs/TEAM_PLAYBOOK.md), [제출 전 20분 예상 문항](docs/mock-exam.md), [few-shot 예시](docs/mock-examples.md).
 
 `chichochoi/sk`를 메인으로, KTY 반도체 지식 패키지와 hamjoon 서술형 대비 원문을 포함한다. 원본 125개 파일은 출처와 고정 커밋을 기록해 보존했다. 실제 응시 문제, 정답, 개인 링크와 인증 정보는 포함하지 않는다.
 
@@ -21,7 +22,7 @@ codex
 ```
 
 전역 Codex 설정을 바꾸지 않는다. 기존 과제 지침에는 연결 안내를 추가하고 `.probe-kit/` 및 프로젝트 스킬 여섯 개를 설치한다. 기존 작업 기록은 보존하고 파일 충돌은 덮어쓰지 않고 알린다. 설치 뒤 새 Codex 세션에서 읽은 지침을 확인한다.
-과제 루트의 `docs/handoff`, `docs/references`, `docs/reports`도 준비한다. 기존 docs 파일과 세션 기록은 보존한다.
+과제 루트의 `docs/handoff`, `docs/references`, `docs/reports`도 준비한다. S1~S7의 세션별 TASK_SPEC, SUB_RESULT, HANDOFF와 PLANNED 배정표를 만들며 세션을 자동 실행하지 않는다. 기존 docs 파일과 세션 기록은 보존한다.
 이전 버전의 .probe-kit 파일과 충돌하면 설치를 중단한다. 실행 중인 과제의 하네스를 자동 교체하지 않으며 새 모의 폴더에서 먼저 확인한다.
 
 첫 요청:
@@ -41,25 +42,26 @@ $probe-workflow .probe-kit/AGENTS.override.md와 공식 규칙부터 확인해.
 | 구성 | 내용 |
 |---|---|
 | [공식 우선 지침](AGENTS.override.md), [일곱 가지 작업 원칙](docs/RULES.md) | 원본과 충돌할 때 적용할 기준 |
-| `AGENTS.md`, `SUB_AGENTS.md`, `skills/`, `prompts/`, `scripts/` | chichochoi 메인/서브 흐름과 과제 유형별 원문 |
+| `AGENTS.md`, `SUB_AGENTS.md`, `skills/` | 원본 역할 지침과 통합 방식에 맞춘 유형별 안내. 원문은 upstream에 보존 |
 | [유형과 스킬 연결](docs/scenarios.md) | README의 9개 유형을 기존 스킬 4개와 질문 묶음에 연결 |
 | [질문 절차와 질문 은행](docs/interview.md) | 숨은 조건 후보, Q-ID → R-ID → 테스트 연결 |
 | [문서 시작점](docs/README.md), [현재 상태](docs/handoff/CURRENT.md) | 여러 세션의 읽는 순서와 파일 작성 범위 |
-| [원본 기반 실행 안내](foruser.md), [보조 요약](docs/RUNBOOK.md) | 원본의 질문, 합의, 명세와 결과 반복, 검증과 제출 순서 |
+| [원본 기반 실행 안내](foruser.md) | 원본의 질문, 합의, 명세와 결과 반복, 검증과 제출 순서 |
 | `scripts/preflight.py`, `scripts/plan_time.py` | 설치 및 Codex 시작 확인, 실제 시각 기반 작업과 제출 계획 |
 | [전체 흐름 점검](docs/REHEARSAL.md), `scripts/rehearse.py` | 새 임시 폴더에서 실패 검출, 정상 실행, 기록과 인계 보존 확인 |
 | [제작진 인터뷰 분석](docs/references/cofa-probe-interview-20261031.md) | 기술, 의도, 인지의 설명과 시간별 근거, 적용 한계 |
-| [메인/작업 세션 요청](docs/prompts.md) | 메인과 작업자 1~2개를 기본 예시로, 역할과 개수를 유연하게 운영 |
-| `runtime/`, `templates/` | 작업 명세, 결과, 요구, 질문, 결정, 증거, 인계 기록 |
+| [7개 세션 운영과 시작 요청](docs/TEAM_PLAYBOOK.md) | 총괄, 개발 2개, 데이터/알고리즘, 조사, 독립 검증, 기록. 필요에 따라 축소 |
+| `templates/` | 공통 원장과 세션별 명세, 결과, 인계 양식. 설치 시 실제 작업 경로에 생성 |
 | `scripts/decision.py` | 과거 결정을 보존하며 선택, 대안, 이유, 검증과 한계를 추가 |
 | [반도체 자료](knowledge/semiconductor/README.md) | KTY 원문 94개 파일, 추가 다운로드 없이 로컬 검색 |
 | [서술형 원문](references/written-prep.original.md), [연습용 안내](docs/written-prep.md) | 원문 보존, 실제 연습은 제출물 확정 전에 완료 |
+| [현재 코드 기반 출제 프롬프트](prompts/mock_exam_5.md), [가상 few-shot](docs/mock-examples.md) | 코드 근거가 붙은 예상 5문항, 사용자 답변 뒤 피드백 |
 | [도구 조사](docs/TOOL_SURVEY.md) | 유명 MCP, 플러그인, 스킬의 용도와 대회 적용 판단 |
 | [채택한 공개 레포의 방법](docs/ADOPTED_PRACTICES.md) | 무엇을 가져왔고 무엇을 바꿨는지 |
 
 ## 여러 세션으로 이어가기
 
-사용자가 같은 프로젝트 폴더에서 필요한 세션을 연다. 메인 + worker-a + worker-b의 3개를 예로 쓰며, 구현, 데이터 확인, 검토 등 역할과 개수는 고정하지 않는다. [공유 절차](docs/handoff/README.md)에 따라 통합 담당자가 파일 범위를 배정하고 각 세션이 자기 기록을 남긴다.
+사용자가 같은 프로젝트 폴더에서 필요한 세션을 연다. 기본 7개 역할은 S1 총괄, S2/S3 개발, S4 데이터/알고리즘, S5 조사, S6 독립 검증, S7 기록/제출 문서로 나눈다. 6개면 S5의 한정된 조사를 S1 또는 S4에 맡기는 안을 우선한다. 역할 수를 줄여도 된다. [운영안](docs/TEAM_PLAYBOOK.md)과 [공유 절차](docs/handoff/README.md)에 따라 실제 파일과 실행 자원의 소유자를 배정한다.
 
 ```text
 docs/
@@ -88,6 +90,8 @@ CURRENT와 공통 요구 및 결정은 통합 담당자 한 명이 관리한다.
 이 저장소의 CURRENT는 하네스 개발 상태다. 설치기는 실제 과제에 별도의 미시작 CURRENT를 만들며 개발 인계를 과제 상태로 복사하지 않는다.
 
 ## 원본 보존과 수정 범위
+
+중복 안내 3개는 foruser와 TEAM_PLAYBOOK에 통합하고, 구형 파일 12개는 활성 경로에서 제거했다. 원본은 upstream에 남아 있다. [정리 내역](docs/CLEANUP.md)을 참고한다.
 
 메인 원본 전체는 `upstream/chichochoi/`에 그대로 있다. 사용 경로의 `init.sh`와 `scripts/subagent.sh`는 공식 규칙에 맞춰 교체했다. 설치는 프로젝트 범위에서만 수행하고 서브 세션은 기본 승인 설정으로 사람이 시작한다. 원본 `config.toml`을 전역에 설치하지 않는다.
 사용 경로의 `templates/HANDOFF.md`는 새 공유 문서를 가리키는 양식으로 보완했다. 해당 원본도 upstream에 보존한다.

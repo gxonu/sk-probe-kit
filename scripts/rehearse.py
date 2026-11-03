@@ -75,17 +75,17 @@ def rehearse():
                 and schedule["task_finish_by"].endswith("13:00:00+09:00")):
             raise RuntimeError("schedule differs from the synthetic expected checkpoints")
         sessions = task / "docs/handoff/sessions"
-        sessions.mkdir()
+        sessions.mkdir(exist_ok=True)
         (task / "docs/handoff/CURRENT.md").write_text(
             "# SYNTHETIC ONLY\nIntegrator: main. Worker: build.\n"
             "main owns runtime ledgers; build owns pipeline.py and its report.\n"
             "No AI session was started; a deterministic local driver executes this fixture.\n",
             encoding="utf-8")
-        (sessions / "main.md").write_text(
+        (sessions / "S1-main/HANDOFF.md").write_text(
             "# main — synthetic fixture driver\nR-01: total=30, count=2, excluded=1, review=1.\n"
             "Q-01: cancellation and missing-value behavior is specified by fixture README.\n",
             encoding="utf-8")
-        (sessions / "build.md").write_text(
+        (sessions / "S2-worker-a/SUB_RESULT.md").write_text(
             "# build — synthetic fixture driver\nScope: pipeline.py, validate_fixture.py, result.json.\n"
             "Acceptance: python validate_fixture.py result.json\nState: ACTIVE\n",
             encoding="utf-8")
@@ -120,13 +120,13 @@ def rehearse():
             "Wrong output rejected with exit 1. Correct output accepted with exit 0.\n"
             "Result: total=30, count=2, excluded=1, review=1.\n",
             encoding="utf-8")
-        with (sessions / "build.md").open("a", encoding="utf-8") as f:
+        with (sessions / "S2-worker-a/SUB_RESULT.md").open("a", encoding="utf-8") as f:
             f.write("State: HANDOFF. Read docs/reports/build-01.md; R-01 verified.\n")
-        with (sessions / "main.md").open("a", encoding="utf-8") as f:
+        with (sessions / "S1-main/HANDOFF.md").open("a", encoding="utf-8") as f:
             f.write("Received build report. Actual oracle output inspected; ledgers updated. State: HANDOFF.\n")
         protected = list(baseline) + [
-            "docs/handoff/CURRENT.md", "docs/handoff/sessions/main.md",
-            "docs/handoff/sessions/build.md", "docs/reports/build-01.md",
+            "docs/handoff/CURRENT.md", "docs/handoff/sessions/S1-main/HANDOFF.md",
+            "docs/handoff/sessions/S2-worker-a/SUB_RESULT.md", "docs/reports/build-01.md",
             ".probe-kit/runtime/DECISIONS.md", ".probe-kit/runtime/EVIDENCE.md",
             ".probe-kit/runtime/REQUIREMENTS.md", ".probe-kit/runtime/QUESTION_LOG.md",
         ]

@@ -4,7 +4,7 @@
 
 | 출처 | 채택 | 적용 위치 | 그대로 따르지 않은 부분 |
 |---|---|---|---|
-| [chichochoi/sk](https://github.com/chichochoi/sk) | 메인/서브 명세와 결과, 데이터 요약, 네 가지 과제 유형, 인계 | 원문 파일, AGENTS.override.md, docs/prompts.md | 전역 설정 교체, 승인 우회, Git 변경 전면 금지, 메인의 코드 확인 금지 |
+| [chichochoi/sk](https://github.com/chichochoi/sk) | 메인/서브 명세와 결과, 데이터 요약, 네 가지 과제 유형, 인계 | 원문 파일, AGENTS.override.md, docs/TEAM_PLAYBOOK.md | 전역 설정 교체, 승인 우회, Git 변경 전면 금지, 메인의 코드 확인 금지 |
 | [xodbs1021/kty-codex-harness-template](https://github.com/xodbs1021/kty-codex-harness-template) | 반도체 개념, 적용 조건, 색인과 출처 | knowledge/semiconductor 전체 원문 | 무거운 별도 하네스 설치와 역할 전체 활성화 |
 | [hamjoon2003/sk-hynix-2nd-harness](https://github.com/hamjoon2003/sk-hynix-2nd-harness) | 서술형 질문, 결정과 한계 설명, 검증 상태 | 원문 및 docs/written-prep.md | 실제 출제 및 채점 빈도 단정, 제출 확정 이후 코칭 |
 | [hekate-louise/codex-harness](https://github.com/hekate-louise/codex-harness) | 질문 점검과 답 기록, 요구 ID와 테스트 연결, 작은 완주 | docs/interview.md, probe-interview, REQUIREMENTS | 모든 커밋을 사람에게 넘기는 방식은 강제하지 않음 |

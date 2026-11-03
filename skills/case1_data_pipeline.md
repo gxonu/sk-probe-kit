@@ -1,5 +1,8 @@
 # Case 1 & Case 5: 데이터 파이프라인 정제·집계 및 반도체/제조 판정 스킬
 
+> 통합 사용: AGENTS.override.md와 docs/TEAM_PLAYBOOK.md를 우선한다. 아래 원본의 고정 모델, 공용 로그, Git 제한과 가점 주장을 실제 규칙으로 적용하지 않는다. 세션별 명세와 결과를 사용하고 검증은 실제 과제 입력으로 수행한다. 원문은 upstream/chichochoi에 보존한다.
+
+
 ## 1. 언제 이 스킬을 쓰는가
 - **Case 1 적용 상황:** 복수의 원천 데이터 파일(CSV, JSON, TSV, DB 덤프, 텍스트 로그 등)이 제공되고, 데이터 정제(결측/중복/이상치 처리) 및 통계 집계, 결과 파일 생성(CSV/Excel 등), 요약 리포트 작성이 요구되는 과제.
 - **Case 5 적용 상황:** SK하이닉스 제조 공정, 웨이퍼(Wafer), 수율(Yield), 장비 파라미터, 센서 시계열 로그, 불량(Defect) 판정 용어가 등장하며, 특정 임계값(Threshold)을 기준으로 정상/주의/위험 등 등급 판정 및 후속 조치 리포팅이 요구되는 과제.
@@ -54,7 +57,7 @@
 - [ ] 센서 결측치 대체값(`-999`, `-9999`, `null`, `NaN`, `INF`) 필터링 기준을 확정한다.
 
 ### 3단계: 작업 명세서 작성 및 서브 에이전트 위임
-- [ ] 메인 에이전트가 `.probe-kit/runtime/TASK_SPEC.md`에 파이프라인 단계별 입출력 경로 및 필터링 규칙을 명시한다.
+- [ ] 메인 에이전트가 `docs/handoff/sessions/<session-id>/TASK_SPEC.md`에 파이프라인 단계별 입출력 경로 및 필터링 규칙을 명시한다.
 - [ ] 서브 에이전트(`Luna 6 xhigh`)를 호출하여 전처리 단계별 건수 로깅 로직을 구현하도록 지시한다.
 - [ ] 서브 에이전트가 코드를 구현하고 전처리 단계별 건수 로그를 표준 출력에 출력하도록 한다.
 
@@ -348,8 +351,9 @@ python3 tests/test_sample_check.py || python3 .probe-kit/scripts/sample_check_te
 grep -E -- "-999|null|NaN" output/wafer_quality_report.csv || echo "결측 센티널값 0건 확인 완료"
 
 # 5. Git 변경 사항 및 무결성 감사 (또는 python3 버전 직접 실행)
-bash .probe-kit/scripts/pre_submit_audit.sh
-# python3 .probe-kit/scripts/pre_submit_audit.py
+git status --short
+git diff --check
+# 이어서 $probe-verify로 실제 요구별 실행 증거를 대조한다. 위 두 명령은 기능 검증이 아니다.
 ```
 
 ---

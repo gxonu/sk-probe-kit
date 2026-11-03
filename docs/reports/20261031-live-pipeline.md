@@ -4,7 +4,7 @@
 - 기준: b3a61dc299b5d456ae6c735d3a4898e049d39c90 이후의 준비용 변경.
 - 목적: 당일 바로 사용할 실행 순서와 복사 가능한 요청, 점검 명령을 제공.
 - 원본 최신 상태: [GitHub API 확인](../references/upstream-check-20261031.md), 추가 커밋 0개.
-- 실행 매뉴얼: [RUNBOOK](../RUNBOOK.md).
+- 실행 매뉴얼: [RUNBOOK](../../foruser.md).
 
 ## 실제 실행 결과
 

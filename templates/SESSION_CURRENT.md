@@ -10,6 +10,7 @@
 - 첫 전체 흐름 목표 / 기능 동결:
 - 제출 시작 / 과제 확정 한계:
 - 후속 서술형과 질문 생성 여유:
+- 제출 전 예상 5문항 시작 / 출제 담당 / 기록 담당:
 - 통합 담당 세션:
 - 갱신 시각:
 - 기준 커밋 / 브랜치:
@@ -23,12 +24,26 @@
 
 | 세션 ID | 역할 | 상태 | 쓰기 가능한 경로 | 완료 조건 | 갱신 시각 | 인계 문서 |
 |---|---|---|---|---|---|---|
+| S1-main | 총괄과 통합 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S1-main/HANDOFF.md) |
+| S2-worker-a | 개발 A | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S2-worker-a/HANDOFF.md) |
+| S3-worker-b | 개발 B | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S3-worker-b/HANDOFF.md) |
+| S4-data | 데이터와 알고리즘 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S4-data/HANDOFF.md) |
+| S5-research | 한정된 조사 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S5-research/HANDOFF.md) |
+| S6-review | 독립 검증과 예상 문항 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S6-review/HANDOFF.md) |
+| S7-records | 기록과 제출 문서 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S7-records/HANDOFF.md) |
 
 상태: PLANNED / ACTIVE / WAITING / HANDOFF / CLOSED. 통합 담당자가 등록한 범위에서만 편집한다.
 공통 원장과 이 파일은 통합 담당자 한 명이 갱신한다.
-메인 + worker-a + worker-b는 배정 예시다. 역할과 개수는 고정하지 않는다.
+기본 7개 역할만 준비한 상태다. S1이 실제 파일 범위와 자원을 배정한 뒤 ACTIVE로 바꾼다. 필요 없는 역할은 대기하며 세션은 사용자가 직접 연다.
 세션별 sessions/<session-id>/TASK_SPEC.md는 메인이, SUB_RESULT.md와 HANDOFF.md는 해당 작업자가 관리한다.
 수신한 요청 파일과 관련 인계만 읽고 필요한 근거로 이동한다.
+
+## 실행 자원 소유권
+
+| 서버/포트/DB/출력 경로 또는 무거운 명령 | 관리 세션 | 동시 사용 조건 / 인계 |
+|---|---|---|
+
+검토 세션은 실행 중인 공유 서버/DB를 임의로 초기화하지 않는다. 기록 담당의 공통 원장 반영안은 S1이 검토한다.
 
 ## 이번 결정과 열린 질문
 

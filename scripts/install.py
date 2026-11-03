@@ -5,6 +5,7 @@ from pathlib import Path
 import sys
 
 SOURCE = Path(__file__).resolve().parents[1]
+SESSIONS = [('S1-main', '총괄과 통합'), ('S2-worker-a', '개발 A'), ('S3-worker-b', '개발 B'), ('S4-data', '데이터와 알고리즘'), ('S5-research', '한정된 조사'), ('S6-review', '독립 검증과 예상 문항'), ('S7-records', '기록과 제출 문서')]
 BLOCK = """
 <!-- sk-probe-kit:v1 -->
 ## 과제 작업 보조
@@ -58,10 +59,8 @@ def install(target, dry_run=False):
     for source in sorted((SOURCE / '.agents/skills').rglob('*')):
         if source.is_file():
             writes.append((target / source.relative_to(SOURCE), source.read_bytes(), False))
-    for source in sorted((SOURCE / 'runtime').glob('*.md')):
-        writes.append((target / '.probe-kit/runtime' / source.name, source.read_bytes(), True))
     for source in sorted((SOURCE / 'templates').glob('*.md')):
-        if source.name in ('SESSION_CURRENT.md', 'SHARED_DOCS.md'):
+        if source.name.startswith('SESSION_') or source.name == 'SHARED_DOCS.md':
             continue
         writes.append((target / '.probe-kit/runtime' / source.name, source.read_bytes(), True))
     # Shared task records live at the task root and survive reinstall.
@@ -79,6 +78,15 @@ def install(target, dry_run=False):
             shared[str(source.relative_to(SOURCE))] = str(source.relative_to(SOURCE))
     for destination, source in shared.items():
         writes.append((target / destination, (SOURCE / source).read_bytes(), True))
+    # Seed planned sessions only; never copy harness development histories.
+    for session_id, role in SESSIONS:
+        for name, source in (
+            ('TASK_SPEC.md', 'templates/SESSION_TASK_SPEC.md'),
+            ('SUB_RESULT.md', 'templates/SESSION_SUB_RESULT.md'),
+            ('HANDOFF.md', 'docs/handoff/TEMPLATE.md'),
+        ):
+            content = (SOURCE / source).read_text().replace('{{SESSION_ID}}', session_id).replace('{{ROLE}}', role)
+            writes.append((target / 'docs/handoff/sessions' / session_id / name, content.encode(), True))
     # Match Codex's per-directory preference while preserving original bytes.
     active = target / 'AGENTS.override.md'
     if not active.exists() and not active.is_symlink():

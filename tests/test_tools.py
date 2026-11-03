@@ -67,14 +67,20 @@ class InstallTests(unittest.TestCase):
         current = self.target / 'docs/handoff/CURRENT.md'
         self.assertEqual(current.read_bytes(), (ROOT / 'templates/SESSION_CURRENT.md').read_bytes())
         # The harness development session must not become the task's active session.
-        self.assertFalse((self.target / 'docs/handoff/sessions').exists())
+        self.assertEqual({p.name for p in (self.target / 'docs/handoff/sessions').iterdir()},
+                         {sid for sid, _ in module('install').SESSIONS})
+        for sid, _ in module('install').SESSIONS:
+            for name in ('TASK_SPEC.md', 'SUB_RESULT.md', 'HANDOFF.md'):
+                p = self.target / 'docs/handoff/sessions' / sid / name
+                self.assertTrue(p.is_file())
+                p.write_text(f'existing {sid} {name}')
         self.assertFalse((self.target / '.probe-kit/docs/handoff/sessions').exists())
         pointer = self.target / '.probe-kit/docs/handoff/CURRENT.md'
         self.assertIn('../../../docs/handoff/CURRENT.md', pointer.read_text())
         self.assertFalse((self.target / '.probe-kit/docs/reports/20261031-session-docs.md').exists())
         current.write_text('active task with decisions')
         session = self.target / 'docs/handoff/sessions/my-session.md'
-        session.parent.mkdir()
+        session.parent.mkdir(exist_ok=True)
         session.write_text('my handoff and uncommitted work')
         report = self.target / 'docs/reports/my-result.md'
         report.write_text('actual evidence')
@@ -82,6 +88,10 @@ class InstallTests(unittest.TestCase):
         self.assertEqual(current.read_text(), 'active task with decisions')
         self.assertEqual(session.read_text(), 'my handoff and uncommitted work')
         self.assertEqual(report.read_text(), 'actual evidence')
+        for sid, _ in module('install').SESSIONS:
+            for name in ('TASK_SPEC.md', 'SUB_RESULT.md', 'HANDOFF.md'):
+                self.assertEqual((self.target / 'docs/handoff/sessions' / sid / name).read_text(),
+                                 f'existing {sid} {name}')
         self.assertTrue((self.target / 'docs/references/cofa-probe-interview-20261031.md').is_file())
 
     def test_shared_docs_symlink_fails_before_any_write(self):

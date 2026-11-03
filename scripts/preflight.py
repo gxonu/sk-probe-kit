@@ -10,7 +10,7 @@ import sys
 REQUIRED = [
     ".probe-kit/AGENTS.md", ".probe-kit/SUB_AGENTS.md", ".probe-kit/foruser.md",
     ".probe-kit/AGENTS.override.md", ".probe-kit/docs/RULES.md",
-    ".probe-kit/docs/RUNBOOK.md", ".probe-kit/runtime/REQUIREMENTS.md",
+    ".probe-kit/docs/TEAM_PLAYBOOK.md", ".probe-kit/runtime/REQUIREMENTS.md",
     ".probe-kit/runtime/QUESTION_LOG.md", ".probe-kit/runtime/DECISIONS.md",
     ".probe-kit/runtime/EVIDENCE.md", "docs/handoff/README.md",
     "docs/handoff/CURRENT.md", "docs/handoff/TEMPLATE.md",
