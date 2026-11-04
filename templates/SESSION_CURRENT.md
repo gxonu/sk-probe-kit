@@ -8,9 +8,9 @@
 - 시작 시각 / 마감 / 남은 시간 / 시간대:
 - 시간표 입력과 plan_time.py 결과:
 - 첫 전체 흐름 목표 / 기능 동결:
-- 제출 시작 / 과제 확정 한계:
+- 제출 시작 / 예정된 제출 확정 / 과제 확정 한계:
 - 후속 서술형과 질문 생성 여유:
-- 제출 전 예상 5문항 시작 / 출제 담당 / 기록 담당:
+- S8 초안(첫 완주 뒤) / 전체 준비 시각 / lead 분 / 최종 변경 확인:
 - 통합 담당 세션:
 - 갱신 시각:
 - 기준 커밋 / 브랜치:
@@ -29,12 +29,13 @@
 | S3-worker-b | 개발 B | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S3-worker-b/HANDOFF.md) |
 | S4-data | 데이터와 알고리즘 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S4-data/HANDOFF.md) |
 | S5-research | 한정된 조사 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S5-research/HANDOFF.md) |
-| S6-review | 독립 검증과 예상 문항 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S6-review/HANDOFF.md) |
+| S6-review | 독립 검증과 제약 점검 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S6-review/HANDOFF.md) |
 | S7-records | 기록과 제출 문서 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S7-records/HANDOFF.md) |
+| S8-explain | 서술형 대비 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S8-explain/HANDOFF.md) |
 
 상태: PLANNED / ACTIVE / WAITING / HANDOFF / CLOSED. 통합 담당자가 등록한 범위에서만 편집한다.
-공통 원장과 이 파일은 통합 담당자 한 명이 갱신한다.
-기본 7개 역할만 준비한 상태다. S1이 실제 파일 범위와 자원을 배정한 뒤 ACTIVE로 바꾼다. 필요 없는 역할은 대기하며 세션은 사용자가 직접 연다.
+이 파일과 REQUIREMENTS/DECISIONS/EVIDENCE는 S1이 갱신한다. QUESTION_LOG만 각 세션이 question_log.py로 추가한다.
+기본 8개 역할만 준비한 상태다. S1이 실제 파일 범위와 자원을 배정한 뒤 ACTIVE로 바꾼다. 필요 없는 역할은 대기하며 세션은 사용자가 직접 연다.
 세션별 sessions/<session-id>/TASK_SPEC.md는 메인이, SUB_RESULT.md와 HANDOFF.md는 해당 작업자가 관리한다.
 수신한 요청 파일과 관련 인계만 읽고 필요한 근거로 이동한다.
 

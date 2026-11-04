@@ -5,7 +5,7 @@ from pathlib import Path
 import sys
 
 SOURCE = Path(__file__).resolve().parents[1]
-SESSIONS = [('S1-main', '총괄과 통합'), ('S2-worker-a', '개발 A'), ('S3-worker-b', '개발 B'), ('S4-data', '데이터와 알고리즘'), ('S5-research', '한정된 조사'), ('S6-review', '독립 검증과 예상 문항'), ('S7-records', '기록과 제출 문서')]
+SESSIONS = [('S1-main', '총괄과 통합'), ('S2-worker-a', '개발 A'), ('S3-worker-b', '개발 B'), ('S4-data', '데이터와 알고리즘'), ('S5-research', '한정된 조사'), ('S6-review', '독립 검증과 제약 점검'), ('S7-records', '기록과 제출 문서'), ('S8-explain', '서술형 대비')]
 BLOCK = """
 <!-- sk-probe-kit:v1 -->
 ## 과제 작업 보조
@@ -44,7 +44,7 @@ def install(target, dry_run=False):
     if not target.is_dir() or target == SOURCE or SOURCE in target.parents:
         raise ValueError("하네스 저장소 밖에 있는 과제 폴더를 지정하세요.")
     writes = []
-    for directory in ('docs', 'scripts', 'templates', 'licenses', 'skills', 'prompts', 'knowledge', 'references', 'upstream'):
+    for directory in ('docs', 'scripts', 'templates', 'licenses', 'skills', 'prompts', 'knowledge', 'references'):
         for source in sorted((SOURCE / directory).rglob('*')):
             if source.is_file() and '__pycache__' not in source.parts:
                 relative = source.relative_to(SOURCE)

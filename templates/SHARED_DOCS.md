@@ -5,7 +5,7 @@
 
 새 세션은 공식 지침 → CURRENT → 배정받은 세션 인계 → 관련 보고서와 출처 순으로 읽는다.
 세션의 대화는 자동 공유되지 않는다. 파일을 저장하고 경로를 전달하며 수신 세션이 다시 읽어야 한다.
-여러 세션이 공통 원장을 동시에 편집하지 않는다. 통합 담당자가 요구와 결정을 반영한다.
+QUESTION_LOG는 각 세션이 question_log.py로 추가한다. 다른 공통 원장은 S1이 갱신한다. 요구와 결정의 변경은 S1이 확인해 반영한다.
 
 실행 안내는 .probe-kit/foruser.md를 중심으로 읽는다.
 작업자별 sessions/<session-id>/TASK_SPEC.md는 메인이 쓰고 SUB_RESULT.md와 HANDOFF.md는 해당 작업자가 쓴다.

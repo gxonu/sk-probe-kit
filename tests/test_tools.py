@@ -142,6 +142,17 @@ class InstallTests(unittest.TestCase):
             self.assertEqual((self.target / '.probe-kit' / relative).read_bytes(),
                              (ROOT / relative).read_bytes())
 
+    def test_eight_roles_and_practical_materials_only(self):
+        self.assertEqual(self.run_install().returncode, 0)
+        sessions = self.target / 'docs/handoff/sessions'
+        self.assertEqual(len(list(sessions.iterdir())), 8)
+        self.assertTrue((sessions / 'S8-explain/SUB_RESULT.md').is_file())
+        self.assertTrue((self.target / '.probe-kit/scripts/question_log.py').is_file())
+        self.assertTrue((self.target / '.probe-kit/prompts/mock_exam_6.md').is_file())
+        for path in ('upstream', 'knowledge/semiconductor/reviews', 'docs/CLEANUP.md',
+                     'docs/TOOL_SURVEY.md', 'runtime/HANDOFF.md', 'runtime/SUBMISSION_REPORT.md'):
+            self.assertFalse((self.target / '.probe-kit' / path).exists(), path)
+
     def test_decision_preserves_history_and_escapes_cells(self):
         self.assertEqual(self.run_install().returncode, 0)
         file = self.target / '.probe-kit/runtime/DECISIONS.md'
@@ -228,6 +239,27 @@ class TimePlanTests(unittest.TestCase):
                            ('2026-10-31T15:00:00+09:00', '2026-10-31T14:00:00+09:00')]:
             with self.subTest(start=start), self.assertRaises(ValueError):
                 module('plan_time').plan(start, end)
+
+    def test_explanation_tracks_planned_submission_and_custom_lead(self):
+        result = module('plan_time').plan('2026-11-04T19:00:00+09:00', '2026-11-04T23:00:00+09:00',
+                                          submission_at='2026-11-04T21:40:00+09:00', explain_lead_minutes=30)
+        self.assertEqual(result['explain_full_prep'], '2026-11-04T21:10:00+09:00')
+        self.assertEqual(result['submission_start'], '2026-11-04T21:30:00+09:00')
+        self.assertEqual(result['task_finish_by'], '2026-11-04T22:00:00+09:00')
+
+    def test_explanation_does_not_consume_submission_buffer_in_short_window(self):
+        result = module('plan_time').plan('2026-11-04T22:00:00+09:00', '2026-11-04T23:00:00+09:00')
+        self.assertTrue(result['explain_shortened'])
+        self.assertLessEqual(result['start'], result['explain_full_prep'])
+        self.assertLessEqual(result['explain_full_prep'], result['submission_start'])
+
+    def test_invalid_preparation_window_is_rejected(self):
+        for options in ({'explain_lead_minutes': -1},
+                        {'submission_at': '2026-11-04T22:30:00+09:00'},
+                        {'submission_at': '2026-11-04T21:00:00'},
+                        {'submission_at': '2026-11-04T18:00:00+09:00'}):
+            with self.subTest(options=options), self.assertRaises(ValueError):
+                module('plan_time').plan('2026-11-04T19:00:00+09:00', '2026-11-04T23:00:00+09:00', **options)
 
 
 class PreflightTests(unittest.TestCase):

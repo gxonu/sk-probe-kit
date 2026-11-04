@@ -16,6 +16,9 @@ REQUIRED = [
     "docs/handoff/CURRENT.md", "docs/handoff/TEMPLATE.md",
     "docs/reports/TEMPLATE.md", "docs/references/README.md",
     ".probe-kit/knowledge/semiconductor/index.jsonl",
+    ".probe-kit/scripts/question_log.py",
+    "docs/handoff/sessions/S8-explain/TASK_SPEC.md",
+    "docs/handoff/sessions/S8-explain/SUB_RESULT.md",
 ]
 SKILLS = ("workflow", "interview", "decisions", "debug", "verify", "explain")
 

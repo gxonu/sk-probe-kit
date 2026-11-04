@@ -37,7 +37,7 @@ def fetch(destination):
         for file in knowledge.rglob('*'):
             if file.is_symlink():
                 raise ValueError('원본 지식 폴더에 심볼릭 링크가 있습니다.')
-        # Nothing from upstream is executed or included in this public repository.
+        # The fetched reference package is copied without executing its code.
         shutil.copytree(knowledge, dest)
         (dest / 'UPSTREAM_PIN.json').write_text(json.dumps(metadata, indent=2) + '\n')
     print(f'원본 지식 폴더 준비 완료: {dest}')

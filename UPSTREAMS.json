@@ -3,26 +3,36 @@
     "url": "https://github.com/chichochoi/sk.git",
     "commit": "a08f364c09ad7074ec6117ffb840290a85419dc8",
     "license_at_review": null,
-    "use": "Original files bundled; init and subagent entrypoints patched with originals preserved under upstream/chichochoi",
+    "use": "Task specification, result review, case selection and troubleshooting principles adapted; upstream runtime/configuration scripts are not installed.",
     "latest_check": {
-      "checked_at": "2026-10-31T03:03:00+09:00",
-      "head": "a08f364c09ad7074ec6117ffb840290a85419dc8",
-      "status": "identical",
-      "additional_commits": 0,
-      "evidence": "docs/references/upstream-check-20261031.md"
+      "checked_at": "2026-11-04",
+      "head": "fed7f241d56b86b8dd2e280b3ece3332100f01e3",
+      "additional_commits_from_base": 7,
+      "evidence": "https://github.com/chichochoi/sk/compare/a08f364c09ad7074ec6117ffb840290a85419dc8...fed7f241d56b86b8dd2e280b3ece3332100f01e3",
+      "adopted": [
+        "Explicit skill combination for mixed cases",
+        "Follow-up questions informed by previous answers",
+        "Direct instruction fallback and scoped troubleshooting",
+        "Six general explanation perspectives; no verbatim exam recollections republished"
+      ],
+      "not_adopted": [
+        "Global configuration replacement",
+        "Approval-bypass flags",
+        "Fixed model/effort or unverified grading claims"
+      ]
     }
   },
   "knowledge": {
     "url": "https://github.com/xodbs1021/kty-codex-harness-template.git",
     "commit": "62f0715bbf79e959a8332dc19e828de176a0b5ef",
     "license_at_review": null,
-    "use": "Original knowledge/semiconductor folder bundled unchanged"
+    "use": "Concept articles, source list, index and applicable checks included; historical review reports omitted; navigation adapted."
   },
   "written_prep": {
     "url": "https://github.com/hamjoon2003/sk-hynix-2nd-harness.git",
     "commit": "222a3119559c2b282ab3252a9ffb13e86c2749c1",
     "license_at_review": "MIT",
-    "use": "Original document and MIT notice bundled; adapted pre-submission guide also included"
+    "use": "Original preparation reference and MIT notice retained; operational preparation is in probe-explain and mock_exam_6."
   },
   "keepdev": {
     "url": "https://github.com/keepdev0919/hynix",

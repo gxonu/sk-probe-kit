@@ -83,16 +83,26 @@ def rehearse():
             encoding="utf-8")
         (sessions / "S1-main/HANDOFF.md").write_text(
             "# main — synthetic fixture driver\nR-01: total=30, count=2, excluded=1, review=1.\n"
-            "Q-01: cancellation and missing-value behavior is specified by fixture README.\n",
+            "S1-main-Q001: cancellation and missing-value behavior is specified by fixture README.\n",
             encoding="utf-8")
         (sessions / "S2-worker-a/SUB_RESULT.md").write_text(
             "# build — synthetic fixture driver\nScope: pipeline.py, validate_fixture.py, result.json.\n"
             "Acceptance: python validate_fixture.py result.json\nState: ACTIVE\n",
             encoding="utf-8")
         runtime = task / ".probe-kit/runtime"
-        with (runtime / "QUESTION_LOG.md").open("a", encoding="utf-8") as f:
-            f.write("| Q-01 | cancellation and missing values | fixture contract | "
-                    "SYNTHETIC README: exclude cancelled, review missing | DOCUMENT_REPORTED | R-01 | fixed oracle |\n")
+        question = task / 'synthetic-question.txt'
+        answer = task / 'synthetic-answer.txt'
+        question.write_bytes(b'SYNTHETIC ONLY: What is the fixture contract?\r\n')
+        answer.write_bytes((task / 'README.md').read_bytes())
+        record = json.loads(run("verbatim question record", [
+            sys.executable, str(scripts / "question_log.py"), "--workspace", str(task),
+            "--session", "S1-main", "--kind", "answer", "--source", "SYNTHETIC fixture, no real conversation",
+            "--question-file", str(question), "--answer-file", str(answer)]))
+        log_bytes = (runtime / "QUESTION_LOG.md").read_bytes()
+        if question.read_bytes() not in log_bytes or answer.read_bytes() not in log_bytes:
+            raise RuntimeError("verbatim source text was altered")
+        if record["qid"] != "S1-main-Q001":
+            raise RuntimeError("unexpected question ID")
         with (runtime / "REQUIREMENTS.md").open("a", encoding="utf-8") as f:
             f.write("\nR-01: SYNTHETIC contract, exclude cancelled and review missing. Verification pending.\n")
         scan = json.loads(run("data scan", [sys.executable, str(scripts / "data_scan.py"), "data.csv"]))

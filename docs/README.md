@@ -1,28 +1,15 @@
-# 문서 시작점
+# 문서 찾기
 
-공식 규칙은 [RULES.md](RULES.md), 현재 작업과 세션 배정은 [handoff/CURRENT.md](handoff/CURRENT.md)에서 확인한다.
-당일 실행은 원본 기반 [foruser.md](../foruser.md)를 중심으로 한다. 재현 가능한 구성 점검은 [REHEARSAL.md](REHEARSAL.md)를 따른다.
+사람이 보는 실행 순서와 복사할 요청은 [foruser.md](../foruser.md)에 있다.
 
-| 폴더 | 목적 | 먼저 읽을 문서 |
-|---|---|---|
-| handoff | 현재 상태, 세션별 작업 범위, 인수인계와 요청 | [공유 절차](handoff/README.md) |
-| references | 출처, 시간 위치, 확인 범위와 해석 | [출처 목록](references/README.md) |
-| reports | 수행한 작업과 검증 결과 | [보고서 목록](reports/README.md) |
+| 필요 | 문서 |
+|---|---|
+| 공식 제약과 최신 메일 | [RULES](RULES.md) |
+| 8세션 역할과 파일 소유권 | [TEAM_PLAYBOOK](TEAM_PLAYBOOK.md), [공유 규칙](handoff/README.md) |
+| 질문 선택과 원문 기록 | [interview](interview.md), [질문 예시](../dm_question.md) |
+| 과제 유형과 case 조합 | [scenarios](scenarios.md) |
+| 반도체 개념과 자료 검색 | [knowledge](knowledge.md) |
+| S8의 6문항과 답변 요청 | [프롬프트](../prompts/mock_exam_6.md), [가상 few-shot](mock-examples.md) |
+| 설치와 실행 흐름 점검 | [REHEARSAL](REHEARSAL.md) |
 
-새 세션은 전체 문서를 읽지 않는다. CURRENT → 배정받은 세션 문서 → 관련 보고서와 출처 순으로 필요한 범위만 읽는다.
-채팅은 자동 공유되지 않는다. 파일 작성 후 다른 세션에 경로를 알려주고, 수신 세션이 파일을 읽어야 내용이 전달된다.
-
-## 작업 가이드
-
-- [기본 7개 세션 운영](TEAM_PLAYBOOK.md): 단계별 활성화, 파일/실행 자원 소유권, 독립 검증과 기록 담당의 전달 방식.
-- [제출 전 20분 설명 연습](mock-exam.md), [가상 few-shot](mock-examples.md): 현재 코드로 예상 5문항을 만들고 답변 뒤 피드백한다.
-- [질문](interview.md): 현재 업무와 사례를 이해하고 구체적인 조건을 확인한다.
-- [설명 연습](written-prep.md): 제출물 확정 전에 코드와 실제 결과의 이해를 점검한다.
-- [공개 레포 채택 내역](ADOPTED_PRACTICES.md), [도구 조사](TOOL_SURVEY.md).
-- [Cofa Probe 제작진 인터뷰 분석](references/cofa-probe-interview-20261031.md).
-
-## 설치한 과제에서의 위치
-
-과제 루트의 `docs/handoff`, `docs/references`, `docs/reports`가 세션 간 공유 위치다.
-`.probe-kit/docs`는 설치된 사용 안내와 참고 문서다. 그 안의 CURRENT는 과제 루트의 현재 상태로 연결한다. 하네스 개발 세션과 검증 보고서는 설치하지 않는다.
-합의된 요구, 결정, 검증의 공통 원장은 `.probe-kit/runtime`에 유지한다. 경로와 작성자는 과제의 `docs/handoff/CURRENT.md`에 기록한다.
+`docs/handoff`, `docs/references`, `docs/reports`는 실제 과제의 공유 공간으로도 생성된다. 키트 자체에는 과거 개발 기록이나 실제 시험 자료를 넣지 않는다.

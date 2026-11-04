@@ -9,5 +9,5 @@ docs/handoff/README.md, docs/handoff/CURRENT.md,
 docs/handoff/sessions/<session-id>/TASK_SPEC.md를 읽고 배정된 역할과 범위만 수행해.
 작업 ID와 실제 결과는 같은 세션 폴더의 SUB_RESULT.md, 인계는 HANDOFF.md에 남겨.
 실행 결과가 길면 docs/reports의 자기 보고서에 기록해.
-공통 원장 변경은 메인에게 제안하고 다른 세션의 파일은 수정하지 마.
+질문 원문은 question_log.py로 추가하고 다른 공통 원장 변경은 S1에게 제안해.
 GUIDE

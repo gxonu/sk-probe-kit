@@ -1,23 +1,22 @@
-Original source bundle with a separate integration layer.
+Source attribution and licenses
 
-chichochoi/sk original files are preserved under upstream/chichochoi and mostly at the root.
-The root init.sh and scripts/subagent.sh are replaced to preserve platform settings.
-The active templates/HANDOFF.md is adapted for shared session records; its original
-is retained under upstream/chichochoi/templates/HANDOFF.md.
-The active foruser.md adapts the upstream sequence and prompts for official rules,
-project installation paths and flexible session files; the upstream version
-is retained under upstream/chichochoi/foruser.md.
-Original texts are retained; AGENTS.override.md and docs/RULES.md define conflict resolution.
+Workflow concepts and case guidance reference chichochoi/sk. Active instructions
+are adapted for eight sessions, official rules, shared verbatim question records
+and evidence-based preparation. Upstream installation/configuration scripts are
+not included. Source commits and reviewed changes are listed in UPSTREAMS.json.
 
-knowledge/semiconductor is copied unchanged from xodbs1021/kty-codex-harness-template.
-No license was found for these two upstream repositories at the recorded revisions.
-This integration does not assign a new blanket license or claim ownership of their contents.
+Semiconductor concepts, source lists and the search index originate from
+xodbs1021/kty-codex-harness-template. Historical review reports are omitted and
+navigation is adapted. Retained original hashes and modified-file provenance
+are listed in ORIGINS.json.
 
-references/written-prep.original.md and docs/written-prep.md originate from
+No license was found for these two repositories at the recorded review revisions.
+This kit does not assign a blanket license or claim authorship of their material.
+
+references/written-prep.original.md originates from
 hamjoon2003/sk-hynix-2nd-harness, Copyright (c) 2026 Ham Jimin.
-The MIT notice is preserved in references/hamjoon-LICENSE and licenses/hamjoon-MIT.txt.
+The MIT notice is retained in references/hamjoon-LICENSE and licenses/hamjoon-MIT.txt.
 
-See ORIGINS.json for original file hashes and UPSTREAMS.json for pinned source commits.
-Integration files and modifications were prepared for gxonu; provenance is not removed.
-The interview reference is an analysis of a user-provided automatic transcript.
-The full transcript is not redistributed; timestamped claims and limitations are recorded.
+The creator-interview reference is an analysis of a user-provided transcript.
+The full transcript is not redistributed. Fictional preparation examples do not
+contain actual examination questions, private task files or personal access links.
