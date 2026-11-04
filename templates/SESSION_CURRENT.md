@@ -22,18 +22,19 @@
 
 ## 배정과 파일 소유권
 
-| 세션 ID | 역할 | 상태 | 쓰기 가능한 경로 | 완료 조건 | 갱신 시각 | 인계 문서 |
+| 세션 표시명 | 역할 | 상태 | 쓰기 가능한 경로 | 완료 조건 | 갱신 시각 | 인계 문서 |
 |---|---|---|---|---|---|---|
 | S1-main | 총괄과 통합 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S1-main/HANDOFF.md) |
 | S2-worker-a | 개발 A | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S2-worker-a/HANDOFF.md) |
 | S3-worker-b | 개발 B | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S3-worker-b/HANDOFF.md) |
 | S4-data | 데이터와 알고리즘 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S4-data/HANDOFF.md) |
-| S5-research | 한정된 조사 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S5-research/HANDOFF.md) |
-| S6-review | 독립 검증과 제약 점검 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S6-review/HANDOFF.md) |
-| S7-records | 기록과 제출 문서 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S7-records/HANDOFF.md) |
-| S8-explain | 서술형 대비 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S8-explain/HANDOFF.md) |
+| S5-research(조사와 문의) | 한정된 조사와 문의 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S5-research/HANDOFF.md) |
+| S6-review(독립 검증) | 독립 검증과 제약 점검 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S6-review/HANDOFF.md) |
+| S7-records(기록과 제출 문서) | 기록과 제출 문서 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S7-records/HANDOFF.md) |
+| S8-explain(서술형 대비) | 서술형 대비 | PLANNED | 미배정 | 실제 과제에서 확정 | - | [인계](sessions/S8-explain/HANDOFF.md) |
 
 상태: PLANNED / ACTIVE / WAITING / HANDOFF / CLOSED. 통합 담당자가 등록한 범위에서만 편집한다.
+괄호는 역할 설명이며 세션 ID와 파일 경로에는 영문 부분만 사용한다.
 이 파일과 REQUIREMENTS/DECISIONS/EVIDENCE는 S1이 갱신한다. QUESTION_LOG만 각 세션이 question_log.py로 추가한다.
 기본 8개 역할만 준비한 상태다. S1이 실제 파일 범위와 자원을 배정한 뒤 ACTIVE로 바꾼다. 필요 없는 역할은 대기하며 세션은 사용자가 직접 연다.
 세션별 sessions/<session-id>/TASK_SPEC.md는 메인이, SUB_RESULT.md와 HANDOFF.md는 해당 작업자가 관리한다.

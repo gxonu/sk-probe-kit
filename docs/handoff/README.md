@@ -6,11 +6,16 @@
 | 문서 | 작성자 | 용도 |
 |---|---|---|
 | CURRENT | S1 | 목표, 실제 시각, S1~S8 배정, 파일과 실행 자원 소유권 |
-| REQUIREMENTS/DECISIONS/EVIDENCE | S1 | 합의된 요구, 선택, 실제 검증 |
+| REQUIREMENTS | S1 | 만들 것과 성공 기준. R-01 같은 요구사항 번호 부여 |
+| DECISIONS | S1 | 왜 그 방법을 골랐는지, 대안과 이유 및 한계 |
+| EVIDENCE | S1 | R-ID별 실제 실행/관찰 결과와 근거 |
 | QUESTION_LOG | 각 세션이 전용 도구로 추가 | 질문과 답변 원문, 세션/출처, 별도 AI 정리 |
 | sessions/<id>/TASK_SPEC | S1 | 목표, 소유 파일, 제약/입출력, 검증, 완료 기준 |
 | sessions/<id>/SUB_RESULT | 해당 세션 | 실제 결과, 근거, 실패/미검증, S1 반영 제안과 다음 행동 |
 | sessions/<id>/HANDOFF | 해당 세션 | 세션 교체 또는 중단 시 이어갈 맥락 |
+| HOW_TO_RUN / AI_COLLABORATION | S7 | 실제 README가 요구한 위치에 실행법과 AI 협업 기록 작성. S6 검증, S1 최종 확인 |
+
+R-ID는 REQUIREMENTS의 요구사항 번호다. DECISIONS는 선택 이유, EVIDENCE는 실제 확인 결과를 같은 번호로 연결한다. PASS는 확인 범위에서 통과, FAIL은 실패, NOT_RUN은 미실행, HUMAN_CHECK는 사람의 직접 확인이 남았다는 뜻이다. HUMAN_CHECK를 통과로 세지 않으며 관찰 결과를 받은 뒤 갱신한다.
 
 QUESTION_LOG는 `.probe-kit/scripts/question_log.py`로만 추가한다. 직접 병렬 편집하지 않는다. 답변을 기록했다고 REQUIREMENTS가 자동 확정되는 것은 아니다.
 S1이 진행 중인 명세를 바꿀 때 대상 세션에 변경 사실과 작업 ID를 알려준다. 결과의 작업 ID와 현재 명세가 다르면 완료로 수용하지 않는다.
