@@ -6,7 +6,7 @@ import json
 
 
 def plan(start, hard_end, task_minutes=180, generation_minutes=10,
-         written_minutes=30, submission_minutes=10, explain_lead_minutes=40,
+         written_minutes=30, submission_minutes=10, explain_lead_minutes=30,
          submission_at=None):
     begin = datetime.fromisoformat(start)
     end = datetime.fromisoformat(hard_end)
@@ -29,14 +29,16 @@ def plan(start, hard_end, task_minutes=180, generation_minutes=10,
     if submit <= begin:
         raise ValueError("작업과 제출 여유 시간을 확보할 수 없습니다. 실제 남은 시간을 확인하세요.")
     budget = (planned - begin).total_seconds() / 60
-    freeze = max(begin, submit - timedelta(minutes=min(30, budget * 0.2)))
-    first = min(begin + timedelta(minutes=40), freeze)
     explain = min(submit, max(begin, planned - timedelta(minutes=explain_lead_minutes)))
+    documents = explain
+    freeze = max(begin, documents - timedelta(minutes=min(20, budget * 0.2)))
+    first = min(begin + timedelta(minutes=40), freeze)
     return {
         "start": begin.isoformat(timespec="seconds"),
         "requirements_target": min(begin + timedelta(minutes=25), first).isoformat(timespec="seconds"),
         "first_flow_target": first.isoformat(timespec="seconds"),
         "feature_freeze": freeze.isoformat(timespec="seconds"),
+        "documents_ready_by": documents.isoformat(timespec="seconds"),
         "submission_start": submit.isoformat(timespec="seconds"),
         "submission_planned": planned.isoformat(timespec="seconds"),
         "task_finish_by": finish.isoformat(timespec="seconds"),
@@ -44,7 +46,7 @@ def plan(start, hard_end, task_minutes=180, generation_minutes=10,
         "explain_full_prep": explain.isoformat(timespec="seconds"),
         "explain_lead_minutes": explain_lead_minutes,
         "explain_shortened": explain <= first or (submit - explain).total_seconds() < 15 * 60,
-        "explain_note": "첫 완주 뒤 초안, 준비 시점에 전체 갱신, 확정 전 변경분 확인. 자동 예약이 아닙니다.",
+        "explain_note": "첫 완주 뒤 초안, 문서 마감까지 전체 문답 갱신, 마지막 준비 구간은 사용자 설명 연습 중심. 제출 확인 병행, 자동 예약 아님.",
         "written_finish_if_task_ends_at_limit": (finish + reserve).isoformat(timespec="seconds"),
         "hard_end": end.isoformat(timespec="seconds"),
         "task_budget_minutes": budget,
@@ -63,7 +65,7 @@ if __name__ == "__main__":
     parser.add_argument("--generation-minutes", type=int, default=10)
     parser.add_argument("--written-minutes", type=int, default=30)
     parser.add_argument("--submission-minutes", type=int, default=10)
-    parser.add_argument("--explain-lead-minutes", type=int, default=40)
+    parser.add_argument("--explain-lead-minutes", type=int, default=30)
     parser.add_argument("--submission-at", help="예정된 과제 제출 확정 시각, 시간대 포함")
     args = parser.parse_args()
     try:

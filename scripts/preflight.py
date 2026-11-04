@@ -17,6 +17,7 @@ REQUIRED = [
     "docs/reports/TEMPLATE.md", "docs/references/README.md",
     ".probe-kit/knowledge/semiconductor/index.jsonl",
     ".probe-kit/scripts/question_log.py",
+    ".probe-kit/scripts/pre_submit_audit.py",
     "docs/handoff/sessions/S8-explain/TASK_SPEC.md",
     "docs/handoff/sessions/S8-explain/SUB_RESULT.md",
 ]

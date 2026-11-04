@@ -31,6 +31,7 @@ python3 .probe-kit/scripts/preflight.py --workspace .
 | 반도체 개념과 검색 | [knowledge](docs/knowledge.md), `knowledge/semiconductor/` |
 | S8 주요 6문항, 보조 문항과 답변 | [요청 문구](prompts/mock_exam_6.md), [가상 예시](docs/mock-examples.md) |
 | 설치/기록/계산 흐름 검증 | [REHEARSAL](docs/REHEARSAL.md), `tests/` |
+| 제출 전 읽기 전용 점검 | `scripts/pre_submit_audit.py`, foruser의 11단계. 비밀값 숨김, 검사 범위와 미확인 표시 |
 
 실제 과제 기록은 `.probe-kit/runtime/`의 공통 원장과 `docs/handoff/sessions/S1-main`~`S8-explain`에 저장한다. 라이선스와 자료 출처는 [NOTICE](NOTICE), [UPSTREAMS.json](UPSTREAMS.json), [ORIGINS.json](ORIGINS.json)에 있다.
 실제 문제, 답안, 개인 접속 링크와 인증 정보는 이 공개 레포에 올리지 않는다.

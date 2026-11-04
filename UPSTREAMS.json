@@ -6,19 +6,23 @@
     "use": "Task specification, result review, case selection and troubleshooting principles adapted; upstream runtime/configuration scripts are not installed.",
     "latest_check": {
       "checked_at": "2026-11-04",
-      "head": "fed7f241d56b86b8dd2e280b3ece3332100f01e3",
-      "additional_commits_from_base": 7,
-      "evidence": "https://github.com/chichochoi/sk/compare/a08f364c09ad7074ec6117ffb840290a85419dc8...fed7f241d56b86b8dd2e280b3ece3332100f01e3",
+      "head": "c51dbc4cf7be468c0b2e45f9a793864acac35a86",
+      "additional_commits_from_base": 9,
+      "evidence": "https://github.com/chichochoi/sk/compare/a08f364c09ad7074ec6117ffb840290a85419dc8...c51dbc4cf7be468c0b2e45f9a793864acac35a86",
       "adopted": [
         "Explicit skill combination for mixed cases",
         "Follow-up questions informed by previous answers",
         "Direct instruction fallback and scoped troubleshooting",
-        "Six general explanation perspectives; no verbatim exam recollections republished"
+        "Six general explanation perspectives; no verbatim exam recollections republished",
+        "Conditional roster, leave, CCTV response and Safety Vision question/check routing",
+        "Read-only submission audit concept, independently implemented with redacted findings and explicit incomplete coverage"
       ],
       "not_adopted": [
         "Global configuration replacement",
         "Approval-bypass flags",
-        "Fixed model/effort or unverified grading claims"
+        "Fixed model/effort or unverified grading claims",
+        "Predicted scenarios presented as confirmed tasks",
+        "Sample policy thresholds, grading guarantees and raw secret output"
       ]
     }
   },

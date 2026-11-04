@@ -4,6 +4,7 @@ import io
 import json
 from pathlib import Path
 import subprocess
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -210,7 +211,9 @@ class DataTests(unittest.TestCase):
 class TimePlanTests(unittest.TestCase):
     def test_full_window_reserves_submission_and_written_time(self):
         p = module('plan_time').plan('2026-10-31T10:00:00+09:00', '2026-10-31T14:00:00+09:00')
-        self.assertEqual(p['feature_freeze'], '2026-10-31T12:20:00+09:00')
+        self.assertEqual(p['feature_freeze'], '2026-10-31T12:10:00+09:00')
+        self.assertEqual(p['documents_ready_by'], '2026-10-31T12:30:00+09:00')
+        self.assertEqual(p['explain_full_prep'], p['documents_ready_by'])
         self.assertEqual(p['submission_start'], '2026-10-31T12:50:00+09:00')
         self.assertEqual(p['task_finish_by'], '2026-10-31T13:00:00+09:00')
 
@@ -229,7 +232,7 @@ class TimePlanTests(unittest.TestCase):
     def test_short_window_has_ordered_checkpoints(self):
         p = module('plan_time').plan('2026-10-31T13:00:00+09:00', '2026-10-31T14:00:00+09:00')
         times = [datetime.fromisoformat(p[k]) for k in
-                 ('start', 'requirements_target', 'first_flow_target', 'feature_freeze', 'submission_start', 'task_finish_by')]
+                 ('start', 'requirements_target', 'first_flow_target', 'feature_freeze', 'documents_ready_by', 'explain_full_prep', 'submission_start', 'task_finish_by')]
         self.assertEqual(times, sorted(times))
         self.assertTrue(p['short_budget'])
 
@@ -244,6 +247,8 @@ class TimePlanTests(unittest.TestCase):
         result = module('plan_time').plan('2026-11-04T19:00:00+09:00', '2026-11-04T23:00:00+09:00',
                                           submission_at='2026-11-04T21:40:00+09:00', explain_lead_minutes=30)
         self.assertEqual(result['explain_full_prep'], '2026-11-04T21:10:00+09:00')
+        self.assertEqual(result['documents_ready_by'], result['explain_full_prep'])
+        self.assertEqual(result['feature_freeze'], '2026-11-04T20:50:00+09:00')
         self.assertEqual(result['submission_start'], '2026-11-04T21:30:00+09:00')
         self.assertEqual(result['task_finish_by'], '2026-11-04T22:00:00+09:00')
 
@@ -260,6 +265,99 @@ class TimePlanTests(unittest.TestCase):
                         {'submission_at': '2026-11-04T18:00:00+09:00'}):
             with self.subTest(options=options), self.assertRaises(ValueError):
                 module('plan_time').plan('2026-11-04T19:00:00+09:00', '2026-11-04T23:00:00+09:00', **options)
+
+
+class SubmissionAuditTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        self.audit = module('pre_submit_audit')
+
+    def test_redacts_candidates_and_distinguishes_loopback(self):
+        token = 'sk-' + 'x' * 28
+        password = 'never-print-this-value'
+        (self.root/'app.py').write_text(f"key = '{token}'\npassword = '{password}'\nclient = 'localhost'\n")
+        result = self.audit.audit(self.root)
+        output = json.dumps(result)
+        self.assertNotIn(token, output)
+        self.assertNotIn(password, output)
+        self.assertEqual(result['pattern_scan']['status'], 'HUMAN_CHECK')
+        self.assertEqual({x['line'] for x in result['pattern_scan']['findings']}, {1, 2, 3})
+        self.assertEqual(result['git']['status'], 'NOT_RUN')
+
+    def test_json_and_dotenv_secrets_are_redacted(self):
+        value = 'example-secret-that-must-stay-hidden'
+        (self.root/'config.json').write_text(json.dumps({'password': value}))
+        (self.root/'.env').write_text('API_KEY=' + value + '\n')
+        result = self.audit.audit(self.root)
+        self.assertEqual({x['path'] for x in result['pattern_scan']['findings']}, {'config.json', '.env'})
+        self.assertNotIn(value, json.dumps(result))
+
+    def test_size_includes_content_excluded_dependencies(self):
+        (self.root/'node_modules').mkdir()
+        (self.root/'node_modules/data.bin').write_bytes(b'x' * 200)
+        (self.root/'app.py').write_text('x=1\n')
+        result = self.audit.audit(self.root, submission_limit_bytes=100)
+        self.assertEqual(result['size']['status'], 'FAIL')
+        self.assertEqual(result['coverage']['measured_file_bytes'], 204)
+        self.assertEqual(result['coverage']['excluded_content_files'], 1)
+
+    def test_bounded_scan_never_reports_complete(self):
+        (self.root/'big.py').write_text('x' * 200)
+        result = self.audit.audit(self.root, max_file_bytes=100)
+        self.assertEqual(result['pattern_scan']['status'], 'NOT_RUN')
+        self.assertEqual(result['coverage']['large_files_skipped'], 1)
+        (self.root/'small.py').write_text('x=1\n')
+        result = self.audit.audit(self.root, max_entries=1)
+        self.assertTrue(result['coverage']['limit_reached'])
+        self.assertEqual(result['size']['status'], 'NOT_RUN')
+
+    def test_unreadable_text_is_not_pattern_absence(self):
+        (self.root/'config.txt').write_bytes(b'\xff\xfe\x01')
+        result = self.audit.audit(self.root)
+        self.assertEqual(result['pattern_scan']['status'], 'NOT_RUN')
+        self.assertEqual(result['coverage']['errors'][0]['kind'], 'unreadable-text')
+
+    def test_symlink_is_not_followed_and_required_files_reject_escape(self):
+        with tempfile.TemporaryDirectory() as other:
+            outside = Path(other)/'outside.txt'
+            outside.write_text('password="do-not-read"')
+            (self.root/'linked.txt').symlink_to(outside)
+            result = self.audit.audit(self.root, required=['linked.txt'])
+            self.assertEqual(result['coverage']['symlinks_skipped'], 1)
+            self.assertEqual(result['coverage']['text_files_read'], 0)
+            self.assertEqual(result['size']['status'], 'NOT_RUN')
+            self.assertEqual(result['required_files'][0]['status'], 'FAIL')
+        for required in ['../outside.txt', '/tmp/outside.txt']:
+            with self.subTest(required=required), self.assertRaises(ValueError):
+                self.audit.audit(self.root, required=[required])
+
+    def test_required_nonempty_files_and_read_only_contents(self):
+        path = self.root/'HOW_TO_RUN.md'
+        path.write_text('Run the provided command.\n')
+        (self.root/'AI_COLLABORATION.md').write_text('')
+        before = {p.name:p.read_bytes() for p in self.root.iterdir()}
+        result = self.audit.audit(self.root, required=['HOW_TO_RUN.md','AI_COLLABORATION.md','MISSING.md'])
+        self.assertEqual([x['status'] for x in result['required_files']], ['PASS','FAIL','FAIL'])
+        self.assertEqual(before, {p.name:p.read_bytes() for p in self.root.iterdir()})
+
+    def test_directory_read_error_is_not_success(self):
+        with patch.object(self.audit.os, 'scandir', side_effect=PermissionError):
+            result = self.audit.audit(self.root)
+        self.assertEqual(result['pattern_scan']['status'], 'NOT_RUN')
+        self.assertEqual(result['size']['status'], 'NOT_RUN')
+
+    def test_cli_reports_failure_and_review_exit_codes(self):
+        command = [sys.executable, str(ROOT/'scripts/pre_submit_audit.py'), '--workspace', str(self.root)]
+        (self.root/'app.py').write_text('x=1\n')
+        result = subprocess.run(command, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        result = subprocess.run(command + ['--require','missing.md'], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 1)
+        (self.root/'app.py').write_text("client='localhost'\n")
+        result = subprocess.run(command, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 2)
 
 
 class PreflightTests(unittest.TestCase):
