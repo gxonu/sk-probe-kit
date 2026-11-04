@@ -1,6 +1,6 @@
 # 입장부터 제출까지
 
-이 문서는 사람이 옆에 열어 두고 순서대로 따라가는 실행 안내다. 각 단계의 **시간 → 네 행동 → 넣을 세션과 프롬프트 → 완료 기준**을 확인한다. 공식 규칙은 [RULES](docs/RULES.md), 세션별 책임은 [TEAM_PLAYBOOK](docs/TEAM_PLAYBOOK.md)에 있다.
+이 문서는 사람이 옆에 열어 두고 순서대로 따라가는 실행 안내다. 직접 복사해 넣을 시작/진행/마무리 프롬프트는 이 문서에 모았다. 각 단계의 **시간 → 네 행동 → 넣을 세션과 프롬프트 → 완료 기준**을 확인한다. 세부 스킬과 참고 예시는 해당 세션이 읽도록 요청에 연결돼 있다. 공식 규칙은 [RULES](docs/RULES.md), 세션별 책임은 [TEAM_PLAYBOOK](docs/TEAM_PLAYBOOK.md)에 있다.
 
 - `bash` 블록은 셸에, `text` 블록은 지정된 Codex 세션의 대화 입력창에 넣는다. `[실제 값]`은 화면이나 자신의 판단으로 바꾼다.
 - 담당자에게 보낼 메시지는 네가 검토하고 직접 보낸다. 스킬 호출이나 파일 저장만으로 메시지가 전송되거나 다른 세션이 시작되지는 않는다.
@@ -114,7 +114,7 @@ S1~S8은 모두 같은 과제 루트에서 시작한다. 모델은 제공된 허
 
 ```text
 $probe-workflow
-나는 S1-main을 총괄로 사용할 거야.
+너는 S1-main이야. 총괄과 통합을 맡아.
 실제 시작은 [시각], 전체 종료는 [시각], 과제 타이머는 [분]이야.
 .probe-kit/AGENTS.md, .probe-kit/AGENTS.override.md, .probe-kit/docs/RULES.md,
 docs/handoff/README.md와 CURRENT.md를 읽고 S1로 등록해.
@@ -132,42 +132,42 @@ S7 기록/제출 문서, S8 서술형 대비로 역할과 소유 범위를 제�
 ### S2-worker-a: 개발 A
 
 ```text
-나는 S2-worker-a야. .probe-kit/AGENTS.md와 .probe-kit/SUB_AGENTS.md,
+너는 S2-worker-a야. .probe-kit/AGENTS.md와 .probe-kit/SUB_AGENTS.md,
 docs/handoff/CURRENT.md와 docs/handoff/sessions/S2-worker-a/TASK_SPEC.md를 읽어.
-내 소유 범위와 입력/출력, 검증 기준을 확인하고 배정된 핵심 기능을 구현해.
+너에게 배정된 소유 범위와 입력/출력, 검증 기준을 확인하고 배정된 핵심 기능을 구현해.
 현재 명세가 없으면 구현을 시작하지 말고 읽기와 제안만 해.
-완료/중단 때 내 SUB_RESULT에 변경, 실제 검증과 한계, 다음 행동을 기록해.
+완료/중단 때 너의 SUB_RESULT에 변경, 실제 검증과 한계, 다음 행동을 기록해.
 ```
 
 ### S3-worker-b: 개발 B
 
 ```text
-나는 S3-worker-b야. .probe-kit/AGENTS.md와 .probe-kit/SUB_AGENTS.md,
+너는 S3-worker-b야. .probe-kit/AGENTS.md와 .probe-kit/SUB_AGENTS.md,
 docs/handoff/CURRENT.md와 docs/handoff/sessions/S3-worker-b/TASK_SPEC.md를 읽어.
 S2와 겹치지 않는 배정 기능을 맡고 합의된 인터페이스를 지켜.
 배정 전에는 구현하지 말고, 연결에 필요한 변경은 S1에게 알려줘.
-결과와 실제 검증, 미완료는 내 SUB_RESULT에 기록해.
+결과와 실제 검증, 미완료는 너의 SUB_RESULT에 기록해.
 ```
 
 ### S4-data: 데이터와 알고리즘
 
 ```text
-나는 S4-data야. .probe-kit/AGENTS.md와 .probe-kit/SUB_AGENTS.md,
+너는 S4-data야. .probe-kit/AGENTS.md와 .probe-kit/SUB_AGENTS.md,
 docs/handoff/CURRENT.md와 docs/handoff/sessions/S4-data/TASK_SPEC.md를 읽어.
 작은 표본부터 데이터 의미, 크기, 키/단위/결측/중복/시간 조건을 확인해.
 README로 확인되지 않는 구현 조건은 질문 후보로 제안해.
 배정 뒤 단순 기준안을 먼저 만들고 필수 제약과 개선 지표를 분리해.
 개선은 동일 입력/시간 예산으로 비교하고 독립된 작은 정답 사례를 남겨.
-필요한 반도체 용어만 지식 인덱스로 검색하고 결과는 내 SUB_RESULT에 기록해.
+필요한 반도체 용어만 지식 인덱스로 검색하고 결과는 너의 SUB_RESULT에 기록해.
 ```
 
 ### S5-research(조사와 문의)
 
 ```text
-나는 S5-research야. .probe-kit/AGENTS.md와 .probe-kit/SUB_AGENTS.md,
+너는 S5-research야. .probe-kit/AGENTS.md와 .probe-kit/SUB_AGENTS.md,
 docs/handoff/CURRENT.md와 docs/handoff/sessions/S5-research/TASK_SPEC.md를 읽어.
 배정된 질문 하나와 시간 예산 안에서 공식 문서/공개 자료를 조사해.
-후보는 최대 3개, 출처/적용 조건/제약/권고를 내 SUB_RESULT에 적어.
+후보는 최대 3개, 출처/적용 조건/제약/권고를 너의 SUB_RESULT에 적어.
 자료를 통째로 가져오기 전에 실제 과제에 필요한 범위를 판단해.
 외부 메시지는 초안만 만들고 내가 전송하게 해. 조사 요청이 없으면 대기해.
 ```
@@ -176,22 +176,22 @@ docs/handoff/CURRENT.md와 docs/handoff/sessions/S5-research/TASK_SPEC.md를 읽
 
 ```text
 $probe-verify
-나는 S6-review야. .probe-kit/AGENTS.md와 .probe-kit/SUB_AGENTS.md,
+너는 S6-review야. .probe-kit/AGENTS.md와 .probe-kit/SUB_AGENTS.md,
 .probe-kit/docs/RULES.md, docs/handoff/CURRENT.md와
 docs/handoff/sessions/S6-review/TASK_SPEC.md를 읽어.
 현재 단계의 필수 요구와 실제 구현을 독립적으로 검증해.
 결함/의심/개선 의견을 나누고 재현 입력, 기대/관찰 결과와 영향을 남겨.
 RAM 16GB와 제출 전체 10GB 등 제약도 단계에 맞게 확인해.
-제품 코드 수정은 소유자에게 전달하고 검증 결과는 내 SUB_RESULT에 기록해.
+제품 코드 수정은 소유자에게 전달하고 검증 결과는 너의 SUB_RESULT에 기록해.
 ```
 
 ### S7-records(기록과 제출 문서)
 
 ```text
-나는 S7-records야. .probe-kit/AGENTS.md와 .probe-kit/SUB_AGENTS.md,
+너는 S7-records야. .probe-kit/AGENTS.md와 .probe-kit/SUB_AGENTS.md,
 docs/handoff/CURRENT.md와 docs/handoff/sessions/S7-records/TASK_SPEC.md를 읽어.
 실제 README에서 필수 제출 파일을 확인하고 배정받은 문서를 작성해.
-세션 결과의 선택/검증/한계를 모아 S1의 공통 원장 반영안을 내 SUB_RESULT에 적어.
+세션 결과의 선택/검증/한계를 모아 S1의 공통 원장 반영안을 너의 SUB_RESULT에 적어.
 HOW_TO_RUN과 AI_COLLABORATION이 요구되면 실제 실행 명령과 협업 근거로 작성해.
 첫 완주부터 초안을 유지하고 기본 제출 예정 30분 전까지 문서를 마감해.
 AI 제안의 수용/수정/폐기와 사람의 판단을 구분하고 미실행 성공을 만들지 마.
@@ -202,12 +202,12 @@ S8이 읽을 코드/결정/실행 근거 위치를 함께 정리해.
 
 ```text
 $probe-explain
-나는 S8-explain이야. .probe-kit/AGENTS.md와 .probe-kit/SUB_AGENTS.md,
+너는 S8-explain이야. .probe-kit/AGENTS.md와 .probe-kit/SUB_AGENTS.md,
 docs/handoff/CURRENT.md와 docs/handoff/sessions/S8-explain/TASK_SPEC.md를 읽어.
 현재 코드와 실제 기록으로 서술형 대비를 전담해.
 아직 구현이 없으면 설명할 선택과 기록이 부족한 이유만 파악해.
 첫 전체 흐름 뒤에는 자료 모드로 주요 6문항과 각 보조 질문 2개,
-모든 문항의 근거 있는 답변 초안을 내 SUB_RESULT에 작성해.
+모든 문항의 근거 있는 답변 초안을 너의 SUB_RESULT에 작성해.
 기록에 없는 이유/실행 성공은 사용자 확인 필요 또는 NOT_RUN으로 남겨.
 준비 시점과 코드 변경 뒤에는 필요한 부분을 갱신하고 제출 확정 전에 끝내.
 전체 문답은 기본 제출 예정 30분 전까지 준비하고 마지막 구간은 내 설명 연습을 도와줘.
@@ -269,7 +269,7 @@ S7에게 제출 문서 확인을, S4에게 작은 데이터 표본 확인을 배
 
 ```text
 $probe-interview
-나는 [S1-main 또는 실제 세션 ID]야.
+너는 [S1-main 또는 실제 세션 ID]야.
 현재 README/데이터/코드와 기존 QUESTION_LOG를 보고
 지금 확인하지 않으면 구현을 잘못할 수 있는 질문을 최대 3개 추천해.
 목표/우선순위, 필수 조건/예외, 성공 판단/출력에서 실제로 미확인인 것만 골라.
@@ -307,7 +307,7 @@ S4는 작은 표본의 열 이름, 단위, 키, 결측/중복, 시간 경계와 
 현재 데이터에서 README나 받은 답변과 맞지 않거나 미확인인 조건을 찾아줘.
 관찰한 사실과 해석을 구분하고 작은 재현 예시, 열/파일 위치를 붙여줘.
 필수 제약과 품질 개선 지표를 분리하고 구현을 바꿀 질문만 최대 3개 제안해.
-기존 Q-ID로 해결된 것은 다시 묻지 말고 내 SUB_RESULT에 요약해.
+기존 Q-ID로 해결된 것은 다시 묻지 말고 너의 SUB_RESULT에 요약해.
 ```
 
 유형별 질문은 `.probe-kit/dm_question.md`의 해당 묶음만 읽는다. 웹의 역할별 권한/실패 상태, 기존 코드의 호환 계약, 데이터의 경계/중복 기준, 정책의 적용일/예외처럼 실제로 미확인인 조건을 좁힌다. 질문 예시 파일에 이번 과제의 답변을 덧쓰지 않는다. 원문 기록은 QUESTION_LOG에 모은다.
@@ -413,7 +413,7 @@ S7에 필수 제출 문서, S6에 검증, S8에 설명 준비 범위도 배정�
 **입력할 곳: 배정받은 S2-worker-a, S3-worker-b 또는 S4-data**
 
 ```text
-내 세션의 최신 TASK_SPEC [작업 ID]와 지정된 지침을 읽고 수행해.
+너의 최신 TASK_SPEC [작업 ID]와 지정된 지침을 읽고 수행해.
 허용 파일과 입력/출력 계약을 지키고 대표 입력의 전체 흐름부터 연결해.
 기존 코드라면 관련 테스트의 변경 전 결과부터 확인해.
 실제 요구를 검증할 정상/경계 입력을 실행하고 필요한 회귀 검증을 해.
@@ -489,7 +489,7 @@ S8에는 현재 구현 기반 6문항과 보조 문항/답변 초안을 배정�
 $probe-debug
 현재 실패는 [관찰한 증상/실행 명령]이야.
 먼저 재현 입력, 기대/실제 결과와 실패 위치를 좁혀줘.
-관련 변경과 기존 실패를 구분하고 내 소유 범위 안에서 최소 수정해.
+관련 변경과 기존 실패를 구분하고 너에게 배정된 소유 범위 안에서 최소 수정해.
 수정 후 같은 입력과 관련 회귀를 실행하고 SUB_RESULT에 근거를 남겨.
 시간 예산 [분] 안에 진전이 없으면 원인, 시도, 단순 대안과 S1 요청을 보고해.
 ```
@@ -519,7 +519,7 @@ $probe-debug
 공식 문서와 공개 자료에서 후보 최대 3개를 확인해.
 출처, 설치/실행 조건, 필수 제약 충족 가능성, 적용할 최소 범위를 비교해.
 현재 단순 구현보다 나은 근거가 없으면 유지 의견을 줘.
-과제 내용/데이터를 외부 검색이나 메시지로 보내지 말고 결과를 내 SUB_RESULT에 적어.
+과제 내용/데이터를 외부 검색이나 메시지로 보내지 말고 결과를 너의 SUB_RESULT에 적어.
 ```
 
 **남은 시간에 범위를 줄일 때: S1-main**
@@ -553,7 +553,7 @@ S8은 최신 코드 기준 전체 문답을 맡게 해.
 $probe-verify
 최신 REQUIREMENTS의 R-ID별로 필수 흐름을 확인해.
 명령/입력, 기대 결과의 근거, 실제 결과/로그를 연결하고
-PASS / FAIL / NOT_RUN / HUMAN_CHECK로 나눠 내 SUB_RESULT에 써줘.
+PASS / FAIL / NOT_RUN / HUMAN_CHECK로 나눠 너의 SUB_RESULT에 써줘.
 핵심 계산은 독립된 작은 사례로 대조하고 중요한 오류를 검출하는지도 확인해.
 필요한 입력 오류/불가능 조건/반복 실행/상태 보존을 실제 범위에서 점검해.
 기존에 통과했고 코드/입력이 바뀌지 않은 검증은 근거를 재사용해.
@@ -578,7 +578,7 @@ $probe-explain 자료 모드.
 주요 질문마다 요구 요소 3~4개, 실제 파일/함수/기록 근거,
 4~6문장 답변 초안과 보조 질문별 1~3문장 답변을 붙여줘.
 기록에 없는 이유는 사용자 확인 필요, 미실행은 NOT_RUN으로 남겨.
-내 SUB_RESULT에 저장하고 내가 반드시 이해해야 할 빈칸부터 알려줘.
+너의 SUB_RESULT에 저장하고 내가 반드시 이해해야 할 빈칸부터 알려줘.
 ```
 
 준비 자료는 실제 출제 예측의 확정이나 제출 답안이 아니다. 선택 이유를 외우기 전에 코드의 입력 → 처리 → 결과와 한계를 설명할 수 있는지 확인한다.
@@ -644,7 +644,7 @@ AI_COLLABORATION.md가 필요하면:
 QUESTION_LOG/DECISIONS/EVIDENCE와 세션 결과를 연결해 쓰고
 기록에 없는 사람의 판단이나 실행 성공은 만들어내지 마.
 불명확한 이유는 내 확인이 필요한 항목으로 알려줘.
-공통 원장 수정 제안은 내 SUB_RESULT에 남겨 S1이 반영하게 해.
+공통 원장 수정 제안은 너의 SUB_RESULT에 남겨 S1이 반영하게 해.
 ```
 
 ### B. S6에 문서대로 재현 확인
@@ -653,7 +653,7 @@ QUESTION_LOG/DECISIONS/EVIDENCE와 세션 결과를 연결해 쓰고
 HOW_TO_RUN의 경로/명령과 실제 현재 환경을 대조해.
 이미 실행한 명령인지, 새로 검증할 부분인지 구분하고 필요한 것만 실행해.
 기존 서버와 DB를 건드리는 재시작/초기화는 소유자와 조정해.
-검증 결과와 문서 오류를 S7에 전달할 수 있게 내 SUB_RESULT에 적어.
+검증 결과와 문서 오류를 S7에 전달할 수 있게 너의 SUB_RESULT에 적어.
 실행하지 못한 부분은 NOT_RUN, 내 직접 화면 확인은 HUMAN_CHECK로 남겨.
 ```
 
@@ -698,7 +698,7 @@ S6가 시작과 중간에도 확인한 제약을 마지막 변경과 대조한�
 5. 필수 파일, 의존성, 데이터 경로가 빠지거나 문서와 다르지 않은가?
 확인된 결함 / 의심 / 미확인을 구분하고 재현 가능한 최소 수정만 제안해.
 코드/원본 데이터/근거를 임의 삭제하거나 감독/플랫폼 프로세스를 건드리지 마.
-S1이 코드 소유자에게 수정 배정할 수 있게 내 SUB_RESULT에 써줘.
+S1이 코드 소유자에게 수정 배정할 수 있게 너의 SUB_RESULT에 써줘.
 ```
 
 용량이 크면 실제 제출 범위와 큰 파일을 먼저 확인한다. 원본 데이터, 필수 의존성, 기록을 지워 용량을 맞추지 않는다. 불필요한 생성물은 소유자와 사용 여부를 확인한 뒤 정리한다. `.git`이나 특정 폴더가 용량 산정에서 제외된다고 추정하지 않는다.
@@ -752,7 +752,7 @@ $probe-explain 갱신 모드.
 **입력할 곳: 교체할 세션**
 
 ```text
-내 HANDOFF에 현재 작업 ID, 완료한 코드/근거, 미완료와 남은 시간,
+너의 HANDOFF에 현재 작업 ID, 완료한 코드/근거, 미완료와 남은 시간,
 다음 행동, 소유 파일/서버/포트와 주의할 조건을 남겨줘.
 현재 진행 중인 프로세스와 저장하지 못한 내용도 알려줘.
 ```
@@ -760,7 +760,7 @@ $probe-explain 갱신 모드.
 **입력할 곳: 같은 역할의 새 세션**
 
 ```text
-나는 [세션 ID]를 이어받아.
+너는 [세션 ID]를 이어받는 새 세션이야.
 .probe-kit/AGENTS.md, docs/handoff/CURRENT.md와
 docs/handoff/sessions/[세션 ID]/HANDOFF.md, 최신 TASK_SPEC/SUB_RESULT를 읽어.
 실제 파일과 실행 상태를 확인하고 이어갈 작업/제약/남은 시간을 짧게 정리한 뒤
