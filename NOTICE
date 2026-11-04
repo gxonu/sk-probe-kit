@@ -1,21 +1,24 @@
 Original source bundle with a separate integration layer.
 
-chichochoi/sk original files are preserved under upstream/chichochoi and mostly at the root.
+chichochoi/sk original files are preserved in the repository under upstream/chichochoi.
 The root init.sh and scripts/subagent.sh are replaced to preserve platform settings.
-The active templates/HANDOFF.md is adapted for shared session records; its original
-is retained under upstream/chichochoi/templates/HANDOFF.md.
+Active AGENTS.md, SUB_AGENTS.md and case guides use one integration protocol.
+Session records are seeded from integration templates, not from upstream instructions.
 The active foruser.md adapts the upstream sequence and prompts for official rules,
 project installation paths and flexible session files; the upstream version
 is retained under upstream/chichochoi/foruser.md.
-Original texts are retained; AGENTS.override.md and docs/RULES.md define conflict resolution.
+Original texts are retained in the repository; they are not installed into task workspaces.
+AGENTS.md and the actual official task rules govern active work.
 
 knowledge/semiconductor is copied unchanged from xodbs1021/kty-codex-harness-template.
 No license was found for these two upstream repositories at the recorded revisions.
 This integration does not assign a new blanket license or claim ownership of their contents.
 
-references/written-prep.original.md and docs/written-prep.md originate from
+The repository's references/written-prep.original.md and explanation-practice ideas in
+prompts/mock_exam_5.md originate from
 hamjoon2003/sk-hynix-2nd-harness, Copyright (c) 2026 Ham Jimin.
-The MIT notice is preserved in references/hamjoon-LICENSE and licenses/hamjoon-MIT.txt.
+The MIT notice is preserved in the repository's references/hamjoon-LICENSE
+and in licenses/hamjoon-MIT.txt, which is included in task installations.
 
 See ORIGINS.json for original file hashes and UPSTREAMS.json for pinned source commits.
 Integration files and modifications were prepared for gxonu; provenance is not removed.

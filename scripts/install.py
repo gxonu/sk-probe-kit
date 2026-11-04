@@ -5,11 +5,22 @@ from pathlib import Path
 import sys
 
 SOURCE = Path(__file__).resolve().parents[1]
+CORE_FILES = (
+    'NOTICE', 'UPSTREAMS.json', 'ORIGINS.json',
+    'AGENTS.md', 'AGENTS.override.md', 'SUB_AGENTS.md', 'foruser.md',
+    'docs/RULES.md', 'docs/TEAM_PLAYBOOK.md', 'docs/interview.md', 'docs/scenarios.md',
+    'prompts/mock_exam_5.md', 'licenses/hamjoon-MIT.txt',
+    'scripts/data_scan.py', 'scripts/decision.py', 'scripts/plan_time.py',
+    'scripts/preflight.py', 'scripts/subagent.sh',
+    'skills/case1_data_pipeline.md', 'skills/case2_web_service.md',
+    'skills/case3_legacy_debug.md', 'skills/case4_policy_rag_doc.md',
+)
+LEDGERS = ('REQUIREMENTS.md', 'QUESTION_LOG.md', 'DECISIONS.md', 'EVIDENCE.md')
 SESSIONS = [('S1-main', '총괄과 통합'), ('S2-worker-a', '개발 A'), ('S3-worker-b', '개발 B'), ('S4-data', '데이터와 알고리즘'), ('S5-research', '한정된 조사'), ('S6-review', '독립 검증과 예상 문항'), ('S7-records', '기록과 제출 문서')]
 BLOCK = """
 <!-- sk-probe-kit:v1 -->
 ## 과제 작업 보조
-공식 운영 안내와 과제 지침을 최우선으로 따른다. 시작할 때 `.probe-kit/AGENTS.override.md`와 `.probe-kit/docs/RULES.md`를 먼저 읽는다.
+공식 운영 안내와 과제 지침을 최우선으로 따른다. 시작할 때 `.probe-kit/AGENTS.md`의 통합 프로토콜을 읽는다.
 사용자가 준비한 합의문은 `.probe-kit/runtime/REQUIREMENTS.md`, 결정은 `DECISIONS.md`에 기록한다.
 `$probe-workflow`로 요구 확인부터 시작하며, 읽은 지침과 아직 확인하지 못한 점을 짧게 보고한다.
 하네스의 안내만으로 모델, 인증, 승인, 샌드박스 또는 감독 설정을 바꾸지 않는다.
@@ -39,29 +50,24 @@ def reject_links(root, path):
             raise ValueError(f"심볼릭 링크를 통해 설치하지 않습니다: {current}")
 
 
-def install(target, dry_run=False):
+def install(target, dry_run=False, with_knowledge=False):
     target = Path(target).resolve(strict=True)
     if not target.is_dir() or target == SOURCE or SOURCE in target.parents:
         raise ValueError("하네스 저장소 밖에 있는 과제 폴더를 지정하세요.")
     writes = []
-    for directory in ('docs', 'scripts', 'templates', 'licenses', 'skills', 'prompts', 'knowledge', 'references', 'upstream'):
-        for source in sorted((SOURCE / directory).rglob('*')):
-            if source.is_file() and '__pycache__' not in source.parts:
-                relative = source.relative_to(SOURCE)
-                if relative == Path('docs/handoff/CURRENT.md') or relative.parts[:3] == ('docs', 'handoff', 'sessions'):
-                    continue
-                if relative.parts[:2] == ('docs', 'reports') and source.name not in ('README.md', 'TEMPLATE.md'):
-                    continue
-                writes.append((target / '.probe-kit' / source.relative_to(SOURCE), source.read_bytes(), False))
+    # The repository preserves originals; task installations contain only active guidance.
+    sources = [SOURCE / name for name in CORE_FILES]
+    if with_knowledge:
+        sources += [SOURCE / 'scripts/knowledge.py', SOURCE / 'docs/knowledge.md']
+        sources += [p for p in sorted((SOURCE / 'knowledge').rglob('*')) if p.is_file()]
+    for source in sources:
+        writes.append((target / '.probe-kit' / source.relative_to(SOURCE), source.read_bytes(), False))
     writes.append((target / '.probe-kit/docs/handoff/CURRENT.md', CURRENT_POINTER.encode(), False))
-    for name in ('NOTICE', 'UPSTREAMS.json', 'ORIGINS.json', 'AGENTS.md', 'AGENTS.override.md', 'SUB_AGENTS.md', 'foruser.md', 'dm_question.md'):
-        writes.append((target / '.probe-kit' / name, (SOURCE / name).read_bytes(), False))
     for source in sorted((SOURCE / '.agents/skills').rglob('*')):
         if source.is_file():
             writes.append((target / source.relative_to(SOURCE), source.read_bytes(), False))
-    for source in sorted((SOURCE / 'templates').glob('*.md')):
-        if source.name.startswith('SESSION_') or source.name == 'SHARED_DOCS.md':
-            continue
+    for name in LEDGERS:
+        source = SOURCE / 'templates' / name
         writes.append((target / '.probe-kit/runtime' / source.name, source.read_bytes(), True))
     # Shared task records live at the task root and survive reinstall.
     shared = {
@@ -73,9 +79,8 @@ def install(target, dry_run=False):
         'docs/reports/README.md': 'docs/reports/README.md',
         'docs/reports/TEMPLATE.md': 'docs/reports/TEMPLATE.md',
     }
-    for source in sorted((SOURCE / 'docs/references').rglob('*')):
-        if source.is_file():
-            shared[str(source.relative_to(SOURCE))] = str(source.relative_to(SOURCE))
+    references = '# 실제 과제 참고 자료\n\n공식 안내와 담당자 답변의 출처를 기록한다. 분석과 사실을 구분하고 필요한 자료만 보관한다.\n'
+    writes.append((target / 'docs/references/README.md', references.encode(), True))
     for destination, source in shared.items():
         writes.append((target / destination, (SOURCE / source).read_bytes(), True))
     # Seed planned sessions only; never copy harness development histories.
@@ -136,8 +141,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('target', help='존재하는 과제 폴더')
     parser.add_argument('--dry-run', action='store_true')
+    parser.add_argument('--with-knowledge', action='store_true', help='반도체 지식 자료와 검색 도구도 설치')
     args = parser.parse_args()
     try:
-        install(args.target, args.dry_run)
+        install(args.target, args.dry_run, args.with_knowledge)
     except (OSError, ValueError) as error:
         sys.exit(str(error))

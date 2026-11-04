@@ -16,8 +16,8 @@
 ## 주요 경로
 
 - [역할과 시작 프롬프트](../TEAM_PLAYBOOK.md)
-- [제출 전 20분 절차](../mock-exam.md)
-- [가상 few-shot](../mock-examples.md)
+- [제출 전 20분 절차](../../prompts/mock_exam_5.md)
+- [가상 few-shot](../../prompts/mock_exam_5.md)
 - [출제 프롬프트](../../prompts/mock_exam_5.md)
 - [주 안내](../../foruser.md)
 

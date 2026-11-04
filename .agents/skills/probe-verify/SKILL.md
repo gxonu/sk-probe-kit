@@ -3,7 +3,7 @@ name: probe-verify
 description: 과제 기능 완료나 제출 준비를 판단할 때 요구사항과 실제 실행 증거를 대조하고 실패와 미검증을 구분한다.
 ---
 
-`.probe-kit/AGENTS.override.md`를 따른다. REQUIREMENTS의 필수 R-ID부터 확인한다.
+`.probe-kit/AGENTS.md`를 따른다. REQUIREMENTS의 필수 R-ID부터 확인한다.
 다중 세션이면 자신의 보고서에 코드와 입력 기준을 함께 기록하고 통합 담당자가 공통 EVIDENCE와 REQUIREMENTS에 반영한다.
 
 - 각 R-ID에 실행 명령, 기대값의 근거, 실제 출력과 상태를 연결한다.

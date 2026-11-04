@@ -1,16 +1,12 @@
 # SK AI Probe Kit
 
-Cofa Probe 과제를 위한 공개 자료 통합본. **공식 운영 안내와 실제 과제 지침을 최우선**으로 적용한다.
+데이터로 문제를 해결하는 과제의 질문, 방법 합의, 구현, 검증과 설명을 돕는 키트다. 최신 공식 안내와 실제 README가 우선한다. chichochoi의 명세/결과 흐름, KTY 반도체 참고 자료와 hamjoon 설명 연습을 하나의 프로토콜로 맞췄다.
 
-**당일에는 [foruser.md](foruser.md)를 먼저 연다.** chichochoi 원본의 단계와 요청 문구를 바탕으로 설치 경로, 공식 규칙, 여러 세션의 파일 공유만 맞췄다.
-[실행 점검 절차](docs/REHEARSAL.md), [원본 최신 확인](docs/references/upstream-check-20261031.md).
-[7개 세션 운영](docs/TEAM_PLAYBOOK.md), [제출 전 20분 예상 문항](docs/mock-exam.md), [few-shot 예시](docs/mock-examples.md).
-
-`chichochoi/sk`를 메인으로, KTY 반도체 지식 패키지와 hamjoon 서술형 대비 원문을 포함한다. 원본 125개 파일은 출처와 고정 커밋을 기록해 보존했다. 실제 응시 문제, 정답, 개인 링크와 인증 정보는 포함하지 않는다.
+**사람은 [foruser.md](foruser.md), AI는 [AGENTS.md](AGENTS.md)부터 시작한다.** 현재 상태와 자기 작업은 설치한 과제의 docs/handoff/CURRENT.md와 세션별 TASK_SPEC에 있다. 역할 배정 때만 [7개 세션 운영](docs/TEAM_PLAYBOOK.md)을 참고한다.
 
 ## 설치
 
-과제 루트에서 실행한다. Python 3.9 이상, Bash와 Git이 필요하다. 대상 임시 경로가 이미 있으면 새 경로를 선택한다.
+Python 3.9 이상, Bash와 Git이 있는 실제 과제 루트에서 하나씩 실행한다.
 
 ```bash
 probe_kit_dir="$(mktemp -d)"
@@ -21,101 +17,33 @@ python3 .probe-kit/scripts/preflight.py --workspace .
 codex
 ```
 
-전역 Codex 설정을 바꾸지 않는다. 기존 과제 지침에는 연결 안내를 추가하고 `.probe-kit/` 및 프로젝트 스킬 여섯 개를 설치한다. 기존 작업 기록은 보존하고 파일 충돌은 덮어쓰지 않고 알린다. 설치 뒤 새 Codex 세션에서 읽은 지침을 확인한다.
-과제 루트의 `docs/handoff`, `docs/references`, `docs/reports`도 준비한다. S1~S7의 세션별 TASK_SPEC, SUB_RESULT, HANDOFF와 PLANNED 배정표를 만들며 세션을 자동 실행하지 않는다. 기존 docs 파일과 세션 기록은 보존한다.
-이전 버전의 .probe-kit 파일과 충돌하면 설치를 중단한다. 실행 중인 과제의 하네스를 자동 교체하지 않으며 새 모의 폴더에서 먼저 확인한다.
+기본 설치에는 활성 지침과 도구, 공통 원장 4개, S1~S7의 PLANNED 배정표와 세션별 양식이 들어간다. 세션을 자동 실행하지 않는다. 반도체 자료 94개와 검색 도구도 필요하면 두 설치 명령에 --with-knowledge를 붙인다. 기본 설치 후 같은 버전에서 추가할 수도 있다.
 
-첫 요청:
+기존 과제 지침과 기록을 보존하며 내용 충돌은 쓰기 전에 알린다. 전역 설정을 변경하거나 이전 설치본을 강제로 갱신하지 않는다.
 
-```text
-$probe-workflow .probe-kit/AGENTS.override.md와 공식 규칙부터 확인해.
-과제 README를 읽고 사실, 가정, 열린 질문, 하지 않을 일, 성공 기준을 정리해.
-구현을 바꾸는 담당자 질문 최대 3개와 계획을 보여줘. 내가 승인하면 최소 흐름부터 진행해.
-실제 시작 시각과 전체 마감, 화면의 제한 시간은 내가 알려줄게.
-.probe-kit/AGENTS.md와 .probe-kit/foruser.md를 읽고 plan_time.py로 시간표를 계산해 CURRENT에 기록해.
-```
+## 사용하는 문서
 
-스킬이 보이지 않으면 `.agents/skills/probe-workflow/SKILL.md`를 직접 읽도록 요청한다. 실제 응시 환경에서의 자동 발견과 모델 사용 가능 여부는 사전 체험에서 확인한다.
-
-## 구성
-
-| 구성 | 내용 |
+| 용도 | 문서 |
 |---|---|
-| [공식 우선 지침](AGENTS.override.md), [일곱 가지 작업 원칙](docs/RULES.md) | 원본과 충돌할 때 적용할 기준 |
-| `AGENTS.md`, `SUB_AGENTS.md`, `skills/` | 원본 역할 지침과 통합 방식에 맞춘 유형별 안내. 원문은 upstream에 보존 |
-| [유형과 스킬 연결](docs/scenarios.md) | README의 9개 유형을 기존 스킬 4개와 질문 묶음에 연결 |
-| [질문 절차와 질문 은행](docs/interview.md) | 숨은 조건 후보, Q-ID → R-ID → 테스트 연결 |
-| [문서 시작점](docs/README.md), [현재 상태](docs/handoff/CURRENT.md) | 여러 세션의 읽는 순서와 파일 작성 범위 |
-| [원본 기반 실행 안내](foruser.md) | 원본의 질문, 합의, 명세와 결과 반복, 검증과 제출 순서 |
-| `scripts/preflight.py`, `scripts/plan_time.py` | 설치 및 Codex 시작 확인, 실제 시각 기반 작업과 제출 계획 |
-| [전체 흐름 점검](docs/REHEARSAL.md), `scripts/rehearse.py` | 새 임시 폴더에서 실패 검출, 정상 실행, 기록과 인계 보존 확인 |
-| [제작진 인터뷰 분석](docs/references/cofa-probe-interview-20261031.md) | 기술, 의도, 인지의 설명과 시간별 근거, 적용 한계 |
-| [7개 세션 운영과 시작 요청](docs/TEAM_PLAYBOOK.md) | 총괄, 개발 2개, 데이터/알고리즘, 조사, 독립 검증, 기록. 필요에 따라 축소 |
-| `templates/` | 공통 원장과 세션별 명세, 결과, 인계 양식. 설치 시 실제 작업 경로에 생성 |
-| `scripts/decision.py` | 과거 결정을 보존하며 선택, 대안, 이유, 검증과 한계를 추가 |
-| [반도체 자료](knowledge/semiconductor/README.md) | KTY 원문 94개 파일, 추가 다운로드 없이 로컬 검색 |
-| [서술형 원문](references/written-prep.original.md), [연습용 안내](docs/written-prep.md) | 원문 보존, 실제 연습은 제출물 확정 전에 완료 |
-| [현재 코드 기반 출제 프롬프트](prompts/mock_exam_5.md), [가상 few-shot](docs/mock-examples.md) | 코드 근거가 붙은 예상 5문항, 사용자 답변 뒤 피드백 |
-| [도구 조사](docs/TOOL_SURVEY.md) | 유명 MCP, 플러그인, 스킬의 용도와 대회 적용 판단 |
-| [채택한 공개 레포의 방법](docs/ADOPTED_PRACTICES.md) | 무엇을 가져왔고 무엇을 바꿨는지 |
+| 시작부터 제출까지의 순서와 복사할 요청 | [foruser](foruser.md) |
+| 모든 세션의 공통 규칙 | [AGENTS](AGENTS.md), 실제 공식 안내 |
+| 7개 역할과 파일/실행 자원 배정 | [TEAM_PLAYBOOK](docs/TEAM_PLAYBOOK.md) |
+| 조건 질문과 필요한 유형 점검 | [interview](docs/interview.md), [scenarios](docs/scenarios.md) |
+| 제출 전 코드 기반 5문항, 6개 설명 축과 few-shot | [통합 설명 연습](prompts/mock_exam_5.md) |
 
-## 여러 세션으로 이어가기
+실제 공유 기록은 과제 루트 docs 아래에 둔다. S1은 CURRENT와 .probe-kit/runtime의 요구/질문/결정/증거를 관리하고 작업자는 자기 세션 결과/인계를 쓴다. S7은 원장 반영안을 제안하고 배정된 제출 문서를 작성한다.
 
-사용자가 같은 프로젝트 폴더에서 필요한 세션을 연다. 기본 7개 역할은 S1 총괄, S2/S3 개발, S4 데이터/알고리즘, S5 조사, S6 독립 검증, S7 기록/제출 문서로 나눈다. 6개면 S5의 한정된 조사를 S1 또는 S4에 맡기는 안을 우선한다. 역할 수를 줄여도 된다. [운영안](docs/TEAM_PLAYBOOK.md)과 [공유 절차](docs/handoff/README.md)에 따라 실제 파일과 실행 자원의 소유자를 배정한다.
+## 원본과 준비 자료
 
-```text
-docs/
-  handoff/
-    CURRENT.md            현재 목표, 세션 배정, 공통 원장과 결과 링크
-    TEMPLATE.md           세션별 인계 양식
-    sessions/<session-id>/
-      TASK_SPEC.md        메인이 작성하는 작업 명세
-      SUB_RESULT.md       해당 작업자의 결과
-      HANDOFF.md          해당 작업자의 인계
-    messages/             필요할 때 요청과 답변을 새 파일로 전달
-  references/             출처와 인터뷰 분석
-  reports/                세션별 변경 및 실제 검증 결과
-```
+원본 125개는 [ORIGINS](ORIGINS.json)의 해시와 출처로 보존한다. upstream, 원본 서술형 자료, 제작 이력과 도구 조사는 기본 설치에 포함하지 않는다. 활성 AGENTS/SUB_AGENTS와 Case 안내는 통합 프로토콜로 수정했으며 원문은 upstream에 있다.
 
-새 세션의 첫 요청:
+[정리 기준](docs/CLEANUP.md), [준비 자료 목록](docs/README.md), [반도체 참고](docs/knowledge.md), [출처와 권리](NOTICE). 시험 문제, 개인 문항 원문과 인증 정보는 공개 키트에 추가하지 않는다.
 
-```text
-프로젝트 공식 지침과 docs/handoff/README.md, docs/handoff/CURRENT.md를 읽어.
-나는 이 세션을 [세션 ID와 역할]로 사용할 거야.
-배정된 범위와 관련 인계, 보고서를 확인하고 현재 상태와 다음 행동을 요약해.
-배정되지 않았거나 다른 세션과 겹치는 파일은 먼저 조정하고, 자기 세션 문서에 결과를 남겨.
-```
-
-CURRENT와 공통 요구 및 결정은 통합 담당자 한 명이 관리한다. 세션별 대화는 자동 공유되지 않으므로 파일 경로를 전달하고 상대 세션이 읽어야 한다.
-이 저장소의 CURRENT는 하네스 개발 상태다. 설치기는 실제 과제에 별도의 미시작 CURRENT를 만들며 개발 인계를 과제 상태로 복사하지 않는다.
-
-## 원본 보존과 수정 범위
-
-중복 안내 3개는 foruser와 TEAM_PLAYBOOK에 통합하고, 구형 파일 12개는 활성 경로에서 제거했다. 원본은 upstream에 남아 있다. [정리 내역](docs/CLEANUP.md)을 참고한다.
-
-메인 원본 전체는 `upstream/chichochoi/`에 그대로 있다. 사용 경로의 `init.sh`와 `scripts/subagent.sh`는 공식 규칙에 맞춰 교체했다. 설치는 프로젝트 범위에서만 수행하고 서브 세션은 기본 승인 설정으로 사람이 시작한다. 원본 `config.toml`을 전역에 설치하지 않는다.
-사용 경로의 `templates/HANDOFF.md`는 새 공유 문서를 가리키는 양식으로 보완했다. 해당 원본도 upstream에 보존한다.
-원본 `AGENTS.md`와 `SUB_AGENTS.md`는 그대로 유지한다. 사용 경로의 `foruser.md`는 원본 단계와 요청 문구를 중심으로 공식 규칙, 설치 경로와 세션별 공유를 맞춘 안내다. 원본은 `upstream/chichochoi/foruser.md`에 보존한다.
-
-원문의 Git 변경 금지, 고정 모델 ID, 채점 가산점 주장, 제출 확정 이후 코칭 안내보다 `AGENTS.override.md`가 우선한다. 원본 보존은 그 주장을 검증하거나 승인했다는 의미가 아니다. 다른 사람이 쓴 문서의 주장과 실제 공식 규정을 구분한다.
-
-반도체 자료 검색 예시:
-
-```bash
-python3 .probe-kit/scripts/knowledge.py search .probe-kit/knowledge/semiconductor 수율
-python3 .probe-kit/scripts/knowledge.py search .probe-kit/knowledge/semiconductor HBM
-```
-
-## 검증과 범위
+## 로컬 검증
 
 ```bash
 python3 -m unittest discover -s tests -v
+python3 scripts/rehearse.py
 ```
 
-설치, 기존 파일 보존, 재설치, 충돌, 원본 및 지식 설치, CSV 요약, 결정 기록을 로컬에서 검증했다. 실제 Probe 접속, 모델, 감독 연결과 점수는 검증 대상이 아니다. 제공된 Codex 버전을 업데이트하지 않는다.
-
-이 저장소와 사용한 공개 자료는 결과 통지 전까지 공개 유지 조건을 따른다. 시험 중 작업 결과를 원격 저장소로 push하지 않는다.
-
-## 출처
-
-[ORIGINS.json](ORIGINS.json)은 원본 파일 해시, [UPSTREAMS.json](UPSTREAMS.json)은 고정 커밋, [NOTICE](NOTICE)는 출처와 수정 범위를 기록한다. 원본 전체에 새로운 라이선스를 붙이지 않았다. hamjoon의 MIT 고지는 보존했다.
+두 번째 명령은 새 임시 폴더의 합성 데이터로 설치, 실패 검출, 정상 처리와 기록 보존을 점검한다. 실제 AI 세션/Probe 접속/제출을 수행하는 검증은 아니다. 실제 응시 중에는 합성 점검 대신 과제 필수 흐름을 확인한다.

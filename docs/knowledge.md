@@ -5,7 +5,7 @@
 
 사용자 요청에 따라 원본 폴더를 이 저장소의 `knowledge/semiconductor/`에 보존했다. 본 통합본이 원저작권이나 새 라이선스를 주장하지 않는다. 출처와 고정 버전은 UPSTREAMS.json과 ORIGINS.json에 있다.
 
-설치 후 과제 루트에서 검색한다. 추가 다운로드는 필요 없다.
+--with-knowledge로 선택 설치한 뒤 과제 루트에서 검색한다. 기본 설치에 없는 경우 키트 설치기에 같은 옵션을 붙여 추가한다. 추가 다운로드는 필요 없다.
 
 ```bash
 python3 .probe-kit/scripts/knowledge.py search .probe-kit/knowledge/semiconductor HBM
