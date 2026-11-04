@@ -92,8 +92,7 @@ class InstallTests(unittest.TestCase):
             for name in ('TASK_SPEC.md', 'SUB_RESULT.md', 'HANDOFF.md'):
                 self.assertEqual((self.target / 'docs/handoff/sessions' / sid / name).read_text(),
                                  f'existing {sid} {name}')
-        self.assertTrue((self.target / 'docs/references/README.md').is_file())
-        self.assertFalse((self.target / 'docs/references/cofa-probe-interview-20261031.md').exists())
+        self.assertTrue((self.target / 'docs/references/cofa-probe-interview-20261031.md').is_file())
 
     def test_shared_docs_symlink_fails_before_any_write(self):
         external = self.root / 'external docs'
@@ -137,24 +136,11 @@ class InstallTests(unittest.TestCase):
         self.assertFalse((self.target / 'AGENTS.md').exists())
 
     def test_original_assets_and_knowledge_are_installed(self):
-        self.assertEqual(self.run_install('--with-knowledge').returncode, 0)
+        self.assertEqual(self.run_install().returncode, 0)
         for relative in ('skills/case1_data_pipeline.md', 'knowledge/semiconductor/index.jsonl',
-                         'scripts/knowledge.py', 'AGENTS.override.md'):
+                         'references/written-prep.original.md', 'AGENTS.override.md'):
             self.assertEqual((self.target / '.probe-kit' / relative).read_bytes(),
                              (ROOT / relative).read_bytes())
-
-    def test_core_install_can_add_knowledge_without_copying_archives_or_losing_records(self):
-        self.assertEqual(self.run_install().returncode, 0)
-        for relative in ('upstream', 'knowledge', 'references', 'templates',
-                         'runtime/SUBMISSION_REPORT.md', 'runtime/HANDOFF.md',
-                         'docs/TOOL_SURVEY.md', 'docs/CLEANUP.md', 'docs/REHEARSAL.md'):
-            self.assertFalse((self.target / '.probe-kit' / relative).exists(), relative)
-        decisions = self.target / '.probe-kit/runtime/DECISIONS.md'
-        decisions.write_text('actual decisions before knowledge installation')
-        self.assertEqual(self.run_install('--with-knowledge').returncode, 0)
-        self.assertEqual(decisions.read_text(), 'actual decisions before knowledge installation')
-        self.assertTrue((self.target / '.probe-kit/knowledge/semiconductor/index.jsonl').is_file())
-        self.assertFalse((self.target / '.probe-kit/upstream').exists())
 
     def test_decision_preserves_history_and_escapes_cells(self):
         self.assertEqual(self.run_install().returncode, 0)

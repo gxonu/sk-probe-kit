@@ -15,6 +15,7 @@ REQUIRED = [
     ".probe-kit/runtime/EVIDENCE.md", "docs/handoff/README.md",
     "docs/handoff/CURRENT.md", "docs/handoff/TEMPLATE.md",
     "docs/reports/TEMPLATE.md", "docs/references/README.md",
+    ".probe-kit/knowledge/semiconductor/index.jsonl",
 ]
 SKILLS = ("workflow", "interview", "decisions", "debug", "verify", "explain")
 

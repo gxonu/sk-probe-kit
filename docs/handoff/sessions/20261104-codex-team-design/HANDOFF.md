@@ -4,7 +4,7 @@
 - 상태: HANDOFF. 6~7개 세션 운영과 코드 기반 예상 문항의 로컬 개선안 완료.
 - 기준: 90289633ecb33b2ab32a26906b6e37dfdda7aeb9, prep/seven-session-review.
 - 범위: docs, prompts/mock_exam_5.md, foruser, README, AGENTS.override, templates/SESSION_CURRENT, probe-explain.
-- 핵심 문서: [보고서](../../../reports/20261104-team-design.md), [운영안](../../../TEAM_PLAYBOOK.md), [예상 문항 절차](../../../../prompts/mock_exam_5.md).
+- 핵심 문서: [보고서](../../../reports/20261104-team-design.md), [운영안](../../../TEAM_PLAYBOOK.md), [예상 문항 절차](../../../mock-exam.md).
 - 원본 125개와 AGENTS/SUB_AGENTS 보존. 설치 코드 변경과 새 자동 실행기 없음.
 - 검증: 기존 테스트 21개, 스킬 형식, 새 안내 설치/링크, 7개 인계와 CURRENT 재설치 보존 PASS.
 - NOT_RUN: 실제 다중 AI 세션 성능, 실제 과제 코드로 예상 질문 생성/답변.
